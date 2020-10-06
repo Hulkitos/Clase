@@ -4,8 +4,6 @@ public class Main {
 
     public static void main(String[] args) {
 
-        //hallo
-
         Car ferrari = new Car();
 
         ferrari.color = "RED";
