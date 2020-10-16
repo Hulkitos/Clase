@@ -13,11 +13,9 @@ public class Main {
 
         System.out.println("Area de rectangle: " + area);
 
-        // 2*(amplada+altura)
         double suma = amplada+altura;
         double mult = 2*suma;
 
         System.out.println("Perimetro de rectangle: " + mult);
     }
-
 }
