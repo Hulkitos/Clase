@@ -1,4 +1,4 @@
-package es.hulk;
+package es.hulk.clase;
 
 public class Ex3 {
 

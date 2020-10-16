@@ -1,8 +1,9 @@
-package es.hulk;
+package es.hulk.clase;
 
 public class Ex8 {
 
     public static void main(String[] args) {
+
         int a;
         int b;
         int c;
