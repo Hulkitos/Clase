@@ -1,6 +1,6 @@
 package es.hulk.clase;
 
-public class Main {
+public class Ex10 {
 
     public static void main(String[] args) {
         // Numero PI
