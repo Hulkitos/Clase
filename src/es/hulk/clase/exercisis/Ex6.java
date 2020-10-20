@@ -1,4 +1,4 @@
-package es.hulk.clase;
+package es.hulk.clase.exercisis;
 
 public class Ex6 {
 

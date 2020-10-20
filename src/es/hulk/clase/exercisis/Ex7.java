@@ -1,20 +1,17 @@
-package es.hulk.clase.scanner;
-
-import java.util.Scanner;
+package es.hulk.clase.exercisis;
 
 public class Ex7 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
 
+    public static void main(String[] args) {
         int a;
         int b;
         int aux;
 
-        a = sc.nextInt();
-        b = sc.nextInt();
+        a = 5;
+        b = 10;
 
-        System.out.println("Valor inicial de a = " + a);
         System.out.println("Valor inicial de b = " + b);
+        System.out.println("Valor inicial de a = " + a);
         System.out.println("   ");
 
         //resultat = a = 10 i b = 5
@@ -23,7 +20,8 @@ public class Ex7 {
         a = b;
         b = aux;
 
-        System.out.println("Valor intercanviat de a = " + a);
         System.out.println("Valor intercanviat de b = " + b);
+        System.out.println("Valor intercanviat de a = " + a);
     }
+
 }

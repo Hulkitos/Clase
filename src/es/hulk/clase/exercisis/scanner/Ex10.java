@@ -1,4 +1,4 @@
-package es.hulk.clase.scanner;
+package es.hulk.clase.exercisis.scanner;
 
 import java.util.Scanner;
 

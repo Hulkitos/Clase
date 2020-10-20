@@ -1,13 +1,16 @@
-package es.hulk.clase;
+package es.hulk.clase.exercisis.scanner;
+
+import java.util.Scanner;
 
 public class Ex9 {
-
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
         double altura;
         double amplada;
 
-        amplada = 2.50;
-        altura = 4;
+        amplada = sc.nextDouble();
+        altura = sc.nextDouble();
 
         double area = altura*amplada;
 
@@ -19,5 +22,4 @@ public class Ex9 {
 
         System.out.println("Perimetro de rectangle: " + mult);
     }
-
 }
