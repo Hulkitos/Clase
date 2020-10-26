@@ -1,15 +1,13 @@
-package es.hulk.clase;
-
-import es.hulk.clase.objects.Dog;
-import es.hulk.clase.objects.Person;
+package es.hulk.clase.condicionals.ex4;
 
 import java.util.Scanner;
 
-public class Main {
+public class SWITCH {
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         int day = scan.nextInt();
+
         switch (day) {
             case 1:
                 System.out.println("Monday");

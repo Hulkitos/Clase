@@ -63,12 +63,10 @@ public class Dog {
         System.out.println(this.nvacunes);
         System.out.println(this.race);
         System.out.println(this.pedigri);
-        novaVacuna(this.vacuned);
     }
 
-    public void novaVacuna(boolean vacuned) {
-       if (vacuned) {
-           System.out.println(true);
-       }
+    public void novaVacuna() {
+        nvacunes++;
+        System.out.println(nvacunes);
     }
 }
