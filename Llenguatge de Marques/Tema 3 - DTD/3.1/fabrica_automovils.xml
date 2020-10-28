@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE fabrica_automobils SYSTEM "C:\Users\Miquel Angel\AppData\Roaming\JetBrains\IntelliJIdea2020.2\scratches\Llenguatge de Marques\3.1\fabrica_automobils.dtd">
+<!DOCTYPE fabrica_automobils SYSTEM "fabrica_automobils.dtd">
 <fabrica_automobils>
     <marca>Fiat</marca>
     <peces>
