@@ -1,0 +1,23 @@
+<empresa>
+	<carta>
+		<missatge>325</missatge>
+		<de>CapMegatzem</de>
+		<per>Operari01</per>
+		<assumpte>Control s'estocs</assumpte>
+		<cos>Hola, et necessito al magatzem per fer el control d'estocs</cos>
+	</carta>
+	<carta>
+		<missatge>326</missatge>
+		<de>Operari01</de>
+		<per>CapMegatzem</per>
+		<assumpte>RE: Control s'estocs</assumpte>
+		<cos>Ara hi vaig</cos>
+	</carta>
+	<carta>
+		<missatge>327</missatge>
+		<de>CapMegatzem</de>
+		<per>Operari01</per>
+		<assumpte>RE: Control s'estocs</assumpte>
+		<cos>Gràcies</cos>
+	</carta>
+</empresa>
