@@ -2,7 +2,7 @@ package es.hulk.clase.exercisis;
 
 public class Ex4 {
 
-    public static void main(String[] args) {
+    public static void ex4() {
         int a = 3;
         int b = 6;
 

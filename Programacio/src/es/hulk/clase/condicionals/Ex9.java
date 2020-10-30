@@ -3,7 +3,7 @@ package es.hulk.clase.condicionals;
 import java.util.Scanner;
 
 public class Ex9 {
-    public static void main(String[] args) {
+    public static void ifex9() {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Num1: ");

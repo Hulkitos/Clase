@@ -3,7 +3,7 @@ package es.hulk.clase.condicionals;
 import java.util.Scanner;
 
 public class Ex7 {
-    public static void main(String[] args) {
+    public static void ifex7() {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Dia: ");

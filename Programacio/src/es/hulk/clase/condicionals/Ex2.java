@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Ex2 {
 
-    public static void main(String[] args) {
+    public static void ifex2() {
         Scanner scan = new Scanner(System.in);
         int num1;
         int num2;
@@ -20,6 +20,5 @@ public class Ex2 {
         } else {
             System.out.println(num1 + " NO es multiple de 2");
         }
-
     }
 }

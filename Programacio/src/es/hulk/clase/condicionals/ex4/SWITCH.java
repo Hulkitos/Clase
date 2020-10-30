@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class SWITCH {
 
-    public static void main(String[] args) {
+    public static void switchex4(String[] args) {
         Scanner scan = new Scanner(System.in);
         int day = scan.nextInt();
 

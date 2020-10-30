@@ -3,7 +3,7 @@ package es.hulk.clase.exercisis.scanner;
 import java.util.Scanner;
 
 public class Ex4 {
-    public static void main(String[] args) {
+    public static void scanex4() {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Introduce dos numeros enteros: (Uno debajo del otro)");

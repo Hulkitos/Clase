@@ -2,7 +2,7 @@ package es.hulk.clase.exercisis;
 
 public class Ex6 {
 
-    public static void main(String[] args) {
+    public static void ex6() {
 
         double euros = 20;
         double dolar = 1.18;

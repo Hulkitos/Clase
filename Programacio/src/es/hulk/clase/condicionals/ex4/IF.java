@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class IF {
 
-    public static void main(String[] args) {
+    public static void ifex4(String[] args) {
         Scanner scan = new Scanner(System.in);
         int day = scan.nextInt();
 

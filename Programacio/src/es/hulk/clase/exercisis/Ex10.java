@@ -2,7 +2,7 @@ package es.hulk.clase.exercisis;
 
 public class Ex10 {
 
-    public static void main(String[] args) {
+    public static void ex10() {
         // Numero PI
         double pi;
         // Altura

@@ -3,7 +3,7 @@ package es.hulk.clase.exercisis.scanner;
 import java.util.Scanner;
 
 public class Ex5 {
-    public static void main(String[] args) {
+    public static void scanex5() {
         Scanner sc = new Scanner(System.in);
 
         double c = sc.nextFloat();

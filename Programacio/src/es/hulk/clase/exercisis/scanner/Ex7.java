@@ -3,7 +3,7 @@ package es.hulk.clase.exercisis.scanner;
 import java.util.Scanner;
 
 public class Ex7 {
-    public static void main(String[] args) {
+    public static void scanex7() {
         Scanner sc = new Scanner(System.in);
 
         int a;

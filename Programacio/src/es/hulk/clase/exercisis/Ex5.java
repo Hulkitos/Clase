@@ -2,7 +2,7 @@ package es.hulk.clase.exercisis;
 
 public class Ex5 {
 
-    public static void main(String[] args) {
+    public static void ex5() {
         float c = 30;
 
         System.out.println(c + "Cº a Fº");

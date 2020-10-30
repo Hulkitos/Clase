@@ -2,7 +2,7 @@ package es.hulk.clase.exercisis;
 
 public class Ex8 {
 
-    public static void main(String[] args) {
+    public static void ex8() {
 
         int a;
         int b;

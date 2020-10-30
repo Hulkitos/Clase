@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Ex5 {
 
-    public static void main(String[] args) {
+    public static void ifex5() {
         Scanner scanner = new Scanner(System.in);
         int hora = scanner.nextInt();
 
