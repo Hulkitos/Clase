@@ -1,11 +1,11 @@
 package es.hulk.clase;
 
-import es.hulk.clase.loops.LoopEX1;
-import es.hulk.clase.loops.LoopEX2;
+import es.hulk.clase.loops.LoopEX3;
+import es.hulk.clase.loops.LoopEX4;
 
 public class Main {
 
     public static void main(String[] args) {
-        LoopEX2.ex2();
+        LoopEX4.ex4();
     }
 }
