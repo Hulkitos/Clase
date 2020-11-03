@@ -1,13 +1,13 @@
 package es.hulk.clase.arrays;
 
-import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
-
 public class Ex7 {
     public static void Exercise() {
         double suma;
         double mitjana;
+
         int ARRAY_LENGHT = 5;
         int[] num = new int[ARRAY_LENGHT];
+
         num[0] = 5;
         num[1] = 6;
         num[2] = 5;
