@@ -1,0 +1,75 @@
+<!DOCTYPE clinica [
+        <!ELEMENT clinica (professionals|fitxes)*>
+        <!ATTLIST clinica
+                nom_clinica CDATA #REQUIRED>
+        <!ELEMENT professionals (veterinari)*>
+        <!ELEMENT veterinari (nom|codi)*>
+        <!ELEMENT nom (#PCDATA)>
+        <!ELEMENT codi (#PCDATA)>
+        <!ATTLIST codi
+                id CDATA #REQUIRED>
+        <!ELEMENT fitxes (clients)*>
+        <!ELEMENT clients (client)*>
+        <!ELEMENT client (dades_personals|llista_mascotas)*>
+        <!ELEMENT dades_personals (nom|llinatges|dni)*>
+        <!ELEMENT llinatges (#PCDATA)>
+        <!ELEMENT dni (#PCDATA)>
+        <!ATTLIST dni
+                id CDATA #REQUIRED>
+        <!ELEMENT llista_mascotas (mascota)*>
+        <!ELEMENT mascota (nom|data_neixement|raça|pelatge)*>
+        <!ATTLIST mascota
+                tipus CDATA #REQUIRED>
+        <!ELEMENT data_neixement (#PCDATA)>
+        <!ELEMENT raça (#PCDATA)>
+        <!ATTLIST raça
+                tipo CDATA #REQUIRED>
+        <!ELEMENT pelatge (#PCDATA)>
+        <!ATTLIST pelatge
+                tipus CDATA #REQUIRED>
+        ]>
+<clinica nom_clinica="animal_kingdom">
+    <professionals>
+        <veterinari>
+            <nom>Veterinari 1</nom>
+            <codi id="4568652785"/>
+        </veterinari>
+        <veterinari>
+            <nom>Veterinari 2</nom>
+            <codi id="43436345"/>
+        </veterinari>
+        <veterinari>
+            <nom>Veterinari 3</nom>
+            <codi id="09808768"/>
+        </veterinari>
+    </professionals>
+    <fitxes>
+        <clients>
+            <client>
+                <dades_personals>
+                    <nom>Client 1</nom>
+                    <llinatges>Modo Client</llinatges>
+                    <dni id="7655789z"/>
+                </dades_personals>
+                <llista_mascotas>
+                    <mascota tipus="ca">
+                        <nom>Linda</nom>
+                        <data_neixement>1/10/2019</data_neixement>
+                        <raça tipo="pura raça"/>
+                    </mascota>
+                    <mascota tipus="moix">
+                        <nom></nom>
+                        <data_neixement></data_neixement>
+                        <raça tipo=""/>
+                        <pelatge tipus="llarg"/>
+                    </mascota>
+                    <mascota tipus="ca">
+                        <nom></nom>
+                        <data_neixement></data_neixement>
+                        <raça tipo="castrat"/>
+                    </mascota>
+                </llista_mascotas>
+            </client>
+        </clients>
+    </fitxes>
+</clinica>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE reisEspanyols [
-  <!ELEMENT reisEspanyols (rei, reina, rei)>
-  <!ELEMENT reina (nom, pare, mare)>
-  <!ELEMENT rei (nom, pare, mare)>
-  <!ELEMENT nom (#PCDATA)>
-  <!ELEMENT pare (#PCDATA)>
-  <!ELEMENT mare (#PCDATA)>
-]>
 
+<!DOCTYPE reisEspanyols [
+        <!ELEMENT reisEspanyols (rei|reina)*>
+        <!ELEMENT rei (nom|pare|mare)*>
+        <!ELEMENT nom (#PCDATA)>
+        <!ELEMENT pare (#PCDATA)>
+        <!ELEMENT mare (#PCDATA)>
+        <!ELEMENT reina (nom|pare|mare)*>
+        ]>
 <reisEspanyols>
     <rei>
         <nom>Felipe III</nom>
