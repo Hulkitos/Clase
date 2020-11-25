@@ -1,4 +1,4 @@
-package es.hulk.clase.loops;
+package es.hulk.clase.exercisis;
 
 import java.util.Scanner;
 

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ingredients xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:noNamespaceSchemaLocation="cuina_2.xsd">
+    <ingredient>
+        <codi>org</codi>
+        <nom>orenga</nom>
+        <calories>500</calories>
+        <importancia>important</importancia>
+    </ingredient>
+    <ingredient>
+        <codi>frg</codi>
+        <nom>formatge</nom>
+        <calories>46</calories>
+        <importancia>base</importancia>
+    </ingredient>
+    <ingredient>
+        <codi>msa</codi>
+        <nom>massa</nom>
+        <calories>46</calories>
+    </ingredient>
+    <ingredient>
+        <codi>gmb</codi>
+        <nom>gambes</nom>
+        <calories>46</calories>
+        <importancia>extra</importancia>
+    </ingredient>
+</ingredients>

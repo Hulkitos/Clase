@@ -1,4 +1,4 @@
-package es.hulk.clase.arrays;
+package es.hulk.clase.exercisis;
 
 import java.util.ArrayList;
 import java.util.Scanner;

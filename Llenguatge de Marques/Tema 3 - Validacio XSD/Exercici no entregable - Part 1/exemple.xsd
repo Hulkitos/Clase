@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:element name="ingredient" type="ingredientType"/>
-  <xs:complexType name="ingredientType">
-    <xs:sequence>
-      <xs:element type="xs:string" name="codi"/>
-      <xs:element type="xs:string" name="nom"/>
-      <xs:element type="xs:string" name="calories"/>
-      <xs:element type="xs:string" name="importancia"/>
-    </xs:sequence>
-  </xs:complexType>
+  
+  <xs:simpleType name="tipus_importancia">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="base"/>
+      <xs:enumeration value="important"/>
+      <xs:enumeration value="extra"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:element name="ingredient">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="codi"/>
+        <xs:element type="xs:string" name="nom"/>
+        <xs:element type="xs:positiveInteger" name="calories"/>
+        <xs:element type="tipus_importancia" minOccurs="0" name="importancia"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>
