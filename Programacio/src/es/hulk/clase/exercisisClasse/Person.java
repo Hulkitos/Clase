@@ -1,4 +1,4 @@
-package es.hulk.clase.objects;
+package es.hulk.clase.exercisisClasse;
 
 public class Person {
 

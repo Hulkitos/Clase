@@ -1,4 +1,4 @@
-package es.hulk.clase.examen;
+package es.hulk.clase.practica;
 
 public class Assignatura {
 
