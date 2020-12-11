@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="curses" type="cursesType"/>
+  <xs:complexType name="circuitType">
+    <xs:sequence>
+      <xs:element name="nom_cir">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Lemans"/>
+            <xs:enumeration value="Silverstone"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="dist_volta">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="12"/>
+            <xs:enumeration value="19.4"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="codi" use="optional"/>
+    <xs:attribute type="xs:string" name="dificultat" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="circuitsType">
+    <xs:sequence>
+      <xs:element type="circuitType" name="circuit" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="pilotType">
+    <xs:sequence>
+      <xs:element name="dni">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="23234444J"/>
+            <xs:enumeration value="25433344Y"/>
+            <xs:enumeration value="12345678I"/>
+            <xs:enumeration value="99999999E"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="nom">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Paco"/>
+            <xs:enumeration value="Toni"/>
+            <xs:enumeration value="Maria"/>
+            <xs:enumeration value="Antón"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="llinatges">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Xispes"/>
+            <xs:enumeration value="Derrapes Motorino"/>
+            <xs:enumeration value="Trompos Sunyer"/>
+            <xs:enumeration value="Libre Escape"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="vespinoType">
+    <xs:sequence>
+      <xs:element name="matricula">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="2345RYT"/>
+            <xs:enumeration value="38438HGH"/>
+            <xs:enumeration value="1234TTT"/>
+            <xs:enumeration value="3333JJJ"/>
+            <xs:enumeration value="4444GGG"/>
+            <xs:enumeration value="1111RRR"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="model">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="megavespa-basic"/>
+            <xs:enumeration value="honda-liquiedforce"/>
+            <xs:enumeration value="megavespa-9000"/>
+            <xs:enumeration value="hondaSpeedFire"/>
+            <xs:enumeration value="yamaha cruisier 33"/>
+            <xs:enumeration value="yamaha FlySurfer"/>
+            <xs:enumeration value="megavespa NonStop"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="cilindrada">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="9000"/>
+            <xs:enumeration value="1500"/>
+            <xs:enumeration value="125"/>
+            <xs:enumeration value="500"/>
+            <xs:enumeration value="2000"/>
+            <xs:enumeration value="250"/>
+            <xs:enumeration value="49"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="xs:string" name="usat" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="marca" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="vespinosType">
+    <xs:sequence>
+      <xs:element type="vespinoType" name="vespino" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="participantType">
+    <xs:sequence>
+      <xs:element type="pilotType" name="pilot"/>
+      <xs:element type="vespinosType" name="vespinos"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="cursa" use="optional"/>
+    <xs:attribute type="xs:string" name="posicio" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="participantsType">
+    <xs:sequence>
+      <xs:element type="participantType" name="participant" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="marcaType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="codi_m" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="marquesType">
+    <xs:sequence>
+      <xs:element type="marcaType" name="marca" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cursesType">
+    <xs:sequence>
+      <xs:element type="circuitsType" name="circuits"/>
+      <xs:element type="participantsType" name="participants"/>
+      <xs:element type="marquesType" name="marques"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="any"/>
+  </xs:complexType>
+</xs:schema>
