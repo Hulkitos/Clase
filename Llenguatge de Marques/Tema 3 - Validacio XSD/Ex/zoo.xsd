@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="zoologic" type="zoologicType"/>
+
+
+
+  <xs:complexType name="mamifer-1Type">
+    <xs:sequence>
+      <xs:element type="xs:string" name="nom-propi"/>
+      <xs:element type="xs:string" name="pares"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mamifer-2Type">
+    <xs:sequence>
+      <xs:element type="xs:string" name="nom-propi"/>
+      <xs:element type="xs:string" name="pares"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mamifer-3Type">
+    <xs:sequence>
+      <xs:element type="xs:string" name="nom-propi"/>
+      <xs:element type="xs:string" name="pares"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mamifersType">
+    <xs:sequence>
+      <xs:element type="mamifer-1Type" name="mamifer-1"/>
+      <xs:element type="mamifer-2Type" name="mamifer-2"/>
+      <xs:element type="mamifer-3Type" name="mamifer-3"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="tipus">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="serp"/>
+        <xs:enumeration value="llargandaix"/>
+        <xs:enumeration value="salamandra"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+
+  <xs:complexType name="reptil-1Type">
+    <xs:sequence>
+      <xs:choice>
+        <xs:element type="xs:string" name="nom-procedencia"/>
+        <xs:element type="xs:string" name="nom-refugi"/>
+      </xs:choice>
+      <xs:element ref="tipus"/>
+    </xs:sequence>
+  </xs:complexType>
+
+
+  <xs:complexType name="reptil-2Type">
+    <xs:sequence>
+      <xs:choice>
+        <xs:element type="xs:string" name="nom-procedencia"/>
+        <xs:element type="xs:string" name="nom-refugi"/>
+      </xs:choice>
+      <xs:element ref="tipus"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="reptil-3Type">
+    <xs:sequence>
+      <xs:choice>
+        <xs:element type="xs:string" name="nom-procedencia"/>
+        <xs:element type="xs:string" name="nom-refugi"/>
+      </xs:choice>
+      <xs:element ref="tipus"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="reptilsType">
+    <xs:sequence>
+      <xs:element type="reptil-1Type" name="reptil-1"/>
+      <xs:element type="reptil-2Type" name="reptil-2"/>
+      <xs:element type="reptil-3Type" name="reptil-3"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="llistats-animalsType">
+    <xs:sequence>
+      <xs:element type="mamifersType" name="mamifers"/>
+      <xs:element type="reptilsType" name="reptils"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:attribute name="superficie">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="m2"/>
+        <xs:enumeration value="l3"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:attribute>
+
+  <xs:complexType name="superficieType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute ref="superficie"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="recinte-1Type">
+    <xs:sequence>
+      <xs:element type="xs:string" name="id"/>
+      <xs:element type="superficieType" name="superficie"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="recinte-2Type">
+    <xs:sequence>
+      <xs:element type="xs:string" name="id"/>
+      <xs:element type="superficieType" name="superficie"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="recintesType">
+    <xs:sequence>
+      <xs:element type="recinte-1Type" name="recinte-1"/>
+      <xs:element type="recinte-2Type" name="recinte-2"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="pesType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="tipus" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  
+  <xs:element name="recinte">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="recinte-1"/>
+        <xs:enumeration value="recinte-2"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  
+  <xs:complexType name="animal-1Type">
+    <xs:sequence>
+      <xs:element type="xs:string" name="codi"/>
+      <xs:element type="xs:string" name="nom-especie"/>
+      <xs:element type="xs:string" name="edat"/>
+      <xs:element type="pesType" name="pes"/>
+      <xs:element ref="recinte"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="animal-2Type">
+    <xs:sequence>
+      <xs:element type="xs:string" name="codi"/>
+      <xs:element type="xs:string" name="nom-especie"/>
+      <xs:element type="xs:string" name="edat"/>
+      <xs:element type="pesType" name="pes"/>
+      <xs:element ref="recinte"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="animal-3Type">
+    <xs:sequence>
+      <xs:element type="xs:string" name="codi"/>
+      <xs:element type="xs:string" name="nom-especie"/>
+      <xs:element type="xs:string" name="edat"/>
+      <xs:element type="pesType" name="pes"/>
+      <xs:element ref="recinte"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="animal-4Type">
+    <xs:sequence>
+      <xs:element type="xs:string" name="codi" />
+      <xs:element type="xs:string" name="nom-especie"/>
+      <xs:element type="xs:string" name="edat"/>
+      <xs:element type="pesType" name="pes"/>
+      <xs:element ref="recinte"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="animalsType">
+    <xs:sequence>
+      <xs:element type="animal-1Type" name="animal-1"/>
+      <xs:element type="animal-2Type" name="animal-2"/>
+      <xs:element type="animal-3Type" name="animal-3"/>
+      <xs:element type="animal-4Type" name="animal-4"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="zoologicType">
+    <xs:sequence>
+      <xs:element type="llistats-animalsType" name="llistats-animals"/>
+      <xs:element type="recintesType" name="recintes"/>
+      <xs:element type="animalsType" name="animals"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

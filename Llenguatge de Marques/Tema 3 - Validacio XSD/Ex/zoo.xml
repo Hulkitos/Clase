@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zoologic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:noNamespaceSchemaLocation="zoo.xsd">
+    <llistats-animals>
+        <mamifers>
+            <mamifer-1>
+                <nom-propi>Carxofa</nom-propi>
+                <pares>mamifer-2</pares>
+            </mamifer-1>
+            <mamifer-2>
+                <nom-propi>Paco</nom-propi>
+                <pares>mamifer-3</pares>
+            </mamifer-2>
+            <mamifer-3>
+                <nom-propi>Antonio</nom-propi>
+                <pares></pares>
+            </mamifer-3>
+        </mamifers>
+        <reptils>
+            <reptil-1>
+                <nom-refugi>CRARC</nom-refugi>
+                <tipus>serp</tipus>
+            </reptil-1>
+            <reptil-2>
+                <nom-procedencia>Ucraina</nom-procedencia>
+                <tipus>llargandaix</tipus>
+            </reptil-2>
+            <reptil-3>
+                <nom-procedencia>Finlandia</nom-procedencia>
+                <tipus>salamandra</tipus>
+            </reptil-3>
+        </reptils>
+    </llistats-animals>
+
+    <recintes>
+        <recinte-1>
+            <id>reptils</id>
+            <superficie superficie="m2">4000</superficie>
+        </recinte-1>
+        <recinte-2>
+            <id>mamifer</id>
+            <superficie superficie="l3">8000</superficie>
+        </recinte-2>
+    </recintes>
+
+    <animals>
+        <animal-1>
+            <codi>76859</codi>
+            <nom-especie>reptils</nom-especie>
+            <edat>5</edat>
+            <pes>2</pes>
+            <recinte>recinte-2</recinte>
+        </animal-1>
+        <animal-2>
+            <codi>78569</codi>
+            <nom-especie>reptils</nom-especie>
+            <edat>3</edat>
+            <pes>2</pes>
+            <recinte>recinte-1</recinte>
+        </animal-2>
+        <animal-3>
+            <codi>84547</codi>
+            <nom-especie>mamifer</nom-especie>
+            <edat>2</edat>
+            <pes>10</pes>
+            <recinte>recinte-2</recinte>
+        </animal-3>
+        <animal-4>
+            <codi>71426</codi>
+            <nom-especie>mamifer</nom-especie>
+            <edat>10</edat>
+            <pes>20</pes>
+            <recinte>recinte-2</recinte>
+        </animal-4>
+    </animals>
+</zoologic>

@@ -1,0 +1,64 @@
+<clinica nom="Animal Kingdom" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="clinica-veterinaria.xsd">
+
+    <professionals>
+        <veterinaris>
+            <veterinari-1>
+                <nom>Curtis Wilder</nom>
+                <id>AO-67</id>
+            </veterinari-1>
+            <veterinari-2>
+                <nom>Knox Remington</nom>
+                <id>YU-52</id>
+            </veterinari-2>
+        </veterinaris>
+    </professionals>
+
+    <fitxes>
+        <client-1>
+            <nom>Joan</nom>
+            <llinatges>Planas</llinatges>
+            <data-neixement></data-neixement>
+            <dni>42856854A</dni>
+            <mascotes>
+                <cans>
+                    <ca-1>
+                        <nom>Hunter</nom>
+                        <data-neixement>7/12/2019</data-neixement>
+                        <raça>perillosa</raça>
+                        <castrats>No</castrats>
+                        <assegurançca>17656</assegurançca>
+                        <professional-assignat>veterinari-1</professional-assignat>
+                    </ca-1>
+                    <ca-2>
+                        <nom>Liam</nom>
+                        <data-neixement>9/10/2018</data-neixement>
+                        <raça>pura</raça>
+                        <castrats>Si</castrats>
+                        <assegurançca></assegurançca>
+                        <professional-assignat>veterinari-1</professional-assignat>
+                    </ca-2>
+                </cans>
+                <moix>
+                    <moix-1>
+                        <nom>Garrett</nom>
+                        <data-neixement>19/02/2010</data-neixement>
+                        <raça>pura</raça>
+                        <castrats>Si</castrats>
+                        <professional-assignat>veterinari-2</professional-assignat>
+                        <pelatge>curt</pelatge>
+                    </moix-1>
+                    <moix-2>
+                        <nom>Blake</nom>
+                        <data-neixement>10/8/2017</data-neixement>
+                        <raça></raça>
+                        <castrats>No</castrats>
+                        <professional-assignat>veterinari-2</professional-assignat>
+                        <pelatge>llarg</pelatge>
+                    </moix-2>
+                </moix>
+            </mascotes>
+        </client-1>
+    </fitxes>
+
+</clinica>
