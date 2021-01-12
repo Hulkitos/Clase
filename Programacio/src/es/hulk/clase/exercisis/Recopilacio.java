@@ -1,7 +1,7 @@
-package es.hulk.clase;
+package es.hulk.clase.exercisis;
 
 
-public class Test {
+public class Recopilacio {
 
     public static void Ex1(int[] list) {
 
