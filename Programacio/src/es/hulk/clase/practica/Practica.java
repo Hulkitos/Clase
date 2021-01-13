@@ -35,10 +35,16 @@ public class Practica {
                 break;
             case 3:
                 counterText();
+                break;
             case 4:
                 counterWords();
+                break;
             case 5:
-
+                Ex5();
+                break;
+            case 6:
+                Ex6();
+                break;
             default:
                 System.err.println("Posi una opcio valida");
                 display();
@@ -59,7 +65,7 @@ public class Practica {
 
     public static void showText() {
         if (string == null) {
-            System.out.println("No s'han trobat resultats");
+            System.err.println("No s'han trobat resultats");
         } else {
             System.out.println(string);
         }
@@ -97,6 +103,174 @@ public class Practica {
         } catch (NullPointerException exception) {
             System.err.println("Introdueixi un text");
         }
+
+        display();
+    }
+
+    public static void Ex5() {
+        int[] numeros = new int[31];
+        char[] caracters = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '.', ',', ':', '?', '!'};
+
+        for (int i = 0; i < string.length(); i++) {
+            switch (string.charAt(i)) {
+                case 'a':
+                    numeros[0]++;
+                    break;
+                case 'b':
+                    numeros[1]++;
+                    break;
+                case 'c':
+                    numeros[2]++;
+                    break;
+                case 'd':
+                    numeros[3]++;
+                    break;
+                case 'e':
+                    numeros[4]++;
+                    break;
+                case 'f':
+                    numeros[5]++;
+                    break;
+                case 'g':
+                    numeros[6]++;
+                    break;
+                case 'h':
+                    numeros[7]++;
+                    break;
+                case 'i':
+                    numeros[8]++;
+                    break;
+                case 'j':
+                    numeros[9]++;
+                    break;
+                case 'k':
+                    numeros[10]++;
+                    break;
+                case 'l':
+                    numeros[11]++;
+                    break;
+                case 'm':
+                    numeros[12]++;
+                    break;
+                case 'n':
+                    numeros[13]++;
+                    break;
+                case 'o':
+                    numeros[14]++;
+                    break;
+                case 'p':
+                    numeros[15]++;
+                    break;
+                case 'q':
+                    numeros[16]++;
+                    break;
+                case 'r':
+                    numeros[17]++;
+                    break;
+                case 's':
+                    numeros[18]++;
+                    break;
+                case 't':
+                    numeros[19]++;
+                    break;
+                case 'u':
+                    numeros[20]++;
+                    break;
+                case 'v':
+                    numeros[21]++;
+                    break;
+                case 'w':
+                    numeros[22]++;
+                    break;
+                case 'x':
+                    numeros[23]++;
+                    break;
+                case 'y':
+                    numeros[24]++;
+                    break;
+                case 'z':
+                    numeros[25]++;
+                    break;
+                case '.':
+                    numeros[26]++;
+                    break;
+                case ',':
+                    numeros[27]++;
+                    break;
+                case ':':
+                    numeros[28]++;
+                    break;
+                case '?':
+                    numeros[29]++;
+                    break;
+                case '!':
+                    numeros[30]++;
+                    break;
+            }
+        }
+        System.out.println(" ");
+        System.out.println("Numero d'aparicions del caracter " + caracters[0] + ": " + numeros[0]);
+        System.out.println("Numero d'aparicions del caracter " + caracters[1] + ": " + numeros[1]);
+        System.out.println("Numero d'aparicions del caracter " + caracters[2] + ": " + numeros[2]);
+        System.out.println("Numero d'aparicions del caracter " + caracters[3] + ": " + numeros[3]);
+        System.out.println("Numero d'aparicions del caracter " + caracters[4] + ": " + numeros[4]);
+        System.out.println("Numero d'aparicions del caracter " + caracters[5] + ": " + numeros[5]);
+        System.out.println("Numero d'aparicions del caracter " + caracters[6] + ": " + numeros[6]);
+        System.out.println("Numero d'aparicions del caracter " + caracters[7] + ": " + numeros[7]);
+        System.out.println("Numero d'aparicions del caracter " + caracters[8] + ": " + numeros[8]);
+        System.out.println("Numero d'aparicions del caracter " + caracters[9] + ": " + numeros[9]);
+        System.out.println("Numero d'aparicions del caracter " + caracters[10] + ": " + numeros[10]);
+        System.out.println("Numero d'aparicions del caracter " + caracters[11] + ": " + numeros[11]);
+        System.out.println("Numero d'aparicions del caracter " + caracters[12] + ": " + numeros[12]);
+        System.out.println("Numero d'aparicions del caracter " + caracters[13] + ": " + numeros[13]);
+        System.out.println("Numero d'aparicions del caracter " + caracters[14] + ": " + numeros[14]);
+        System.out.println("Numero d'aparicions del caracter " + caracters[15] + ": " + numeros[15]);
+        System.out.println("Numero d'aparicions del caracter " + caracters[16] + ": " + numeros[16]);
+        System.out.println("Numero d'aparicions del caracter " + caracters[17] + ": " + numeros[17]);
+        System.out.println("Numero d'aparicions del caracter " + caracters[18] + ": " + numeros[18]);
+        System.out.println("Numero d'aparicions del caracter " + caracters[19] + ": " + numeros[19]);
+        System.out.println("Numero d'aparicions del caracter " + caracters[20] + ": " + numeros[20]);
+        System.out.println("Numero d'aparicions del caracter " + caracters[21] + ": " + numeros[21]);
+        System.out.println("Numero d'aparicions del caracter " + caracters[22] + ": " + numeros[22]);
+        System.out.println("Numero d'aparicions del caracter " + caracters[23] + ": " + numeros[23]);
+        System.out.println("Numero d'aparicions del caracter " + caracters[24] + ": " + numeros[24]);
+        System.out.println("Numero d'aparicions del caracter " + caracters[25] + ": " + numeros[25]);
+        System.out.println("Numero d'aparicions del caracter " + caracters[26] + ": " + numeros[26]);
+        System.out.println("Numero d'aparicions del caracter " + caracters[27] + ": " + numeros[27]);
+        System.out.println("Numero d'aparicions del caracter " + caracters[28] + ": " + numeros[28]);
+        System.out.println("Numero d'aparicions del caracter " + caracters[29] + ": " + numeros[29]);
+        System.out.println("Numero d'aparicions del caracter " + caracters[30] + ": " + numeros[30]);
+
+        display();
+    }
+
+    public static void Ex6() {
+        char [] lletres;
+
+        int mesRepetida = 0;
+        char charMesRepetit = Character.MIN_VALUE;
+
+        lletres = string.toCharArray();
+
+        for(int i=0; i<lletres.length; i++){
+
+            char charActual = lletres[i];
+            int counter = 0;
+
+            for (int j =0; j<lletres.length; j++){
+                if (lletres[j] == charActual)
+                    counter++;
+            }
+
+            if(mesRepetida < counter)
+            {
+                mesRepetida = counter;
+                charMesRepetit = charActual;
+            }
+        }
+
+        System.out.println(charMesRepetit+": Se repite "+mesRepetida);
+        System.out.println("El Caracter que es repeteix mes vegades es: " + charMesRepetit);
 
         display();
     }

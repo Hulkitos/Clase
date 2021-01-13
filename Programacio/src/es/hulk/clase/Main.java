@@ -1,10 +1,10 @@
 package es.hulk.clase;
 
-import es.hulk.clase.exercisis.Exceptions;
+import es.hulk.clase.practica.Practica;
 
 public class Main {
 
     public static void main(String[] args) {
-        Exceptions.Ex4();
+        Practica.display();
     }
 }
