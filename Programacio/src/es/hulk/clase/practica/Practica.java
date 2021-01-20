@@ -43,7 +43,9 @@ public class Practica {
                 Ex5();
                 break;
             case 6:
-                Ex6();
+                repeatedChar();
+                break;
+            case 0:
                 break;
             default:
                 System.err.println("Posi una opcio valida");
@@ -244,7 +246,7 @@ public class Practica {
         display();
     }
 
-    public static void Ex6() {
+    public static void repeatedChar() {
         char [] lletres;
 
         int mesRepetida = 0;
@@ -270,8 +272,12 @@ public class Practica {
         }
 
         System.out.println(charMesRepetit+": Se repite "+mesRepetida);
-        System.out.println("El Caracter que es repeteix mes vegades es: " + charMesRepetit);
+        System.out.println("El Caracter que es repeteix mes vegades es: " + charMesRepetit + "");
 
         display();
+    }
+
+    public static void repeatedWord() {
+
     }
 }

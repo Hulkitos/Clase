@@ -1,0 +1,2 @@
+- També faràs que les files amb les dades (les que no són capçaleres)  que siguin senar (impar) siguin de color gris i les parell siguin blanques (apartat Tables de w3schools).
+- Utilitza tamanys de lletra, colors i colors de fons per estilitzar la teva taula tant bé com puguis.

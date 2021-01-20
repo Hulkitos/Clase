@@ -55,4 +55,12 @@ public class Person {
     public int getTelephone() {
         return this.telephone;
     }
+
+    public void display() {
+        System.out.println("Nom: " + getName());
+        System.out.println("Edat: " + getAge());
+        System.out.println("Genere: " + getGenre());
+        System.out.println("DNI: " + getDNI());
+        System.out.println("Telefon: " + getTelephone());
+    }
 }
