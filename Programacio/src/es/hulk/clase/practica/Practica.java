@@ -7,6 +7,9 @@ public class Practica {
     private static Scanner scan = new Scanner(System.in);
     private static int option;
     private static String string;
+    private static int[] numeros = new int[31];
+    private static char[] caracters = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '.', ',', ':', '?', '!'};
+
 
     public static void display() {
         System.out.println("");
@@ -19,9 +22,10 @@ public class Practica {
         System.out.println("5. N ́umero d’aparicions de cada car`acters.");
         System.out.println("6. Dir el car`acter m ́es repetit i el n ́umero d’aparicions.");
         System.out.println("7. Dir la paraula m ́es repetida i el n ́umero d’aparicions.");
-        System.out.println("5. N ́umero d’aparicions de cada car`acters.");
         System.out.println("8. Introduir per teclat un car`acter i dir quantes vegades apareix.");
         System.out.println("9. Introduir per teclat una paraula i dir quantes vegades apareix.");
+        System.out.println(" ");
+        System.out.println("0. Surt del programa");
         System.out.println(" ");
         System.out.print("Opcio: ");
         option = scan.nextInt();
@@ -44,6 +48,15 @@ public class Practica {
                 break;
             case 6:
                 repeatedChar();
+                break;
+            case 7:
+                repeatedWord();
+                break;
+            case 8:
+                Ex8();
+                break;
+            case 9:
+                Ex9();
                 break;
             case 0:
                 break;
@@ -110,9 +123,6 @@ public class Practica {
     }
 
     public static void Ex5() {
-        int[] numeros = new int[31];
-        char[] caracters = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '.', ',', ':', '?', '!'};
-
         for (int i = 0; i < string.length(); i++) {
             switch (string.charAt(i)) {
                 case 'a':
@@ -278,6 +288,67 @@ public class Practica {
     }
 
     public static void repeatedWord() {
+        String[] stringArray = string.split(" ");
+        int counter = 1;
+        int max = 0;
 
+        String current = stringArray[0];
+        String paraula = stringArray[0];
+
+        for (int i = 0; i < stringArray.length ; i++) {
+            if (stringArray[i].equals(current)) {
+                counter++;
+            } else {
+                counter = 1;
+                current = stringArray[i];
+            }
+            if (max < counter) {
+                max = counter;
+                paraula = stringArray[i];
+            }
+        }
+
+        System.out.println("Paraula mes repetida " + paraula + " amb " + counter + " aparicions");
+        display();
+    }
+
+    public static void Ex8() {
+        System.out.print("Trii un caracter: ");
+        char char1 = scan.next().charAt(0);
+        char char2;
+        int counter = 0;
+
+        for (int i = 0; i < string.length(); i++) {
+            char2 = string.charAt(i);
+            if (char1 == char2) {
+                counter++;
+            }
+        }
+
+        System.out.println("El caracter mes repetit es " + char1 + " amb " + counter + " aparicions");
+
+        display();
+    }
+
+    public static void Ex9() {
+        Scanner scan = new Scanner(System.in);
+
+        System.out.print("Escrigui una paraula: ");
+        String paraula = scan.nextLine();
+        int counter = 0;
+        String aux;
+
+        String[] array = string.split(" ");
+
+        for (int i = 0; i < array.length; i++) {
+            aux = array[i];
+            if (aux.equals(paraula)) {
+                counter++;
+            }
+        }
+
+        System.out.println("La paraula mes repetida es " + paraula + " amb " + counter + " aparicions");
+
+        display();
     }
 }
