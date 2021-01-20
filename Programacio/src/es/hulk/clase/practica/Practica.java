@@ -107,7 +107,7 @@ public class Practica {
     public static void counterWords() {
 
         try {
-            String[] arraystring = string.split(" ");
+            String[] arraystring = string.split("\\W+");
             int counter = 0;
 
             for (int i = 0; i < arraystring.length; i++) {
@@ -288,7 +288,7 @@ public class Practica {
     }
 
     public static void repeatedWord() {
-        String[] stringArray = string.split(" ");
+        String[] stringArray = string.split("\\W+");
         int counter = 1;
         int max = 0;
 
@@ -338,7 +338,7 @@ public class Practica {
         int counter = 0;
         String aux;
 
-        String[] array = string.split(" ");
+        String[] array = string.split("\\W+");
 
         for (int i = 0; i < array.length; i++) {
             aux = array[i];
