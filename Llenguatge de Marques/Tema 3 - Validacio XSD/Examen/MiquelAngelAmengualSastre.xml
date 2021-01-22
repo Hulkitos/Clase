@@ -1,0 +1,149 @@
+<?xml version="1.0"?>
+<!DOCTYPE llibreria [
+        <!ELEMENT llibreria (llibres|comics|seccions)*>
+        <!ATTLIST llibreria
+                nom CDATA #REQUIRED
+                xmlns:xs CDATA #REQUIRED
+                xs:noNamespaceSchemaLocation CDATA #REQUIRED>
+        <!ELEMENT llibres (llibre)*>
+        <!ELEMENT llibre (titol|autor|editorial|genere|linkEbook|linkCompra)*>
+        <!ATTLIST llibre
+                codi CDATA #REQUIRED>
+        <!ELEMENT titol (#PCDATA)>
+        <!ELEMENT autor (#PCDATA)>
+        <!ELEMENT editorial (#PCDATA)>
+        <!ELEMENT genere (#PCDATA)>
+        <!ELEMENT linkEbook (#PCDATA)>
+        <!ELEMENT linkCompra (#PCDATA)>
+        <!ELEMENT comics (comic)*>
+        <!ELEMENT comic (titol|autor|editorial|dibuixant|colorejador|numero|descatalogat)*>
+        <!ATTLIST comic
+                codi CDATA #REQUIRED>
+        <!ELEMENT dibuixant (#PCDATA)>
+        <!ELEMENT colorejador (#PCDATA)>
+        <!ELEMENT numero (#PCDATA)>
+        <!ELEMENT descatalogat (#PCDATA)>
+        <!ATTLIST descatalogat
+                data_des CDATA #REQUIRED>
+        <!ELEMENT seccions (seccio)*>
+        <!ELEMENT seccio (codi|nom|estants)*>
+        <!ELEMENT codi (#PCDATA)>
+        <!ELEMENT nom (#PCDATA)>
+        <!ELEMENT estants (estant)*>
+        <!ELEMENT estant (numero_estant|max_cap|copies)*>
+        <!ELEMENT numero_estant (#PCDATA)>
+        <!ELEMENT max_cap (#PCDATA)>
+        <!ELEMENT copies (copia)*>
+        <!ELEMENT copia (ISBN|num_edicio|data_impressio|num_pag)*>
+        <!ATTLIST copia
+                llibre_comic CDATA #REQUIRED>
+        <!ELEMENT ISBN (#PCDATA)>
+        <!ELEMENT num_edicio (#PCDATA)>
+        <!ELEMENT data_impressio (#PCDATA)>
+        <!ELEMENT num_pag (#PCDATA)>
+        ]>
+<llibreria nom="Món de llibres"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+           xs:noNamespaceSchemaLocation="AmengualSastreMiquelAngel.xsd">
+
+    <llibres>
+        <llibre codi="ESDA">
+            <titol>El Senyor del Anells</titol>
+            <autor>JRR Tolkien</autor>
+            <editorial>Minotauro</editorial>
+            <genere>Fantasia</genere>
+            <linkEbook>https://www.casadellibro.com/ebook-aquitania-ebook/9788408237747/11844504</linkEbook>
+        </llibre>
+        <llibre codi="ENDV">
+            <titol>El Nom del Vent</titol>
+            <autor>Patrick Rothfuss</autor>
+            <autor>Scott Farley</autor>
+            <editorial>DEBOLSILLO</editorial>
+            <genere>Fantasia</genere>
+        </llibre>
+        <llibre codi="RRO">
+            <titol>Reina Roja</titol>
+            <autor>Juan Gomez-Jurado</autor>
+            <editorial>S.A. EDICIONES B</editorial>
+            <genere>Novel·la Negra</genere>
+            <linkCompra>https://www.casadellibro.com/ebook-aquitania-ebook/9788408237747/11844504</linkCompra>
+        </llibre>
+    </llibres>
+
+    <comics>
+        <comic codi="BAU">
+            <titol>Batman: Año Uno</titol>
+            <autor>Frank Miller</autor>
+            <editorial>ECC</editorial>
+            <dibuixant>David Mazzucchelli</dibuixant>
+            <colorejador>Richmond Lewis</colorejador>
+            <numero>1</numero>
+        </comic>
+        <comic codi="WAT">
+            <titol>Watchmen</titol>
+            <autor>Alan Moore</autor>
+            <editorial>ECC</editorial>
+            <dibuixant>Dave Gibbons</dibuixant>
+            <numero>7</numero>
+            <descatalogat data_des="2010-11-12"/>
+        </comic>
+    </comics>
+
+    <seccions>
+        <seccio>
+            <codi>FTS</codi>
+            <nom>Fantasia</nom>
+            <estants>
+                <estant>
+                    <numero_estant>10</numero_estant>
+                    <max_cap>150</max_cap>
+                    <copies>
+                        <copia llibre_comic="ESDA">
+                            <ISBN>ISBN_987-92-JK</ISBN>
+                            <num_edicio>5</num_edicio>
+                            <data_impressio>2015-09-02</data_impressio>
+                            <num_pag>1515</num_pag>
+                        </copia>
+                        <copia llibre_comic="ENDV">
+                            <ISBN>ISBN_77-92-ABD</ISBN>
+                            <num_edicio>9</num_edicio>
+                            <data_impressio>2019-09-02</data_impressio>
+                            <num_pag>420</num_pag>
+                        </copia>
+                    </copies>
+                </estant>
+                <estant>
+                    <numero_estant>11</numero_estant>
+                    <max_cap>120</max_cap>
+                    <copies>
+                        <copia llibre_comic="ENDV">
+                            <ISBN>ISBN_69-928-YT</ISBN>
+                            <num_edicio>1</num_edicio>
+                            <data_impressio>2006-07-02</data_impressio>
+                            <num_pag>415</num_pag>
+                        </copia>
+                    </copies>
+                </estant>
+            </estants>
+        </seccio>
+
+        <seccio>
+            <codi>NN</codi>
+            <nom>Novel·la Negra</nom>
+            <estants>
+                <estant>
+                    <numero_estant>2</numero_estant>
+                    <max_cap>350</max_cap>
+                    <copies>
+                        <copia llibre_comic="RRO">
+                            <ISBN>ISBN_22-33-JGJ</ISBN>
+                            <num_edicio>50</num_edicio>
+                            <data_impressio>2021-06-21</data_impressio>
+                            <num_pag>260</num_pag>
+                        </copia>
+                    </copies>
+                </estant>
+            </estants>
+        </seccio>
+    </seccions>
+</llibreria>
