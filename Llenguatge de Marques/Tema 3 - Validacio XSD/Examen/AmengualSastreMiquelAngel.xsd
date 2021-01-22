@@ -8,12 +8,6 @@
     </xs:restriction>
   </xs:simpleType>
 
-  <xs:simpleType name="llibre_comic">
-    <xs:restriction base="xs:string">
-      <xs:pattern value="[A-Z]{3,4}"/>
-    </xs:restriction>
-  </xs:simpleType>
-
   <xs:complexType name="llibreType">
     <xs:sequence>
       <xs:element name="titol">
@@ -159,7 +153,7 @@
         </xs:simpleType>
       </xs:element>
     </xs:sequence>
-    <xs:attribute name="llibre_comic" use="required" type="llibre_comic"/>
+    <xs:attribute name="llibre_comic" use="required" type="codi"/>
   </xs:complexType>
   <xs:complexType name="copiesType">
     <xs:sequence>
