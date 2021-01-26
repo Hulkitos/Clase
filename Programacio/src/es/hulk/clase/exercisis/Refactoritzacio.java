@@ -10,7 +10,7 @@ public class Refactoritzacio {
 
     public static void printPersona(Person persona) {
         System.out.println("Dades de la persona: ");
-        persona.display();
+        persona.toString();
     }
 
     public static void displayNumbers() {

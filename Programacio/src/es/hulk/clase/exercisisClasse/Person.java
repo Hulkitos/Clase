@@ -56,11 +56,12 @@ public class Person {
         return this.telephone;
     }
 
-    public void display() {
+    public String toString() {
         System.out.println("Nom: " + getName());
         System.out.println("Edat: " + getAge());
         System.out.println("Genere: " + getGenre());
         System.out.println("DNI: " + getDNI());
         System.out.println("Telefon: " + getTelephone());
+        return toString();
     }
 }
