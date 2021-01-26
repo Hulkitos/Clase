@@ -1,12 +1,12 @@
 package es.hulk.clase.exercisisClasse;
 
-public class Empleat extends Person {
+public class Employee extends Person {
 
     private int id;
     private int sou;
     private int anysPertinencia;
 
-    public Empleat(String name, int age, String DNI, String genre, int telephone, int id, int sou, int anysPertinencia) {
+    public Employee(String name, int age, String DNI, String genre, int telephone, int id, int sou, int anysPertinencia) {
         super(name, age, DNI, genre, telephone);
         this.anysPertinencia = anysPertinencia;
         this.id = id;
