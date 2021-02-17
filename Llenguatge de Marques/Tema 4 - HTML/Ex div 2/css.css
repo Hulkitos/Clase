@@ -8,6 +8,13 @@
     display: table;
 }
 
+.row{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+}
+
 [class*="col-"] {
     float: left;
     padding: 15px;
@@ -26,7 +33,7 @@
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
 
-.div-1 {
+#div-1 {
     clear: both;
     display: table;
     width: 70%;
@@ -36,13 +43,11 @@
     padding: 10px;
 }
 
-header {
+#titol {
     width: 70%;
     margin-left: auto;
     margin-right: auto;
     padding: 5px;
-    border-bottom: black 3px solid;
-    margin-bottom: 20px;
 }
 
 #seccio-1, #seccio-2 {
@@ -51,4 +56,40 @@ header {
 
 #formulari {
     clear: both;
+}
+
+.header-div {
+    float: left;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+#cap {
+    background-color: bisque;
+    border-bottom: black 3px solid;
+    margin-bottom: 10px;
+}
+
+.buttones {
+    float: right;
+    display: table;
+}
+
+.buttones::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+body {
+    margin: 0px;
+}
+#border {
+    border-bottom: solid 3px;
+}
+
+.hrline {
+    color: black;
+    box-shadow: 2px 2px 2px;
 }
