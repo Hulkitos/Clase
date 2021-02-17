@@ -16,18 +16,81 @@
             <div id="seccio-1" class="col-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
             <div id="seccio-2" class="col-5">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</div>
             <div id="formulari"><h3>Formulari</h3></div>
-            <div class="col-2">
+            <div class="col-5">
                 <form>
-                    <label>Nom:</label><br>
-                    <input type="text" placeholder="Nom">
 
-                    <label>Llinatge 1:</label><br>
-                    <input type="text" placeholder="Llinatge 1">
+                    <label for="dni">DNI</label><br>
+                    <input id="dni" name="dni" type="text" placeholder="DNI">
 
-                    <label>Llinatge 2:</label><br>
-                    <input type="text" placeholder="Llinatge 2">
+                    <label for="e-mail">Correu Electronic</label><br>
+                    <input id="e-mail" name="e-mail" type="email" placeholder="example@exmaple.com">
+
+                    <label for="fname">Nom</label><br>
+                    <input id="fname" name="fname" type="text" placeholder="Natasha">
+
+                    <label for="fsurname">Llinatge 1</label><br>
+                    <input id="fsurname" name="fsurname" type="text" placeholder="Romanoff">
+
+                    <label for="s-surname">Llinatge 2</label><br>
+                    <input id="s-surname" name="s-surname" type="text" placeholder="Burton">
+
+                    <label>Genere</label><br>
+
+                    <input id="home" name="home" type="radio" placeholder="fname" type="text" Value="Natasha">
+                    <label for="home">Home</label>
+
+                    <input id="dona" name="dona" type="radio" placeholder="fname" type="text" Value="Natasha">
+                    <label for="dona">Dona</label>
+
+                    <input id="altres" name="altres" type="radio" placeholder="fname" type="text" Value="Natasha">
+                    <label for="altres">Altres</label>
+
+                    <br>
+
+                    <label for="date">Data Neixement</label><br>
+                    <input id="date" name="date" type="date" placeholder="10/06/1996">
+
+                    <label for="estudis">Nivell d'estudis</label><br>
+                    <select name="estudis" id="estudis">
+                        <option value="ESO">ESO</option>
+                        <option value="Batchillerat">Batchillerat</option>
+                        <option value="Grau-Mitja">FP Grau Mitja</option>
+                        <option value="Grau-Superior">FP Grau Superior</option>
+                    </select>
+
+                    <label>Aficions</label><br>
+
+                    <input id="Surf" name="Surf" type="checkBox" placeholder="fname" type="text" Value="Natasha">
+                    <label for="Surf">Surf</label>
+
+                    <input id="Escacs" name="Escacs" type="checkBox" placeholder="fname" type="text" Value="Natasha">
+                    <label for="Escacs">Escacs</label>
+
+                    <input id="Basket" name="Basket" type="checkBox" placeholder="fname" type="text" Value="Natasha">
+                    <label for="Basket">Basket</label>
+
+                    <input id="E-Sports" name="E-Sports" type="checkBox" placeholder="fname" type="text" Value="Natasha">
+                    <label for="E-Sports">E-Sports</label>
+
+                    <input id="Dormir" name="Dormir" type="checkBox" placeholder="fname" type="text" Value="Natasha">
+                    <label for="Dormir">Dormir</label>
+
+                    <input id="Llegir" name="Llegir" type="checkBox" placeholder="fname" type="text" Value="Natasha">
+                    <label for="Llegir">Llegir</label>
+
+                    <input id="Dibuixar" name="Dibuixar" type="checkBox" placeholder="fname" type="text" Value="Natasha">
+                    <label for="Dibuixar">Dibuixar</label>
+
+                    <input id="Musica" name="Musica" type="checkBox" placeholder="fname" type="text" Value="Natasha">
+                    <label for="Musica">Musica</label>
+
+                    <br>
+
+                    <label for="vol">Probabilitat d'aprovar 0 - 100:</label>
+                    <input type="range" id="vol" name="vol" min="0" max="100">
+
                 </form>
             </div>
         </div>
     </body>
-</html>
+</html>-
