@@ -2,9 +2,7 @@ package es.hulk.clase.refactor;
 
 public class Invoice {
     public float totalPrice (float price, float vat, float discount) {
-        float implVat = 0;
-
-        implVat = (vat * price) / 100;
+        float implVat = (vat * price) / 100;
         System.out.println("Applied vat: " + implVat);
 
         implVat = price + implVat;
