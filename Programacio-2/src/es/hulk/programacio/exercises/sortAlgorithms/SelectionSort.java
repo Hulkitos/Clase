@@ -2,18 +2,7 @@ package es.hulk.programacio.exercises.sortAlgorithms;
 
 public class SelectionSort {
 
-    /*public static void arraySort(int[] array) {
-        for (int i = 0; i < array.length; i++) {
-
-            for (int j = 1; j < array.length; i++) {
-
-            }
-        }
-    }
-
-     */
-
-    public static void selectionSort(int[] array) {
+    public static void applySort(int[] array) {
         int min;
         int minIndex = 0;
         int aux;

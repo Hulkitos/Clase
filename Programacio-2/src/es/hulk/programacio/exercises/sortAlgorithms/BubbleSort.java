@@ -2,16 +2,16 @@ package es.hulk.programacio.exercises.sortAlgorithms;
 
 public class BubbleSort {
 
-    public static void bubbleSort(int[] elements) {
+    public static void applySort(int[] INT_ARRAY) {
         int aux;
 
-        for (int i = 0; i < elements.length; i++) {
-            for (int j = 1; j < elements.length - i; j++) {
+        for (int i = 0; i < INT_ARRAY.length; i++) {
+            for (int j = 1; j < INT_ARRAY.length - i; j++) {
                 int index = j - 1;
-                if (elements[index] > elements[j]) {
-                    aux = elements[index];
-                    elements[index] = elements[j];
-                    elements[j] = aux;
+                if (INT_ARRAY[index] > INT_ARRAY[j]) {
+                    aux = INT_ARRAY[index];
+                    INT_ARRAY[index] = INT_ARRAY[j];
+                    INT_ARRAY[j] = aux;
                 }
             }
         }

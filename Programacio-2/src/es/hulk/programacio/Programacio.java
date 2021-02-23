@@ -1,6 +1,7 @@
 package es.hulk.programacio;
 
 import es.hulk.programacio.exercises.sortAlgorithms.BubbleSort;
+import es.hulk.programacio.exercises.sortAlgorithms.SelectionSort;
 
 public class Programacio {
 
@@ -13,7 +14,7 @@ public class Programacio {
         }
 
         System.out.println(" ");
-        BubbleSort.bubbleSort(elements);
+        SelectionSort.applySort(elements);
 
         System.out.println("Array after sort");
         for (int i = 0; i < elements.length; i++) {
