@@ -38,81 +38,114 @@
             <div id="seccio-1" class="col-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
             <div id="seccio-2" class="col-5">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</div>
             <div id="formulari"><h3>Formulari</h3></div>
-            <div class="col-5">
-                <form>
+                <form method="post">
 
-                    <label for="dni">DNI</label><br>
-                    <input id="dni" name="dni" type="text" placeholder="DNI">
+                    <div class="col-4">
+                        <label for="dni">DNI:</label><br>
+                        <input type="text" id="dni" name="dni" placeholder="123456789a" class="col-12">
+                    </div>
 
-                    <label for="e-mail">Correu Electronic</label><br>
-                    <input id="e-mail" name="e-mail" type="email" placeholder="example@exmaple.com">
+                    <div class="col-8">
+                        <label for="correu">Correu electrònic</label><br>
+                        <input type="email" id="correu" name="correu" placeholder="example@example.com" class="col-12">
+                    </div>
 
-                    <label for="fname">Nom</label><br>
-                    <input id="fname" name="fname" type="text" placeholder="Natasha">
+                    <div class="col-4">
+                        <label for="firstname">Nom:</label><br>
+                        <input type="text" id="firstname" name="firstname" placeholder="Bruja" class="col-12">
+                    </div>
 
-                    <label for="fsurname">Llinatge 1</label><br>
-                    <input id="fsurname" name="fsurname" type="text" placeholder="Romanoff">
+                    <div class="col-4">
+                        <label for="Llinatge">Llinatge 1:</label><br>
+                        <input type="text" id="Llinatge" name="Llinatge" placeholder="Escarlata" class="col-12">
+                    </div>
 
-                    <label for="s-surname">Llinatge 2</label><br>
-                    <input id="s-surname" name="s-surname" type="text" placeholder="Burton">
+                    <div class="col-4">
+                        <label for="Llinatge2">Llinatge 2:</label><br>
+                        <input type="text" id="Llinatge2" name="Llinatge2" placeholder="Vision" class="col-12">
+                    </div>
 
-                    <label>Genere</label><br>
+                    <div class="col-4">
 
-                    <input id="home" name="Genere" type="radio" value="home">
-                    <label for="home">Home</label>
+                        <label> Gènere: </label><br>
 
-                    <input id="dona" name="Genere" type="radio" value="dona">
-                    <label for="dona">Dona</label>
+                        <input type="radio" id="home" name="genere" value="home">
+                        <label for="home">Home</label>
 
-                    <input id="altres" name="Genere" type="radio" value="altres">
-                    <label for="altres">Altres</label>
+                        <input type="radio" id="dona" name="genere" value="dona">
+                        <label for="dona">Dona</label>
 
-                    <br>
+                        <input type="radio" id="altres" name="genere" value="altres">
+                        <label for="altres">Altres</label>
+                    </div>
 
-                    <label for="date">Data Neixement</label><br>
-                    <input id="date" name="date" type="date" placeholder="10/06/1996">
+                    <div class="col-8">
+                        <label for="data">Data de Naixament:</label><br>
+                        <input id="data" name="data" type="date" value="data" class="col-6">
+                    </div>
 
-                    <label for="estudis">Nivell d'estudis</label><br>
-                    <select name="estudis" id="estudis">
-                        <option value="ESO">ESO</option>
-                        <option value="Batchillerat">Batchillerat</option>
-                        <option value="Grau-Mitja">FP Grau Mitja</option>
-                        <option value="Grau-Superior">FP Grau Superior</option>
-                    </select>
+                    <div class="col-4">
 
-                    <label>Aficions</label><br>
+                        <label for="nivel">Nivell d'estudis:</label><br>
+                        <select name="nivel" id="nivel" class="col-12">
+                            <option value="ESO">ESO</option>
+                            <option value="Batx">Batxillerat</option>
+                            <option value="CFGM">Cicle formatiu de grau mitja</option>
+                            <option value="CFGS">Cicle formatiu de grau superior</option>
+                            <option value="Uni">Universitat</option>
+                        </select>
 
-                    <input id="Surf" name="Surf" type="checkBox" placeholder="fname" type="text" Value="Natasha">
-                    <label for="Surf">Surf</label>
+                    </div>
+                    <div class="col-8 texte">
+                        <label>Aficions</label><br>
 
-                    <input id="Escacs" name="Escacs" type="checkBox" placeholder="fname" type="text" Value="Natasha">
-                    <label for="Escacs">Escacs</label>
+                        <input type="checkBox" id="Surf" name="Surf">
+                        <label for="Surf">Surf</label>
 
-                    <input id="Basket" name="Basket" type="checkBox" placeholder="fname" type="text" Value="Natasha">
-                    <label for="Basket">Basket</label>
+                        <input type="checkBox"  id="Escacs" name="Escacs">
+                        <label for="Escacs">Escacs</label>
 
-                    <input id="E-Sports" name="E-Sports" type="checkBox" placeholder="fname" type="text" Value="Natasha">
-                    <label for="E-Sports">E-Sports</label>
+                        <input type="checkBox"  id="Basket" name="Basket">
+                        <label for="Basket">Basket</label>
 
-                    <input id="Dormir" name="Dormir" type="checkBox" placeholder="fname" type="text" Value="Natasha">
-                    <label for="Dormir">Dormir</label>
+                        <input type="checkBox"  id="E-Sports" name="E-Sports">
+                        <label for="E-Sports">E-Sports</label>
 
-                    <input id="Llegir" name="Llegir" type="checkBox" placeholder="fname" type="text" Value="Natasha">
-                    <label for="Llegir">Llegir</label>
+                        <input type="checkBox"  id="Dormir" name="Dormir">
+                        <label for="Dormir">Dormir</label>
 
-                    <input id="Dibuixar" name="Dibuixar" type="checkBox" placeholder="fname" type="text" Value="Natasha">
-                    <label for="Dibuixar">Dibuixar</label>
+                        <input type="checkBox"  id="Llegir" name="Llegir">
+                        <label for="Llegir">Llegir</label>
 
-                    <input id="Musica" name="Musica" type="checkBox" placeholder="fname" type="text" Value="Natasha">
-                    <label for="Musica">Musica</label>
+                        <input type="checkBox"  id="Dibuixar" name="Dibuixar">
+                        <label for="Dibuixar">Dibuixar</label>
 
-                    <br>
+                        <input type="checkBox"  id="Musica" name="Musica">
+                        <label for="Musica">Musica</label>
 
-                    <label for="vol">Probabilitat d'aprovar 0 - 100:</label>
-                    <input type="range" id="vol" name="vol" min="0" max="100">
+                    </div>
+
+                    <div class="col-12">
+                        <template name="template">
+                            <label for="vol">Probabilitats d'aprovar 0 - 100:</label><br>
+                            <input type="range" id="vol" name="vol" min="0" max="100" class="col-12">
+                            <output id="output"></output>
+                        </template>
+                    </div>
+
+                    <div onload="createDiv()">
+                        <p id="rangeValue"></p>
+                    </div>
+
+                    <div class="col-2">
+                        <input onclick="click()" type="submit" id="submit" value="Enviar">
+                    </div>
 
                 </form>
             </div>
-        </div>
     </body>
+
+    <script type="text/javascript">
+    </script>
+
 </html>

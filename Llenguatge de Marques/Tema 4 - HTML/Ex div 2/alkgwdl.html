@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="javascriptform.css">
+</head>
+<body>
+<form name= "details"><div class="box1"><div id="a"><input type="text" name="lastname" placeholder="LAST NAME"></div><br>
+    <div id="b"><input type="text" name="firstname" placeholder="FIRST NAME"></div><br>
+    <div id="c"><input type="e-mail" name="email" placeholder="E-MAIL"></div><br>
+    <div id="d"><input type="password" name="password" placeholder="PASSWORD"></div><br>
+    <div id="sub-button"><button onclick="getdetails();">submit</button></div></form>
+
+</div>
+
+<script>
+    function getdetails()
+    {
+        var a = document.forms["details"]["lastname"].value;
+        var b = document.forms["details"]["firstname"].value;
+        var c= document.forms["details"]["email"].value;
+
+        alert("Your name is "+a+" "+b+". Your e-mail is "+c);
+
+    }
+</script>
+</html>
