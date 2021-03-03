@@ -17,6 +17,43 @@ public class Dog {
         this.pedigri = pedigri;
     }
 
-    
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
 
+    public void setEdat(int edat) {
+        this.edat = edat;
+    }
+
+    public void setRaça(String raça) {
+        this.raça = raça;
+    }
+
+    public void setNvacunes(int nvacunes) {
+        this.nvacunes = nvacunes;
+    }
+
+    public void setPedigri(boolean pedigri) {
+        this.pedigri = pedigri;
+    }
+
+    public String getNom() {
+        return this.nom;
+    }
+
+    public int getEdat() {
+        return this.edat;
+    }
+
+    public String getRaça() {
+        return this.raça;
+    }
+
+    public int getNvacunes() {
+        return this.nvacunes;
+    }
+
+    public boolean isPedigri() {
+        return this.pedigri;
+    }
 }
