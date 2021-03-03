@@ -64,4 +64,10 @@ public class Dog {
         System.out.println(pedigri);
         System.out.println(nvacunes);
     }
+
+    public int novaVacuna(int newVacuna) {
+        int aux = nvacunes;
+        nvacunes = aux + newVacuna;
+        return nvacunes;
+    }
 }
