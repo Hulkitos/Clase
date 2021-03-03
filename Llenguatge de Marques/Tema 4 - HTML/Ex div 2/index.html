@@ -135,7 +135,7 @@
                     </div>
 
                     <div class="col-2">
-                        <input onclick="click()" type="submit" id="submit" value="Enviar">
+                        <input onClick="click()" type="submit" id="submit" value="Enviar">
                     </div>
 
                     <div>
@@ -149,8 +149,13 @@
     <script type="text/javascript">
         function changeRange() {
             var a = document.getElementById("range").value;
+            var message = "Probabilitats d'aprovar " + a + " de 100:"
 
-            document.getElementById("valuerange").innerHTML = "Probabilitats d'aprovar " + a + " de 100:";
+            document.getElementById("valuerange").innerHTML = message;
+        }
+
+        function click() {
+            alert("button pressed!");
         }
     </script>
 
