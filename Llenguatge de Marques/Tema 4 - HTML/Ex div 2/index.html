@@ -126,11 +126,8 @@
                     </div>
 
                     <div class="col-12">
-                        <template name="template">
-                            <label for="vol">Probabilitats d'aprovar 0 - 100:</label><br>
-                            <input type="range" id="vol" name="vol" min="0" max="100" class="col-12">
-                            <output id="output"></output>
-                        </template>
+                            <label id="valuerange" for="range">Probabilitats d'aprovar 0 de 100:</label><br>
+                            <input type="range" id="range" name="vol" min="0" max="100" class="col-12" onChange="changeRange()">
                     </div>
 
                     <div onload="createDiv()">
@@ -141,11 +138,20 @@
                         <input onclick="click()" type="submit" id="submit" value="Enviar">
                     </div>
 
+                    <div>
+                        <p id=""></p>
+                    </div>
+
                 </form>
             </div>
     </body>
 
     <script type="text/javascript">
+        function changeRange() {
+            var a = document.getElementById("range").value;
+
+            document.getElementById("valuerange").innerHTML = "Probabilitats d'aprovar " + a + " de 100:";
+        }
     </script>
 
 </html>
