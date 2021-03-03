@@ -56,4 +56,12 @@ public class Dog {
     public boolean isPedigri() {
         return this.pedigri;
     }
+
+    public void display() {
+        System.out.println(nom);
+        System.out.println(edat);
+        System.out.println(raça);
+        System.out.println(pedigri);
+        System.out.println(nvacunes);
+    }
 }
