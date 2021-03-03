@@ -62,7 +62,29 @@ public class Variables {
     }
 
     public static void ArithmeticOperations3() {
+        double c = 8;
+        double result = (a + b) * 5 / (2 * c);
 
+        System.out.println(result);
+    }
+
+    public static void ArithmeticOperations4(double a, double b) {
+        double p = (a * a) + (b * b);
+        System.out.println(p);
+
+        double area = a * b;
+        System.out.println(area);
+    }
+
+    public static void ArithmeticOperations5() {
+        double pi = 3.14;
+        double h = 4;
+        double d = 6;
+        double r = d / 2;
+
+        // V = pi * r2 * h
+        double result = pi * (r * r) * h;
+        System.out.println(result);
     }
 
 }
