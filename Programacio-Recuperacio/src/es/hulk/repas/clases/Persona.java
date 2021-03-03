@@ -67,4 +67,19 @@ public class Persona {
         System.out.println(sexe);
         System.out.println(telefono);
     }
+
+    public static void print() {
+        Persona persona = new Persona();
+        Persona persona1 = new Persona("John Gilbert", 40, "6876897869a", "Femeni", 8797676);
+
+        persona.setNom("Elena Gilbert");
+        persona.setDNI("5987798a");
+        persona.setEdat(17);
+        persona.setSexe("Femeni");
+        persona.setTelefono(75768987);
+
+        persona.display();
+        System.out.println(" ");
+        persona1.display();
+    }
 }
