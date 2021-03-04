@@ -34,6 +34,7 @@
         <!ELEMENT numero_assegurança (#PCDATA)>
         <!ATTLIST numero_assegurança id CDATA #REQUIRED>
         ]>
+
 <clinica nom_clinica="animal_kingdom">
     <professionals>
         <veterinari>
