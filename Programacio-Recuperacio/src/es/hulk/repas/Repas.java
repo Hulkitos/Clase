@@ -2,13 +2,13 @@ package es.hulk.repas;
 
 import es.hulk.repas.clases.Dog;
 import es.hulk.repas.clases.Persona;
+import es.hulk.repas.exercisis.Condicionals;
 import es.hulk.repas.exercisis.Variables;
 
 public class Repas {
 
     public static void main(String[] args) {
-        printDogs();
-
+        Condicionals.getTimeZone(20, 4, 2010);
     }
 
     public static void printPersons() {

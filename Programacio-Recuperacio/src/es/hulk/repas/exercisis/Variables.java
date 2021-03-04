@@ -24,9 +24,7 @@ public class Variables {
     }
 
     public static void ArithmeticOperations2() {
-        int aux;
-
-        aux = a * (b + 2) * 10;
+        int aux = a * (b + 2) * 10;
         System.out.println(aux);
     }
 
