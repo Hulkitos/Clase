@@ -7,7 +7,6 @@ public class Dog {
     String race;
     int nvacunes;
     String pedigri;
-    boolean vacuned;
 
     public Dog(String name, int age, String race, int nvacunes, String pedigri) {
         this.name = name;

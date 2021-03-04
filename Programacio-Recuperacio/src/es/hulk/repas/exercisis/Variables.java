@@ -82,7 +82,6 @@ public class Variables {
         double d = 6;
         double r = d / 2;
 
-        // V = pi * r2 * h
         double result = pi * (r * r) * h;
         System.out.println(result);
     }
