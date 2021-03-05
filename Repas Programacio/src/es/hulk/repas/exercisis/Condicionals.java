@@ -23,52 +23,55 @@ public class Condicionals {
         }
     }
 
-    public static void weekDaysIF(int day) {
-        if (day == 1) {
-            System.out.println("Dilluns");
-        }
-        if (day == 2) {
-            System.out.println("Dimarts");
-        }
-        if (day == 3) {
-            System.out.println("Dimecres");
-        }
-        if (day == 4) {
-            System.out.println("Dijous");
-        }
-        if (day == 5) {
-            System.out.println("Divendres");
-        }
-        if (day == 6) {
-            System.out.println("Dissabte");
-        }
-        if (day == 7) {
-            System.out.println("Diumenge");
-        }
-    }
-
-    public static void weekDaysSwitch(int day) {
-        switch (day) {
-            case 1:
-                System.out.println("Dilluns");
+    public static void weekDays(String type, int day) {
+        switch (type) {
+            case "IF_STATE":
+                if (day == 1) {
+                    System.out.println("Dilluns");
+                }
+                if (day == 2) {
+                    System.out.println("Dimarts");
+                }
+                if (day == 3) {
+                    System.out.println("Dimecres");
+                }
+                if (day == 4) {
+                    System.out.println("Dijous");
+                }
+                if (day == 5) {
+                    System.out.println("Divendres");
+                }
+                if (day == 6) {
+                    System.out.println("Dissabte");
+                }
+                if (day == 7) {
+                    System.out.println("Diumenge");
+                }
                 break;
-            case 2:
-                System.out.println("Dimarts");
-                break;
-            case 3:
-                System.out.println("Dimecres");
-                break;
-            case 4:
-                System.out.println("Dijous");
-                break;
-            case 5:
-                System.out.println("Divendres");
-                break;
-            case 6:
-                System.out.println("Dissabte");
-                break;
-            case 7:
-                System.out.println("Diumenge");
+            case "SWITCH":
+                switch (day) {
+                    case 1:
+                        System.out.println("Dilluns");
+                        break;
+                    case 2:
+                        System.out.println("Dimarts");
+                        break;
+                    case 3:
+                        System.out.println("Dimecres");
+                        break;
+                    case 4:
+                        System.out.println("Dijous");
+                        break;
+                    case 5:
+                        System.out.println("Divendres");
+                        break;
+                    case 6:
+                        System.out.println("Dissabte");
+                        break;
+                    case 7:
+                        System.out.println("Diumenge");
+                        break;
+                }
                 break;
         }
     }
@@ -212,7 +215,6 @@ public class Condicionals {
     public static void moneyCount(int money) {
         // billets 50€, 20€, 10€ i 5€
         // monedes 2€ i 1€
-        int aux;
         int cincuanta = 0;
         int vint = 0;
         int deu = 0;

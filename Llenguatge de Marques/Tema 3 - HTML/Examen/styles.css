@@ -1,0 +1,50 @@
+.logo {
+    height: 60px;
+}
+
+body{
+    margin: 0px;
+}
+
+.div-principal {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title-principal {
+    font-size: 30px;
+}
+
+.button {
+    font-size: 20px;
+    color: white;
+    background-color: tomato;
+    padding: 10px;
+    border-radius: 6px;
+    border: 2px solid black;
+    width: 80%;
+    text-align: left;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.float-right {
+    float: right;
+}
+
+.center {
+    margin-bottom: 30%;
+}
+
+.div-2 {
+    margin-top: 20px;
+}
+
+.div-3 {
+    margin-left: -20px;
+}
+
+.titol-secon {
+    font-weight: bold;
+}

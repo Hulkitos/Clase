@@ -2,13 +2,14 @@ package es.hulk.repas;
 
 import es.hulk.repas.clases.Dog;
 import es.hulk.repas.clases.Persona;
+import es.hulk.repas.exercisis.Arrays;
 import es.hulk.repas.exercisis.Bucles;
 import es.hulk.repas.exercisis.Condicionals;
 
 public class Repas {
 
     public static void main(String[] args) {
-        Bucles.averageCalculator();
+        Arrays.printArray("BUCLE", new int[]{1, 2, 3, 4, 5, 6, 7});
     }
 
     public static void printPersons() {

@@ -30,7 +30,7 @@
     border-radius: 6px;
     border: 2px solid black;
     width: 80%;
-    text-align: left;
+    text-align: right;
 }
 
 [class*="col-"] {
