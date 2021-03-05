@@ -8,7 +8,7 @@ import es.hulk.repas.exercisis.Condicionals;
 public class Repas {
 
     public static void main(String[] args) {
-        Bucles.stopOnZero();
+        Bucles.averageCalculator();
     }
 
     public static void printPersons() {
