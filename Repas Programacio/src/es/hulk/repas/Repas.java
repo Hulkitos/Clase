@@ -2,12 +2,13 @@ package es.hulk.repas;
 
 import es.hulk.repas.clases.Dog;
 import es.hulk.repas.clases.Persona;
+import es.hulk.repas.exercisis.Bucles;
 import es.hulk.repas.exercisis.Condicionals;
 
 public class Repas {
 
     public static void main(String[] args) {
-        Condicionals.moneyCount(30);
+        Bucles.stopOnZero();
     }
 
     public static void printPersons() {

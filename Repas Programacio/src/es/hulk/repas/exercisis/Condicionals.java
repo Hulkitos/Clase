@@ -1,12 +1,8 @@
 package es.hulk.repas.exercisis;
 
-import java.util.Calendar;
 import java.util.Date;
-import java.util.Scanner;
 
 public class Condicionals {
-
-    private static final Scanner scan = new Scanner(System.in);
 
     public static void positiveOrNegative(int num) {
         if (num < 0) {
@@ -16,8 +12,7 @@ public class Condicionals {
         }
     }
 
-    public static void multiple() {
-        int num = scan.nextInt();
+    public static void multiple(int num) {
         int div = num / 2;
         int result = div % 0;
 
