@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Exercici 3</title>
+    <meta charset="utf-8">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <style>
+        [class*="col-"] {
+            float: left;
+        }
+
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .col-1{width: 8.33%}
+        .col-2{width: 16.66%}
+        .col-3{width: 25%}
+        .col-4{width: 33.33%}
+        .col-5{width: 41.66%}
+        .col-6{width: 50%}
+        .col-7{width: 58.33%}
+        .col-8{width: 66.66%}
+        .col-9{width: 75%}
+        .col-10{width: 83.33%}
+        .col-11{width: 91.66%}
+        .col-12{width: 100%}
+
+        body {
+            margin: 0px;
+        }
+
+        .div{
+            text-align: left;
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+<header class="row">
+    <div class="col-6 div">HOLA1</div>
+    <div class="col-6 div">HOLA</div>
+</header>
+
+</body>
+
+</html>
