@@ -10,6 +10,7 @@ body{
     width: 70%;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 20px;
 }
 
 .title-principal {
@@ -33,6 +34,10 @@ body{
     float: right;
 }
 
+.float-left {
+    float: left;
+}
+
 .center {
     margin-bottom: 30%;
 }
@@ -47,4 +52,43 @@ body{
 
 .titol-secon {
     font-weight: bold;
+}
+
+* {
+    font-family: "Comic Sans MS";
+}
+
+.images {
+    height: 240px;
+}
+
+div {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.format-div {
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.apart {
+    border-left: 2px solid black;
+}
+
+.images-2 {
+    height: 130px;
+}
+
+.title-section {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+.last-div {
+    margin-bottom: 50px;
 }
