@@ -124,7 +124,138 @@ public class Condicionals {
 
     public static void getSecondTimeZone(int dia, int mes, int any) {
         switch(mes) {
+            case 1:
+                if (dia <= 31) {
+                    System.out.println("Data correcte");
+                }
+                mes = 1;
+                break;
+            case 2:
+                dia = 28;
+                if (dia <= 28) {
+                    System.out.println("Data correcte");
+                }
+                mes = 2;
+            case 3:
+                if (dia <= 31) {
+                    System.out.println("Data correcte");
+                }
+                mes = 3;
+                break;
+            case 4:
+                if (dia <= 30) {
+                    System.out.println("Data correcte");
+                }
+                mes = 4;
+                break;
+            case 5:
+                if (dia <= 31) {
+                    System.out.println("Data correcte");
+                }
+                mes = 5;
+                break;
+            case 6:
+                if (dia <= 30) {
+                    System.out.println("Data correcte");
+                }
+                mes = 6;
+                break;
+            case 7:
+                if (dia <= 31) {
+                    System.out.println("Data correcte");
+                }
+                mes = 7;
+            case 8:
+                if (dia <= 31) {
+                    System.out.println("Data correcte");
+                }
+                mes = 8;
+                break;
+            case 9:
+                if (dia <= 30) {
+                    System.out.println("Data correcte");
+                }
+                mes = 9;
+                break;
+            case 10:
+                if (dia <= 31) {
+                    System.out.println("Data correcte");
+                }
+                mes = 10;
+                break;
+            case 11:
+                if (dia <= 30) {
+                    System.out.println("Data correcte");
+                }
+                mes = 11;
+            case 12:
+                if (dia <= 31) {
+                    System.out.println("Data correcte");
+                }
+                mes = 12;
+                break;
+            default:
+                System.out.println("Incorrecte");
+                break;
+        }
+    }
+
+    public static void sortNum(int a, int b, int c) {
+        if (a < b) {
 
         }
     }
+
+    public static void moreAge(int age) {
+        if (age < 18) {
+            System.out.println("Menor d'edat");
+        } else {
+            System.out.println("Major d'edat");
+        }
+    }
+
+    public static void moneyCount(int money) {
+        // billets 50€, 20€, 10€ i 5€
+        // monedes 2€ i 1€
+        int aux;
+        int cincuanta = 0;
+        int vint = 0;
+        int deu = 0;
+        int cinc = 0;
+        int dos = 0;
+        int un = 0;
+
+        if (money >= 50) {
+            cincuanta = money / 50;
+            money = money - cincuanta * 50;
+        }
+        if (money >= 20) {
+            vint = money / 20;
+            money = money - vint * 20;
+        }
+        if (money >= 10) {
+            deu = money / 10;
+            money = money - deu * 10;
+        }
+        if (money >= 5) {
+            cinc = money / 5;
+            money = money - cinc * 5;
+        }
+        if (money >= 2) {
+            dos = money / 2;
+            money = money - dos * 2;
+        }
+        if (money >= 1) {
+            un = money / 1;
+            money = money - un * 1;
+        }
+
+        System.out.println(cincuanta);
+        System.out.println(vint);
+        System.out.println(deu);
+        System.out.println(cinc);
+        System.out.println(dos);
+        System.out.println(un);
+    }
+
 }
