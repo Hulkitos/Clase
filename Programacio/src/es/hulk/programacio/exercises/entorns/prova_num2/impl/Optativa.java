@@ -4,10 +4,8 @@ import es.hulk.programacio.exercises.entorns.prova_num2.Assignatura;
 
 public class Optativa extends Assignatura {
 
-    private double preu;
-
-    public Optativa(int codi, String assignatura, int tipus, int credits, String[] alumnes) {
-        super(codi, assignatura, tipus, credits, alumnes);
+    public Optativa(int tipus, int credits) {
+        super(tipus, credits);
     }
 
     @Override

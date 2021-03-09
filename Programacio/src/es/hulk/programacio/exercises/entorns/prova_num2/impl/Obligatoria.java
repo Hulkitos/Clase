@@ -4,8 +4,8 @@ import es.hulk.programacio.exercises.entorns.prova_num2.Assignatura;
 
 public class Obligatoria extends Assignatura {
 
-    public Obligatoria(int codi, String assignatura, int tipus, int credits, String[] alumnes) {
-        super(codi, assignatura, tipus, credits, alumnes);
+    public Obligatoria(int tipus, int credits) {
+        super(tipus, credits);
     }
 
     @Override

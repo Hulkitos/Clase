@@ -16,19 +16,24 @@ public abstract class Assignatura {
         this.alumnes = alumnes;
     }
 
+    public Assignatura(int tipus, int credits) {
+        this.tipus = tipus;
+        this.credits = credits;
+    }
+
     public abstract double getPreu();
 
     public boolean findAlumne(String alumne) {
         int i = 0;
         String alumneAux = alumnes[i];
-        boolean found = false;
-        while (i < alumnes.length && !found) {
+
+        while (i < alumnes.length) {
             if (alumne.equals(alumneAux)) {
-                found = true;
+                return true;
             }
             i++;
         }
-        return found;
+        return false;
     }
 
     public int getTipus() {
