@@ -67,4 +67,17 @@ public class Array {
         System.out.println(average);
     }
 
+    public static void twoArray(int[] ArrayA, int[] ArrayB) {
+        int[] ArrayC = new int[8];
+        for (int i = 0; i < ArrayA.length; i++) {
+            ArrayC[i * 2] = ArrayA[i];
+            ArrayC[i*2+1] = ArrayB[i];
+        }
+
+        for (int i = 0; i < ArrayC.length; i++) {
+            System.out.println(ArrayC[i]);
+        }
+
+    }
+
 }
