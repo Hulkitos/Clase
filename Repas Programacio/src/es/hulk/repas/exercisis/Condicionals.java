@@ -112,89 +112,90 @@ public class Condicionals {
         }
     }
 
-    public static void getTimeZone(int dia, int mes, int any) {
-        if (dia <= 30 || mes <= 12 || any <= 2060) {
-            System.out.println(dia + " " + mes + " " + any);
-        } else {
-            System.out.println("Esta malament");
-        }
-    }
-
-    public static void getSecondTimeZone(int dia, int mes, int any) {
-        switch(mes) {
-            case 1:
-                if (dia <= 31) {
-                    System.out.println("Data correcte");
+    public static void getTimeZone(String type, int dia, int mes, int any) {
+        switch (type) {
+            case "SHORT":
+                if (dia <= 30 || mes <= 12 || any <= 2060) {
+                    System.out.println(dia + " " + mes + " " + any);
+                } else {
+                    System.out.println("Esta malament");
                 }
-                mes = 1;
-                break;
-            case 2:
-                dia = 28;
-                if (dia <= 28) {
-                    System.out.println("Data correcte");
+            case "LONG":
+                switch(mes) {
+                    case 1:
+                        if (dia <= 31) {
+                            System.out.println("Data correcte");
+                        }
+                        mes = 1;
+                        break;
+                    case 2:
+                        dia = 28;
+                        if (dia <= 28) {
+                            System.out.println("Data correcte");
+                        }
+                        mes = 2;
+                    case 3:
+                        if (dia <= 31) {
+                            System.out.println("Data correcte");
+                        }
+                        mes = 3;
+                        break;
+                    case 4:
+                        if (dia <= 30) {
+                            System.out.println("Data correcte");
+                        }
+                        mes = 4;
+                        break;
+                    case 5:
+                        if (dia <= 31) {
+                            System.out.println("Data correcte");
+                        }
+                        mes = 5;
+                        break;
+                    case 6:
+                        if (dia <= 30) {
+                            System.out.println("Data correcte");
+                        }
+                        mes = 6;
+                        break;
+                    case 7:
+                        if (dia <= 31) {
+                            System.out.println("Data correcte");
+                        }
+                        mes = 7;
+                    case 8:
+                        if (dia <= 31) {
+                            System.out.println("Data correcte");
+                        }
+                        mes = 8;
+                        break;
+                    case 9:
+                        if (dia <= 30) {
+                            System.out.println("Data correcte");
+                        }
+                        mes = 9;
+                        break;
+                    case 10:
+                        if (dia <= 31) {
+                            System.out.println("Data correcte");
+                        }
+                        mes = 10;
+                        break;
+                    case 11:
+                        if (dia <= 30) {
+                            System.out.println("Data correcte");
+                        }
+                        mes = 11;
+                    case 12:
+                        if (dia <= 31) {
+                            System.out.println("Data correcte");
+                        }
+                        mes = 12;
+                        break;
+                    default:
+                        System.out.println("Incorrecte");
+                        break;
                 }
-                mes = 2;
-            case 3:
-                if (dia <= 31) {
-                    System.out.println("Data correcte");
-                }
-                mes = 3;
-                break;
-            case 4:
-                if (dia <= 30) {
-                    System.out.println("Data correcte");
-                }
-                mes = 4;
-                break;
-            case 5:
-                if (dia <= 31) {
-                    System.out.println("Data correcte");
-                }
-                mes = 5;
-                break;
-            case 6:
-                if (dia <= 30) {
-                    System.out.println("Data correcte");
-                }
-                mes = 6;
-                break;
-            case 7:
-                if (dia <= 31) {
-                    System.out.println("Data correcte");
-                }
-                mes = 7;
-            case 8:
-                if (dia <= 31) {
-                    System.out.println("Data correcte");
-                }
-                mes = 8;
-                break;
-            case 9:
-                if (dia <= 30) {
-                    System.out.println("Data correcte");
-                }
-                mes = 9;
-                break;
-            case 10:
-                if (dia <= 31) {
-                    System.out.println("Data correcte");
-                }
-                mes = 10;
-                break;
-            case 11:
-                if (dia <= 30) {
-                    System.out.println("Data correcte");
-                }
-                mes = 11;
-            case 12:
-                if (dia <= 31) {
-                    System.out.println("Data correcte");
-                }
-                mes = 12;
-                break;
-            default:
-                System.out.println("Incorrecte");
-                break;
         }
     }
 
