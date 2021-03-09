@@ -196,4 +196,27 @@ public class Array {
         }
     }
 
+    public static void searchArrayAfterYChar() {
+        Scanner scanner = new Scanner(System.in);
+
+        int N = 10;
+        char[] chars = new char[N];
+        int counter = 0;
+        boolean found = false;
+
+        for (int i = 0; i < chars.length; i++) {
+            chars[i] = scanner.next().charAt(0);
+        }
+
+        for (int i = 0; i < N; i++) {
+            if (chars[i] == 'y') {
+                found = true;
+            } else if (chars[i] == 'x') {
+                counter++;
+            }
+        }
+
+        System.out.println("Aparicions de X: " + counter);
+    }
+
 }
