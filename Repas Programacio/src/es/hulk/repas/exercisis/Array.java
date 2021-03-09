@@ -71,13 +71,35 @@ public class Array {
         int[] ArrayC = new int[8];
         for (int i = 0; i < ArrayA.length; i++) {
             ArrayC[i * 2] = ArrayA[i];
-            ArrayC[i*2+1] = ArrayB[i];
+            ArrayC[i * 2 + 1] = ArrayB[i];
         }
 
         for (int i = 0; i < ArrayC.length; i++) {
             System.out.println(ArrayC[i]);
         }
+    }
 
+    public static void sortArray(int[] num) {
+        int min = num.length - 1;
+
+        boolean descending = true;
+        boolean ascending = true;
+
+        for (int i = 0; i < min; i++) {
+            if (num[i] > num[i+1]) {
+                ascending = false;
+            } else if(num[i] < num[i+1]){
+                descending = false;
+            }
+        }
+
+        if (descending) {
+            System.out.println("Array Ordenada: Major a Menor");
+        } else if (ascending) {
+            System.out.println("Array Ordenada: Menor a Major");
+        } else {
+            System.out.println("Array no Ordenada");
+        }
     }
 
 }
