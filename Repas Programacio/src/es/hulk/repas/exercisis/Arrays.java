@@ -54,4 +54,15 @@ public class Arrays {
         System.out.println(str);
     }
 
+    public static void averageArrayCalculator(int[] num) {
+        int aux = 0;
+        int counter = 0;
+        for (int i = 0; i < num.length; i++) {
+            aux += num[i];
+            counter++;
+        }
+        double average = aux / counter;
+        System.out.println(average);
+    }
+
 }
