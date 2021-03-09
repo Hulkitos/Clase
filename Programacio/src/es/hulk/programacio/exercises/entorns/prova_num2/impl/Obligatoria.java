@@ -22,4 +22,9 @@ public class Obligatoria extends Assignatura {
         }
         return preu;
     }
+
+    @Override
+    public boolean findAlumne(String alumne) {
+        return false;
+    }
 }

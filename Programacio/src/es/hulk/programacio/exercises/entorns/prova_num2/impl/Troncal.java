@@ -12,4 +12,9 @@ public class Troncal extends Assignatura {
     public double getPreu() {
         return getCredits() * 21 + 10;
     }
+
+    @Override
+    public boolean findAlumne(String alumne) {
+        return false;
+    }
 }

@@ -12,4 +12,9 @@ public class Optativa extends Assignatura {
     public double getPreu() {
         return getCredits() * 21 + 15;
     }
+
+    @Override
+    public boolean findAlumne(String alumne) {
+        return false;
+    }
 }

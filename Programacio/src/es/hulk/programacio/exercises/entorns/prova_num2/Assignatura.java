@@ -21,23 +21,19 @@ public abstract class Assignatura {
         this.credits = credits;
     }
 
+    public Assignatura(String[] alumnes) {
+        this.alumnes = alumnes;
+    }
+
     public abstract double getPreu();
 
-    public boolean findAlumne(String alumne) {
-        int i = 0;
-        String alumneAux = alumnes[i];
-
-        while (i < alumnes.length) {
-            if (alumne.equals(alumneAux)) {
-                return true;
-            }
-            i++;
-        }
-        return false;
-    }
+    public abstract boolean findAlumne(String alumne);
 
     public int getCredits() {
         return credits;
     }
 
+    public String[] getAlumnes() {
+        return alumnes;
+    }
 }
