@@ -88,9 +88,9 @@ public class Array {
         boolean ascending = true;
 
         for (int i = 0; i < min; i++) {
-            if (num[i] > num[i+1]) {
+            if (num[i] > num[i + 1]) {
                 ascending = false;
-            } else if(num[i] < num[i+1]){
+            } else if (num[i] < num[i + 1]) {
                 descending = false;
             }
         }
@@ -106,6 +106,7 @@ public class Array {
 
     public static void positiveArrayList() {
         ArrayList<Integer> num = new ArrayList<Integer>();
+
         Scanner scanner = new Scanner(System.in);
 
         int min = num.size() - 1;
@@ -119,7 +120,7 @@ public class Array {
                 System.out.print("Numeros: ");
                 j = scanner.nextInt();
                 num.add(j);
-            } else  {
+            } else {
                 System.out.print("Numeros: ");
                 j = scanner.nextInt();
             }
@@ -134,5 +135,39 @@ public class Array {
             System.out.println(num.get(i));
         }
     }
+
+
+    public static void arrayListExercise() {
+        ArrayList<Integer> positive = new ArrayList<Integer>();
+        ArrayList<Integer> negative = new ArrayList<Integer>();
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Numeros: ");
+        int num = scanner.nextInt();
+
+        while (num != 0) {
+            if (num > 0) {
+                System.out.print("Numeros: ");
+                num = scanner.nextInt();
+                positive.add(num);
+            } else if (num < 0) {
+                System.out.print("Numeros: ");
+                num = scanner.nextInt();
+                negative.add(num);
+            }
+        }
+
+        for (int i = 0; i < positive.size(); i++) {
+            System.out.println("Numeros Positius");
+            System.out.println(positive.get(i));
+        }
+
+        for (int i = 0; i < negative.size(); i++) {
+            System.out.println("Numeros Negatius");
+            System.out.println(negative.get(i));
+        }
+    }
+
 
 }
