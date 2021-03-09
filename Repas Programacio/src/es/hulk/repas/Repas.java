@@ -12,7 +12,7 @@ public class Repas {
     private static char[] chars = {'h', 'o', 'l', 'a'};
 
     public static void main(String[] args) {
-        Array.sortArray(num);
+        Array.positiveArrayList();
     }
 
     public static void printPersons() {

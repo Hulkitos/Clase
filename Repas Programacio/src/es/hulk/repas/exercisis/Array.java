@@ -1,6 +1,8 @@
 package es.hulk.repas.exercisis;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Array {
 
@@ -99,6 +101,38 @@ public class Array {
             System.out.println("Array Ordenada: Menor a Major");
         } else {
             System.out.println("Array no Ordenada");
+        }
+    }
+
+    public static void positiveArrayList() {
+        ArrayList<Integer> num = new ArrayList<Integer>();
+        Scanner scanner = new Scanner(System.in);
+
+        int min = num.size() - 1;
+
+        System.out.print("Numeros: ");
+        int j = scanner.nextInt();
+        num.add(j);
+
+        while (j != 0) {
+            if (j > 1) {
+                System.out.print("Numeros: ");
+                j = scanner.nextInt();
+                num.add(j);
+            } else  {
+                System.out.print("Numeros: ");
+                j = scanner.nextInt();
+                if (j > 0) {
+                    num.add(j);
+                } else {
+                    num.remove(j);
+                }
+            }
+        }
+
+        for (int i = 0; i < num.size(); i++) {
+            num.remove(min);
+            System.out.println(num.get(i));
         }
     }
 
