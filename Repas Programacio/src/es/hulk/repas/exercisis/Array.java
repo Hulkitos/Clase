@@ -106,10 +106,7 @@ public class Array {
 
     public static void positiveArrayList() {
         ArrayList<Integer> num = new ArrayList<Integer>();
-
         Scanner scanner = new Scanner(System.in);
-
-        int min = num.size() - 1;
 
         System.out.print("Numeros: ");
         int j = scanner.nextInt();
@@ -217,6 +214,20 @@ public class Array {
         }
 
         System.out.println("Aparicions de X: " + counter);
+    }
+
+    public static void sayNumberInArray() {
+        Scanner scanner = new Scanner(System.in);
+        int[] num = {7, 8, 9, 5, 2};
+
+        for (int i = 0; i < num.length; i++) {
+            int j = scanner.nextInt();
+            if (j == num[i]) {
+                System.out.println(j);
+            } else {
+                System.out.println("no esta dins la array");
+            }
+        }
     }
 
 }
