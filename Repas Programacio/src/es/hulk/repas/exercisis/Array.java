@@ -115,23 +115,24 @@ public class Array {
         num.add(j);
 
         while (j != 0) {
-            if (j > 1) {
+            if (j > 0) {
                 System.out.print("Numeros: ");
                 j = scanner.nextInt();
                 num.add(j);
             } else  {
                 System.out.print("Numeros: ");
                 j = scanner.nextInt();
-                if (j > 0) {
-                    num.add(j);
-                } else {
+                if (j < 0) {
                     num.remove(j);
+                } else {
+                    num.add(j);
                 }
             }
         }
 
+        num.remove(num.size() - 1);
+
         for (int i = 0; i < num.size(); i++) {
-            num.remove(min);
             System.out.println(num.get(i));
         }
     }
