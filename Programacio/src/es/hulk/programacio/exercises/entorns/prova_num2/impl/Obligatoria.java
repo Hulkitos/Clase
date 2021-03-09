@@ -22,5 +22,4 @@ public class Obligatoria extends Assignatura {
         }
         return preu;
     }
-
 }

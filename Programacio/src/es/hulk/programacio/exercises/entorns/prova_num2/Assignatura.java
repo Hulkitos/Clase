@@ -36,10 +36,6 @@ public abstract class Assignatura {
         return false;
     }
 
-    public int getTipus() {
-        return this.tipus;
-    }
-
     public int getCredits() {
         return credits;
     }
