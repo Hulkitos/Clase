@@ -7,6 +7,8 @@ import es.hulk.repas.exercisis.Array;
 public class Repas {
 
     private static int[] num = {2, 3, 4, 5};
+    private static int[] ArrayA = {1, 3, 5, 7};
+    private static int[] ArrayB = {2, 4, 6, 8};
     private static char[] chars = {'h', 'o', 'l', 'a'};
 
     public static void main(String[] args) {
