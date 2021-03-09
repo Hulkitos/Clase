@@ -7,9 +7,10 @@ import es.hulk.repas.exercisis.Arrays;
 public class Repas {
 
     private static int[] num = {2, 3, 4, 5};
+    private static char[] chars = {'h', 'o', 'l', 'a'};
 
     public static void main(String[] args) {
-        Arrays.arrayString(num);
+        Arrays.charArray(chars);
     }
 
     public static void printPersons() {
