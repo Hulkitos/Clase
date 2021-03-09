@@ -169,5 +169,31 @@ public class Array {
         }
     }
 
+    public static void searchCharInArrayPart1(char[] chars) {
+        int counter = 0;
+        for (int i = 0; i < chars.length; i++) {
+            if (chars[i] == 'x' || chars[i] == 'X') {
+                counter++;
+            }
+        }
+    }
+
+    public static void searchCharInArrayPart2() {
+        int N = 10;
+        char[] chars = new char[N];
+        int counter = 0;
+
+        Scanner scanner = new Scanner(System.in);
+
+        for (int i = 0; i < chars.length; i++) {
+            chars[i] = scanner.next().charAt(0);
+        }
+
+        for (int i = 0; i < chars.length; i++) {
+            if (chars[i] == 'x' || chars[i] == 'X') {
+                counter++;
+            }
+        }
+    }
 
 }
