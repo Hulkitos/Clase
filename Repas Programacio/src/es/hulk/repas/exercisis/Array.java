@@ -122,17 +122,15 @@ public class Array {
             } else  {
                 System.out.print("Numeros: ");
                 j = scanner.nextInt();
-                if (j < 0) {
-                    num.remove(j);
-                } else {
-                    num.add(j);
-                }
             }
         }
 
         num.remove(num.size() - 1);
 
         for (int i = 0; i < num.size(); i++) {
+            if (num.get(i) < 0) {
+                num.remove(i);
+            }
             System.out.println(num.get(i));
         }
     }
