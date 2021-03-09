@@ -2,7 +2,7 @@ package es.hulk.repas;
 
 import es.hulk.repas.clases.Dog;
 import es.hulk.repas.clases.Persona;
-import es.hulk.repas.exercisis.Arrays;
+import es.hulk.repas.exercisis.Array;
 
 public class Repas {
 
@@ -10,7 +10,7 @@ public class Repas {
     private static char[] chars = {'h', 'o', 'l', 'a'};
 
     public static void main(String[] args) {
-        Arrays.charArray(chars);
+        Array.intArray(num);
     }
 
     public static void printPersons() {

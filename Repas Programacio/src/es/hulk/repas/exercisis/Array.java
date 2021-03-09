@@ -1,6 +1,8 @@
 package es.hulk.repas.exercisis;
 
-public class Arrays {
+import java.util.Arrays;
+
+public class Array {
 
     public static void printArray(String type, int[] num) {
         switch (type) {
@@ -50,13 +52,13 @@ public class Arrays {
     }
 
     public static void intArray(int[] num) {
-        String str = String.valueOf(num);
+        String str = Arrays.toString(num);
         System.out.println(str);
     }
 
     public static void averageArrayCalculator(int[] num) {
-        int aux = 0;
-        int counter = 0;
+        double aux = 0;
+        double counter = 0;
         for (int i = 0; i < num.length; i++) {
             aux += num[i];
             counter++;
