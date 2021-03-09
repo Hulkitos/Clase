@@ -25,5 +25,33 @@ public class Arrays {
         }
     }
 
+    public static void inverseArray(int[] num) {
+        int min = num.length - 1;
+        for (int i = min; i < num.length; i--) {
+            if (i != -1) {
+                System.out.println(num[i]);
+            } else {
+                break;
+            }
+        }
+    }
+
+    public static void sumaArray(int[] num) {
+        int suma = 0;
+        for (int i = 0; i < num.length; i++) {
+            suma += num[i];
+        }
+        System.out.println(suma);
+    }
+
+    public static void charArray(char[] chars) {
+        String str = String.valueOf(chars);
+        System.out.println(str);
+    }
+
+    public static void intArray(int[] num) {
+        String str = String.valueOf(num);
+        System.out.println(str);
+    }
 
 }
