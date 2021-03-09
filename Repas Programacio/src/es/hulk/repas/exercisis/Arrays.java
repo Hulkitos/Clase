@@ -19,5 +19,11 @@ public class Arrays {
         }
     }
 
+    public static void arrayString(int[] num) {
+        for (int i = 0; i < num.length; i++) {
+            System.out.println(num[i]);
+        }
+    }
+
 
 }
