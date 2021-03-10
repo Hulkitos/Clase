@@ -1,7 +1,5 @@
 package es.hulk.programacio.exercises.clases_subclases.AbstractBanking;
 
-import javax.swing.*;
-
 public class CheckingAcount extends Account{
 
     private double overDraftLimit;

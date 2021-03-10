@@ -1,7 +1,5 @@
 package es.hulk.programacio.exercises.clases_subclases.AbstractBanking;
 
-import java.util.Date;
-
 public abstract class Account{
 
     protected double balance;
