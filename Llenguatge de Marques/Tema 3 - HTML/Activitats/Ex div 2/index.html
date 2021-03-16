@@ -126,22 +126,17 @@
                     </div>
 
                     <div class="col-12">
-                            <label id="valuerange" for="range">Probabilitats d'aprovar 0 de 100:</label><br>
-                            <input type="range" id="range" name="vol" min="0" max="100" class="col-12" onChange="changeRange()">
+                        <label id="valuerange" for="range">Probabilitats d'aprovar 0 de 100:</label><br>
+                        <input type="range" id="range" name="vol" min="0" max="100" class="col-12" onChange="changeRange()">
                     </div>
 
-                    <div onload="createDiv()">
+                    <div>
                         <p id="rangeValue"></p>
                     </div>
 
                     <div class="col-2">
                         <input onClick="click()" type="submit" id="submit" value="Enviar">
                     </div>
-
-                    <div>
-                        <p id=""></p>
-                    </div>
-
                 </form>
             </div>
     </body>
@@ -151,11 +146,13 @@
             var a = document.getElementById("range").value;
             var message = "Probabilitats d'aprovar " + a + " de 100:"
 
+            if (a < 0) {
+                document.getElementById("divprob").style.opacity = 0;
+            }
+            if (a > 100) {
+                document.getElementById("divprob").style.opacity = 1;
+            }
             document.getElementById("valuerange").innerHTML = message;
-        }
-
-        function click() {
-            alert("button pressed!");
         }
     </script>
 
