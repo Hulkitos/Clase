@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Divs 2</title>
+
+    <link rel="stylesheet" href="css.css">
+</head>
+
+<body onload="changeRange()">
+
+<header class="row header-div">
+
+    <div class="col-6">Titol pàgina</div>
+
+    <div class="col-1">
+        <button type="button" class="boton">Menu Item</button>
+    </div>
+    <div class="col-1">
+        <button type="button" class="boton">Menu Item</button>
+    </div>
+    <div class="col-1">
+        <button type="button" class="boton">Menu Item</button>
+    </div>
+
+</header>
+
+<br>
+<br>
+<br>
+<br>
+<hr class="hrline" width="100%">
+<br>
+<br>
+<div id="div-1">
+
+        <div class="col-12">
+            <input type="range" id="range" value="0" name="vol" min="0" max="100" class="col-12" onChange="changeRange()">
+            <br><br>
+            <div id="divprob" class="divprob">
+                <p id="num"></p>
+            </div>
+        </div>
+
+        <div class="col-2">
+            <input onClick="click()" type="submit" id="submit" value="Enviar">
+        </div>
+    </form>
+</div>
+</body>
+
+<script type="text/javascript">
+    function changeRange() {
+        var a = document.getElementById("range").value;
+
+        if (a == 0) {
+            document.getElementById("divprob").style.opacity = 0;
+        }
+        if (a >= 1) {
+            document.getElementById("divprob").style.opacity = 0.1;
+        }
+        if (a >= 10) {
+            document.getElementById("divprob").style.opacity = 0.2;
+        }
+        if (a >= 20) {
+            document.getElementById("divprob").style.opacity = 0.3;
+        }
+        if (a >= 30) {
+            document.getElementById("divprob").style.opacity = 0.4;
+        }
+        if (a >= 40) {
+            document.getElementById("divprob").style.opacity = 0.5;
+        }
+        if (a >= 50) {
+            document.getElementById("divprob").style.opacity = 0.6;
+        }
+        if (a >= 60) {
+            document.getElementById("divprob").style.opacity = 0.7;
+        }
+        if (a >= 70) {
+            document.getElementById("divprob").style.opacity = 0.8;
+        }
+        if (a >= 80) {
+            document.getElementById("divprob").style.opacity = 0.9;
+        }
+        if (a == 100) {
+            document.getElementById("divprob").style.opacity = 1;
+        }
+
+        document.getElementById("num").innerHTML = a;
+    }
+</script>
+
+</html>

@@ -1,8 +1,6 @@
 package es.hulk.programacio;
 
 import es.hulk.programacio.clases.Dog;
-import es.hulk.programacio.exercises.sortAlgorithms.BubbleSort;
-import es.hulk.programacio.exercises.sortAlgorithms.SelectionSort;
 
 public class Programacio {
 

@@ -31,9 +31,8 @@ public class Repas {
     }
 
     public static void printDogs() {
-        Dog ca = new Dog("Perrito Caliente", 5, "Nutella", 5, true);
         Dog segonca = new Dog("Perrito", 5, "Nesquik", 7, true);
-        Dog perriton = new Dog("Caliente", 5, "Donettes", 4, true);
+
         segonca.novaVacuna(786);
         segonca.display();
     }
