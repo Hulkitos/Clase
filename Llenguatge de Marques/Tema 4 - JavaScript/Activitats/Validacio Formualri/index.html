@@ -136,6 +136,8 @@
                         <input onClick="click()" type="submit" id="submit" value="Enviar">
                     </div>
                 </form>
+
+            <button onClick="checkEmail()">Calvo</button>
             </div>
     </body>
 
@@ -153,7 +155,14 @@
         }
 
         function checkDni() {
+            var dni = document.getElementById("dni").value;
+            var long = dni.length;
 
+          if (long == 10) {
+                alert(dni)
+            } else {
+                alert("too long")
+            }
         }
 
         function checkEmail() {
