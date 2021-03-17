@@ -137,7 +137,7 @@
                     </div>
                 </form>
 
-            <button onClick="checkEmail()">Calvo</button>
+            <button onClick="checkmail()">Calvo</button>
             </div>
     </body>
 
@@ -159,14 +159,21 @@
             var long = dni.length;
 
           if (long == 10) {
-                alert(dni)
+                alert(dni);
             } else {
-                alert("too long")
+                alert("too long");
             }
         }
 
-        function checkEmail() {
+        function checkmail() {
+            var format = /\S+@\S+\.\S+/;
+            var email = document.getElementById("email").value;
 
+            if (email == format) {
+                alert(email);
+            } else {
+                alert("bad mouse");
+            }
         }
     </script>
 
