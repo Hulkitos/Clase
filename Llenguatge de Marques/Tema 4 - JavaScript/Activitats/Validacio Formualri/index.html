@@ -167,9 +167,10 @@
 
         function checkmail() {
             var format = /\S+@\S+\.\S+/;
-            var email = document.getElementById("email").value;
+            var mail = document.getElementById("email").value;
+            alert(mail);
 
-            if (email == format) {
+           if (email == format) {
                 alert(email);
             } else {
                 alert("bad mouse");
