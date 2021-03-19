@@ -167,15 +167,19 @@
 
         function checkmail() {
             var format = /\S+@\S+\.\S+/;
-            var mail = document.getElementById("email").value;
-            alert(mail);
+            var email = document.getElementById("correu").value;
 
-           if (email == format) {
+           if (format.test(email)) {
                 alert(email);
             } else {
-                alert("bad mouse");
+                alert("Bad Email");
             }
         }
+
+        function checkName() {
+
+        }
+
     </script>
 
 </html>
