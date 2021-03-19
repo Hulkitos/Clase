@@ -3,6 +3,7 @@ package es.hulk.repas;
 import es.hulk.repas.clases.Dog;
 import es.hulk.repas.clases.Persona;
 import es.hulk.repas.exercisis.Array;
+import es.hulk.repas.exercisis.Revisio1;
 
 public class Repas {
 
@@ -12,7 +13,8 @@ public class Repas {
     private static char[] chars = {'h', 'o', 'l', 'a'};
 
     public static void main(String[] args) {
-        Array.positiveArrayList();
+        Revisio1.countXifres(30);
+
     }
 
     public static void printPersons() {

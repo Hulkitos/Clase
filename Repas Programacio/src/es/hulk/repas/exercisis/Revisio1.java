@@ -20,9 +20,24 @@ public class Revisio1 {
         }
     }
 
-    public static void countXifres(int num) {
-
+    public static int countXifres(int num) {
+        int xifres = 0;
+        if (num <= 9) {
+            return 1;
+        }
+        if (num <= 99) {
+            return 2;
+        }
+        if (num <= 999) {
+            return 3;
+        }
+        if (num <= 9999) {
+            return 4;
+        }
+        if (num <= 10000) {
+            return 5;
+        }
+        return 6;
     }
-
 
 }
