@@ -141,6 +141,8 @@
             </div>
     </body>
 
+    <script link="checks.js"></script>
+
     <script type="text/javascript">
         function changeRange() {
             var a = document.getElementById("range").value;
@@ -153,62 +155,6 @@
             document.getElementById("valuerange").innerHTML = message;
             document.getElementById("num").innerHTML = a;
         }
-
-        function checkDni() {
-            var dni = document.getElementById("dni").value;
-            var long = dni.length;
-
-          if (long == 10) {
-                alert(dni);
-            } else {
-                alert("DNI too long");
-            }
-        }
-
-        function checkmail() {
-            var format = /\S+@\S+\.\S+/;
-            var email = document.getElementById("correu").value;
-
-           if (format.test(email)) {
-                alert(email);
-            } else {
-                alert("Bad Email");
-            }
-        }
-
-        function checkName() {
-            var name = document.getElementById("firstname").value;
-            var long = name.length;
-
-            if (long == 10) {
-                alert(name);
-            } else {
-                alert("Name too long");
-            }
-        }
-
-        function checkSurname() {
-            var surname = document.getElementById("Llinatge").value;
-            var long = surname.length;
-
-            if (long == 20) {
-                alert(surname);
-            } else {
-                alert("Surname too long");
-            }
-        }
-
-        function checkSecondSurname() {
-            var secondSurname = document.getElementById("Llinatge2").value;
-            var long = secondSurname.length;
-
-            if (long == 20) {
-                alert(secondSurname);
-            } else {
-                alert("Surname too long");
-            }
-        }
-
     </script>
 
 </html>
