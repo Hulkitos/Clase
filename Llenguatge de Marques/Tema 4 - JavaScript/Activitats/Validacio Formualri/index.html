@@ -161,7 +161,7 @@
           if (long == 10) {
                 alert(dni);
             } else {
-                alert("too long");
+                alert("DNI too long");
             }
         }
 
@@ -177,7 +177,25 @@
         }
 
         function checkName() {
+            var name = document.getElementById("firstname").value;
+            var long = name.length;
 
+            if (long == 10) {
+                alert(name);
+            } else {
+                alert("Name too long");
+            }
+        }
+
+        function checkSurname() {
+            var surname = document.getElementById("Llinatge").value;
+            var long = surname.length;
+
+            if (long == 20) {
+                alert(surname);
+            } else {
+                alert("Surname too long");
+            }
         }
 
     </script>
