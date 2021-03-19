@@ -8,14 +8,8 @@ use centers;
 show tables from centers;
 
 -- ex4
-select * from mysql.user;
-select * from activity;
-select * from material;
-select * from material_external;
-select * from material_internal;
-select * from plant;
-select * from routing;
-select * from work_center;
+select * from db;
+select * from users;
 
 -- ex 5
 show grants for centers;
