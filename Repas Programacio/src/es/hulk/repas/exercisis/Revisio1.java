@@ -57,10 +57,17 @@ public class Revisio1 {
         int mes2 = scanner.nextInt();
         int any2 = scanner.nextInt();
 
-        if (dia1 <= dies && dia2 <= dies && mes1 <= mesos && mes2 <= mesos && any1 <= anys && any2 <= anys) {
-            System.out.println("Correcte");
-        } else {
-            System.out.println("Incorrecte");
-        }
+        int diesAny1 = any1 * 365;
+        int diesAny2 = any2 * 365;
+
+        int diesMesos1 = mes1 * 30;
+        int diesMesos2 = mes2 * 30;
+
+        int calcul1 = diesAny1 + diesMesos1 + dia1;
+        int calcul2 = diesAny2 + diesMesos2 + dia2;
+
+        int calculFinal = calcul1 - calcul2;
+
+        System.out.println(calculFinal);
     }
 }
