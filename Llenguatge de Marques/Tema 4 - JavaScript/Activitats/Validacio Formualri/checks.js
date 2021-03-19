@@ -24,7 +24,7 @@ function checkName() {
     var name = document.getElementById("firstname").value;
     var long = name.length;
 
-    if (long == 10) {
+    if (long != 0 && long >= 10) {
         alert(name);
     } else {
         alert("Name too long");
@@ -35,7 +35,7 @@ function checkSurname() {
     var surname = document.getElementById("Llinatge").value;
     var long = surname.length;
 
-    if (long == 20) {
+    if (long != 0 && long >= 20) {
         alert(surname);
     } else {
         alert("Surname too long");
@@ -46,7 +46,7 @@ function checkSecondSurname() {
     var secondSurname = document.getElementById("Llinatge2").value;
     var long = secondSurname.length;
 
-    if (long == 20) {
+    if (long != 0 && long >= 20) {
         alert(secondSurname);
     } else {
         alert("Surname too long");
