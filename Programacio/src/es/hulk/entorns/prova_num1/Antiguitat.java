@@ -1,4 +1,4 @@
-package es.hulk.programacio.exercises.entorns.prova_num1;
+package es.hulk.entorns.prova_num1;
 
 public class Antiguitat {
 

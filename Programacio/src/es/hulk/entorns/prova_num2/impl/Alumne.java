@@ -1,6 +1,6 @@
-package es.hulk.programacio.exercises.entorns.prova_num2.impl;
+package es.hulk.entorns.prova_num2.impl;
 
-import es.hulk.programacio.exercises.entorns.prova_num2.Assignatura;
+import es.hulk.entorns.prova_num2.Assignatura;
 
 public class Alumne extends Assignatura {
 

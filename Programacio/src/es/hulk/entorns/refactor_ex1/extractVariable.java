@@ -1,4 +1,4 @@
-package es.hulk.programacio.exercises.entorns.refactor_ex1;
+package es.hulk.entorns.refactor_ex1;
 
 import java.util.Scanner;
 

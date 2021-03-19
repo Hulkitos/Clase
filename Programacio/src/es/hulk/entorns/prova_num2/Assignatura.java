@@ -1,4 +1,4 @@
-package es.hulk.programacio.exercises.entorns.prova_num2;
+package es.hulk.entorns.prova_num2;
 
 public abstract class Assignatura {
 

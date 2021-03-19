@@ -1,4 +1,4 @@
-package es.hulk.programacio.exercises.entorns.refactor_ex3;
+package es.hulk.entorns.refactor_ex3;
 
 public class Discount {
 
