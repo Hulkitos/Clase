@@ -70,4 +70,28 @@ public class Revisio1 {
 
         System.out.println(calculFinal);
     }
+
+    public static void dieferenciaHores() {
+        Scanner scanner = new Scanner(System.in);
+        int minutsSegons = 60;
+
+        int hours = scanner.nextInt();
+        int minutes = scanner.nextInt();
+        int secons = scanner.nextInt();
+
+        int hores = 0;
+        int minuts = 0;
+        int segons = 0;
+
+        if (hours <= 24 && minutes <= minutsSegons && secons <= minutsSegons) {
+            if (segons < minutsSegons) {
+                hores++;
+            }
+            if (hours < minutsSegons) {
+                minuts++;
+            }
+        } else {
+            System.out.println("Introdueix una hora correcte");
+        }
+    }
 }
