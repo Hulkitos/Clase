@@ -1,5 +1,6 @@
 package es.hulk.repas.exercisis;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Revisio1 {
@@ -122,5 +123,40 @@ public class Revisio1 {
         while (numero != 0);
 
         System.out.println("Suma: " + aux);
+    }
+
+    public static void multipleOfTwo() {
+        Scanner scanner = new Scanner(System.in);
+        int counter = 0;
+        int numero;
+
+        do {
+            numero = scanner.nextInt();
+            if (numero % 2 == 0) {
+                counter++;
+            }
+        } while (numero % 2 == 0);
+
+        System.out.println("S'ha introduit un numero que no es multiple de 2");
+        System.out.println("Numero de vegades que s'ha introduit un numero multiple de 2: " + counter);
+    }
+
+    public static void betweenZeroAndMaxNumber() {
+        Scanner scanner = new Scanner(System.in);
+        Random random = new Random();
+        int numero = scanner.nextInt();
+        int rand = random.nextInt(numero);
+
+        do {
+            numero = scanner.nextInt();
+            if (numero < rand) {
+                System.out.println("Numero menor");
+            }
+            if (numero > rand) {
+                System.out.println("Numero major");
+            }
+        } while (rand != numero);
+
+        System.out.println("S'ha introduit el numero correcte.");
     }
 }
