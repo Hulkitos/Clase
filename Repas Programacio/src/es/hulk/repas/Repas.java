@@ -13,7 +13,7 @@ public class Repas {
     private static char[] chars = {'h', 'o', 'l', 'a'};
 
     public static void main(String[] args) {
-        Revisio1.daysBetween2Dates();
+        Revisio1.quadratDeNumero();
     }
 
     public static void printPersons() {

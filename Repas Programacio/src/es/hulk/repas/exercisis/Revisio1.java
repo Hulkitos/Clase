@@ -77,21 +77,50 @@ public class Revisio1 {
 
         int hours = scanner.nextInt();
         int minutes = scanner.nextInt();
-        int secons = scanner.nextInt();
+        int seconds = scanner.nextInt();
 
-        int hores = 0;
-        int minuts = 0;
-        int segons = 0;
+        if (hours <= 24 && minutes <= minutsSegons && seconds <= minutsSegons) {
+            if (seconds > minutsSegons) {
+                seconds = 0;
+                minutes++;
+            }
+            if (minutes > minutsSegons) {
+                minutes = 0;
+                hours++;
+            }
+            seconds++;
 
-        if (hours <= 24 && minutes <= minutsSegons && secons <= minutsSegons) {
-            if (segons < minutsSegons) {
-                hores++;
-            }
-            if (hours < minutsSegons) {
-                minuts++;
-            }
+            System.out.println(hours + ":" + minutes + ":" + seconds);
         } else {
             System.out.println("Introdueix una hora correcte");
         }
+    }
+
+    public static void quadratDeNumero() {
+        Scanner scanner = new Scanner(System.in);
+        int numero;
+        do {
+            numero = scanner.nextInt();
+            int mult = numero * numero;
+            System.out.println(mult);
+        }
+        while (numero != 0);
+
+        System.out.println("Numero 0");
+    }
+
+    public static void sumQuadratNumeros() {
+        Scanner scanner = new Scanner(System.in);
+        int numero;
+        int aux = 0;
+        do {
+            numero = scanner.nextInt();
+            int mult = numero * numero;
+            aux += mult;
+            System.out.println(mult);
+        }
+        while (numero != 0);
+
+        System.out.println("Suma: " + aux);
     }
 }
