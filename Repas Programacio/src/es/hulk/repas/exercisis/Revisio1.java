@@ -159,4 +159,19 @@ public class Revisio1 {
 
         System.out.println("S'ha introduit el numero correcte.");
     }
+
+    public static void stopOnNegativeAverageCalculator() {
+        Scanner scanner = new Scanner(System.in);
+        int numero;
+        int counter = 0;
+        double aux = 0;
+        do {
+            numero = scanner.nextInt();
+            aux += numero;
+            counter++;
+        } while (numero < 0);
+
+        double average = aux / counter;
+        System.out.println(average);
+    }
 }
