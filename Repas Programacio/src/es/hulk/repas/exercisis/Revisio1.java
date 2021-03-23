@@ -174,4 +174,17 @@ public class Revisio1 {
         double average = aux / counter;
         System.out.println(average);
     }
+
+    public static void askFourNumbers() {
+        Scanner scanner = new Scanner(System.in);
+
+        int max1 = scanner.nextInt();
+        int multiple = scanner.nextInt();
+
+        for (int i = 0; i <= max1; i++) {
+            if (i % multiple == 0) {
+                System.out.println(i + " es multiple");
+            }
+        }
+    }
 }
