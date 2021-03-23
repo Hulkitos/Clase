@@ -2,6 +2,7 @@
 <project version="4">
   <component name="SqlDialectMappings">
     <file url="file://$PROJECT_DIR$/Bases de Dades/Tema 4 - DDL i DML/Exercisis/Ex 5-03-2021/insert .sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/Bases de Dades/Tema 9 - Users i Rols/CORRECCIO users_roles_ex_1_MiguelAngelNavarro.sql" dialect="MySQL" />
     <file url="PROJECT" dialect="MySQL" />
   </component>
 </project>
