@@ -13,7 +13,7 @@ public class Repas {
     private static char[] chars = {'h', 'o', 'l', 'a'};
 
     public static void main(String[] args) {
-        Revisio1.betweenZeroAndMaxNumber();
+        Revisio1.askFourNumbers();
     }
 
     public static void printPersons() {
