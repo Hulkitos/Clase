@@ -12,5 +12,6 @@ public class RepeatedScannerChar extends Practica1 {
             }
         }
         System.out.println("Numero de aparicions del caracter: " + scan + " amb un total de " + counter + " repeticions");
+        Practica1.display();
     }
 }

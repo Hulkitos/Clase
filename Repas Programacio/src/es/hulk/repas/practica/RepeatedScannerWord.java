@@ -13,6 +13,7 @@ public class RepeatedScannerWord extends Practica1 {
             }
         }
         System.out.println("La paraula: " + word + " es repeteix " + counter);
+        Practica1.display();
     }
 
 }
