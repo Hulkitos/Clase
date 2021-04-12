@@ -2,15 +2,16 @@ package es.hulk.repas.practica;
 
 public class CountChars extends Practica1 {
 
-    private static char[] chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz".toCharArray();
+    private static char[] chars = "abcdefghijklmnopqrstuvwxyz".toCharArray();
     private static int maxchars = chars.length;
 
     public static void returnCountedChars() {
+        String string = text.toLowerCase();
         int counter = 0;
-        int maxText = text.length();
+        int maxText = string.length();
         for (int i = 0; i < maxText; i++) {
             for (int j = 0; j < maxchars; j++) {
-                if (text.charAt(i) == chars[j]) {
+                if (string.charAt(i) == chars[j]) {
                     counter++;
                 }
             }

@@ -12,6 +12,6 @@ public class NewText extends Practica1 {
 
         Practica1.display();
 
-        return text;
+        return text.toLowerCase();
     }
 }
