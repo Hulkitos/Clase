@@ -13,9 +13,9 @@ public class Practica1 {
     protected static String text;
 
     public static void display() {
-        System.out.println("");
+        System.out.println();
         System.out.println("Trii una de les opcions disponibles: ");
-        System.out.println("");
+        System.out.println();
         System.out.println("1. Introduir un text nou.");
         System.out.println("2. Veure el text actual.");
         System.out.println("3. Comptar el n ́umero de lletres.");
@@ -52,9 +52,5 @@ public class Practica1 {
                     display();
             }
         }
-    }
-
-    public int getOption() {
-        return option;
     }
 }
