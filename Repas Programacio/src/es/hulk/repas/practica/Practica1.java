@@ -52,6 +52,12 @@ public class Practica1 {
                 case 7:
                     ReapetedWord.returnRepeatedWord();
                     break;
+                case 8:
+                    RepeatedScannerChar.RepeatedScannerChar();
+                    break;
+                case 9:
+                    RepeatedScannerWord.RepeatedScannerWord();
+                    break;
                 default:
                     display();
             }
