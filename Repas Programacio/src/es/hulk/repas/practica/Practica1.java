@@ -8,6 +8,7 @@ public class Practica1 {
 
     protected static Scanner scanner = new Scanner(System.in);
     protected static String text;
+    protected static String string = text.toLowerCase();
 
     public static void display() {
         System.out.println();

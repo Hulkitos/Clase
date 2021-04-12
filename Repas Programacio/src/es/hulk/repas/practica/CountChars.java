@@ -6,7 +6,6 @@ public class CountChars extends Practica1 {
     private static int maxchars = chars.length;
 
     public static void returnCountedChars() {
-        String string = text.toLowerCase();
         int counter = 0;
         int maxText = string.length();
         for (int i = 0; i < maxText; i++) {

@@ -7,7 +7,6 @@ public class AppearChars extends Practica1 {
     private static int[] numeros = new int[chars.length];
 
     public static void CountAppearChars() {
-        String string = text.toLowerCase();
         for (int i = 0; i < string.length(); i++) {
             for (int j = 0; j < maxchars; j++) {
                 if (string.charAt(i) == chars[j]) {
