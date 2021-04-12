@@ -257,12 +257,10 @@ public class PrimeraPractica {
     }
 
     public static void repeatedChar() {
-        char [] lletres;
+        char [] lletres = string.toCharArray();
 
         int mesRepetida = 0;
         char charMesRepetit = Character.MIN_VALUE;
-
-        lletres = string.toCharArray();
 
         for(int i=0; i<lletres.length; i++){
 
@@ -274,8 +272,7 @@ public class PrimeraPractica {
                     counter++;
             }
 
-            if(mesRepetida < counter)
-            {
+            if(mesRepetida < counter) {
                 mesRepetida = counter;
                 charMesRepetit = charActual;
             }
