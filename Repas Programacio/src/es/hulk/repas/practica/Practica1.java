@@ -28,8 +28,8 @@ public class Practica1 {
         System.out.print("Opcio: ");
         option = scanner.nextInt();
 
-        while(option != 0) {
-            switch(option) {
+        while (option != 0) {
+            switch (option) {
                 case 1:
                     NewText.newText();
                     break;
@@ -44,6 +44,12 @@ public class Practica1 {
                     break;
                 case 5:
                     AppearChars.CountAppearChars();
+                    break;
+                case 6:
+                    RepeatedChar.returnRepeatedChar();
+                    break;
+                case 7:
+                    ReapetedWord.returnRepeatedWord();
                     break;
                 default:
                     display();
