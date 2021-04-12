@@ -4,12 +4,9 @@ import java.util.Scanner;
 
 public class Practica1 {
 
-    public static Scanner getScanner() {
-        return scanner;
-    }
-
-    private static Scanner scanner = new Scanner(System.in);
     private static int option;
+
+    protected static Scanner scanner = new Scanner(System.in);
     protected static String text;
 
     public static void display() {
