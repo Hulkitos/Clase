@@ -2,7 +2,7 @@ package es.hulk.repas.practica;
 
 public class AppearChars extends Practica1 {
 
-    private static char[] chars = "abcdefghijklmnopqrstuvwxyz".toCharArray();
+    private static char[] chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz".toCharArray();
     private static int maxchars = chars.length;
     private static int[] numeros = new int[chars.length];
 
@@ -11,7 +11,9 @@ public class AppearChars extends Practica1 {
             for (int j = 0; j < maxchars; j++) {
                 if (text.charAt(i) == chars[j]) {
                     numeros[j]++;
-                    System.out.println("Caracter: " + chars[j] + " | Aparicions: " + numeros[j]);
+                    System.out.println("Caracter: " + chars[j] +
+                            " | Aparicions: " + numeros[j] +
+                            " | Valor I = " + i);
                 }
             }
         }
