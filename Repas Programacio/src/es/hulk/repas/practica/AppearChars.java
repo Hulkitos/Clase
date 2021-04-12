@@ -12,8 +12,7 @@ public class AppearChars extends Practica1 {
                 if (text.charAt(i) == chars[j]) {
                     numeros[j]++;
                     System.out.println("Caracter: " + chars[j] +
-                            " | Aparicions: " + numeros[j] +
-                            " | Valor I = " + i);
+                            " | Aparicions: " + numeros[j]);
                 }
             }
         }
