@@ -26,7 +26,6 @@ public class ReapetedWord extends Practica1 {
         }
 
         System.out.println("Paraula mes repetida " + paraula + " amb " + counter + " aparicions");
-        Practica1.display();
     }
 
 }

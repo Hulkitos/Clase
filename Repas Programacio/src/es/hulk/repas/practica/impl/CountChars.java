@@ -4,10 +4,11 @@ import es.hulk.repas.practica.Practica1;
 
 public class CountChars extends Practica1 {
 
-    private static char[] chars = "abcdefghijklmnopqrstuvwxyz".toCharArray();
+    private static char[] chars = "abcdefghijklmnopqrstuvwxyz.,?!:".toCharArray();
     private static int maxchars = chars.length;
 
     public static void returnCountedChars() {
+        String string = text.toLowerCase();
         int counter = 0;
         int maxText = string.length();
         for (int i = 0; i < maxText; i++) {
@@ -18,8 +19,6 @@ public class CountChars extends Practica1 {
             }
         }
         System.out.println("La frase te un total " + counter + " lletres");
-
-        Practica1.display();
     }
 
 }

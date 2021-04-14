@@ -10,7 +10,6 @@ public class ShowText extends Practica1 {
         } else {
             System.out.println("El text es: " + text.toLowerCase());
         }
-        Practica1.display();
     }
 
 }

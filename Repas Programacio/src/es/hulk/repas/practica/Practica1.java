@@ -8,9 +8,8 @@ public class Practica1 {
 
     private static int option;
 
-    protected static Scanner scanner = new Scanner(System.in);
+    private static Scanner scanner = new Scanner(System.in);
     protected static String text;
-    protected static String string = text.toLowerCase();
 
     public static void display() {
         System.out.println();
@@ -60,9 +59,8 @@ public class Practica1 {
                 case 9:
                     RepeatedScannerWord.RepeatedScannerWord();
                     break;
-                default:
-                    display();
             }
+            display();
         }
     }
 }

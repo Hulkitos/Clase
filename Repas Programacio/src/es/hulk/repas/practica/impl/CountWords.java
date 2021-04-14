@@ -12,8 +12,6 @@ public class CountWords extends Practica1 {
             counter++;
         }
         System.out.println("La frase te un total de " + counter + " paraules");
-
-        Practica1.display();
     }
 
 }
