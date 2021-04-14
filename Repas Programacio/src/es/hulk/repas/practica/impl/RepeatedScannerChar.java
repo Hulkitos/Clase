@@ -1,4 +1,6 @@
-package es.hulk.repas.practica;
+package es.hulk.repas.practica.impl;
+
+import es.hulk.repas.practica.Practica1;
 
 public class RepeatedScannerChar extends Practica1 {
 

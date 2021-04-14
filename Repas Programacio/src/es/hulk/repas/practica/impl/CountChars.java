@@ -1,4 +1,6 @@
-package es.hulk.repas.practica;
+package es.hulk.repas.practica.impl;
+
+import es.hulk.repas.practica.Practica1;
 
 public class CountChars extends Practica1 {
 

@@ -1,5 +1,7 @@
 package es.hulk.repas.practica;
 
+import es.hulk.repas.practica.impl.*;
+
 import java.util.Scanner;
 
 public class Practica1 {
