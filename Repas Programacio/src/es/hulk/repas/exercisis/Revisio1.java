@@ -40,7 +40,6 @@ public class Revisio1 {
     }
 
     public static int menorInvertit(int num) {
-
         return num;
     }
 

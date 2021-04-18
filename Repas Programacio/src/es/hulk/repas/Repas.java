@@ -4,6 +4,7 @@ import es.hulk.repas.clases.Dog;
 import es.hulk.repas.clases.Persona;
 import es.hulk.repas.exercisis.Array;
 import es.hulk.repas.exercisis.Revisio1;
+import es.hulk.repas.exercisis.Revisio2;
 import es.hulk.repas.practica.Practica1;
 
 public class Repas {
@@ -14,7 +15,7 @@ public class Repas {
     private static char[] chars = {'h', 'o', 'l', 'a'};
 
     public static void main(String[] args) {
-        Practica1.display();
+        Revisio2.getCompteBanc(10, 1000);
     }
 
     public static void printPersons() {
