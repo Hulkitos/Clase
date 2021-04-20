@@ -193,10 +193,38 @@ public class Revisio1 {
         int max1 = scanner.nextInt();
         int multiple = scanner.nextInt();
 
-        for (int i = 0; i <= max1; i++) {
+        for (int i = max1; i <= max1; i--) {
             if (i % multiple == 0) {
                 System.out.println(i + " es multiple");
             }
+            if (i < 0) {
+                break;
+            }
         }
+    }
+
+    public static void numerosSenars() {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        int result = 1;
+
+        for (int i = 0; i < n; i++) {
+            if (i % 2 != 0) {
+                result = result * i;
+                System.out.println(result);
+            }
+        }
+    }
+
+    public static void calcularFactorial() {
+        Scanner scanner = new Scanner(System.in);
+        int factorial = scanner.nextInt();
+        int result = 1;
+
+        for (int i = 1; i <= factorial; i++) {
+            result = result * i;
+        }
+
+        System.out.println("Calcul factorial de " + factorial + " es " + result);
     }
 }
