@@ -243,12 +243,20 @@ public class Revisio1 {
             if (n == 0) {
                 counter0++;
             }
-            i++;
         }
         int resultPositive = sumaPos / counterPositive;
         int resultNegative = sumaNeg / counterNegative;
         System.out.println("Contador de 0: " + counter0);
         System.out.println("Mitjana Positius: " + resultPositive);
         System.out.println("Mitjana Negatius: " + resultNegative);
+    }
+
+    public static void calcularAlumnes() {
+        Scanner scanner = new Scanner(System.in);
+        int i = 0;
+        while (i <= 20) {
+            int n = scanner.nextInt();
+
+        }
     }
 }
