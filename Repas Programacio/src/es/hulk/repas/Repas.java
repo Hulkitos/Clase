@@ -2,9 +2,6 @@ package es.hulk.repas;
 
 import es.hulk.repas.clases.Dog;
 import es.hulk.repas.clases.Persona;
-import es.hulk.repas.exercisis.Array;
-import es.hulk.repas.exercisis.Revisio1;
-import es.hulk.repas.exercisis.Revisio2;
 import es.hulk.repas.practica.Practica1;
 
 public class Repas {

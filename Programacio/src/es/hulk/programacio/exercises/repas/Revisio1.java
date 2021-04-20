@@ -1,4 +1,4 @@
-package es.hulk.repas.exercisis;
+package es.hulk.programacio.exercises.repas;
 
 import java.util.Random;
 import java.util.Scanner;
