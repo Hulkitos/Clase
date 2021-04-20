@@ -284,4 +284,14 @@ public class Revisio1 {
         System.out.println("Majors d'edat: " + counterAnys);
         System.out.println("Majors de 1,75m: " + counterAltura);
     }
+
+    public static void tabulaMultiplier() {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+
+        for (int i = 0; i <= 10; i++) {
+            int result = n * i;
+            System.out.println("Multiplicar " + n + " x " + i + " = " + result);
+        }
+    }
 }
