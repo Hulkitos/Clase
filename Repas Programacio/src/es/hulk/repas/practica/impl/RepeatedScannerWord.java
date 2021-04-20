@@ -23,6 +23,8 @@ public class RepeatedScannerWord extends Practica1 {
             System.out.println("La paraula: " + word + " es repeteix " + counter);
         } catch (InputMismatchException exception) {
             System.err.println("Error: " + exception);
+        } catch (NullPointerException exception) {
+            System.err.println("Error: " + exception);
         }
     }
 

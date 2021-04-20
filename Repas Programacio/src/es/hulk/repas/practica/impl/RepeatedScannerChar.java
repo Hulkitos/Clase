@@ -23,6 +23,9 @@ public class RepeatedScannerChar extends Practica1 {
 
         } catch (InputMismatchException exception) {
             System.err.println("Error: " + exception);
+        } catch (NullPointerException exception) {
+            System.err.println("Error: " + exception);
         }
+
     }
 }

@@ -9,33 +9,38 @@ public class RepeatedChar extends Practica1 {
     private static int[] numeros = new int[chars.length];
 
     public static void returnRepeatedChar() {
-        char[] lletres = text.toCharArray();
+        try {
+            char[] lletres = text.toCharArray();
 
-        int mesRepetida = 0;
-        char charMesRepetit = Character.MIN_VALUE;
+            int mesRepetida = 0;
+            char charMesRepetit = Character.MIN_VALUE;
 
-        for (int i = 0; i < lletres.length; i++) {
+            for (int i = 0; i < lletres.length; i++) {
 
-            char charActual = lletres[i];
-            int counter = 0;
+                char charActual = lletres[i];
+                int counter = 0;
 
-            for (int j = 0; j < lletres.length; j++) {
-                for (int k = 0; k < chars.length; k++) {
-                    if (lletres[j] == charActual) {
-                        if (charActual == chars[k]) {
-                            counter++;
+                for (int j = 0; j < lletres.length; j++) {
+                    for (int k = 0; k < chars.length; k++) {
+                        if (lletres[j] == charActual) {
+                            if (charActual == chars[k]) {
+                                counter++;
+                            }
                         }
                     }
                 }
+
+                if (mesRepetida < counter) {
+                    mesRepetida = counter;
+                    charMesRepetit = charActual;
+                }
             }
 
-            if (mesRepetida < counter) {
-                mesRepetida = counter;
-                charMesRepetit = charActual;
-            }
+            System.out.println(charMesRepetit + ": Se repite " + mesRepetida);
+        } catch(NullPointerException exception) {
+            System.err.println("Erorr: " + exception);
         }
 
-        System.out.println(charMesRepetit + ": Se repite " + mesRepetida);
     }
 
 }
