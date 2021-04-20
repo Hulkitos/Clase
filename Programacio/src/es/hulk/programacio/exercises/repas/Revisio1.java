@@ -253,10 +253,35 @@ public class Revisio1 {
 
     public static void calcularAlumnes() {
         Scanner scanner = new Scanner(System.in);
-        int i = 0;
-        while (i <= 20) {
-            int n = scanner.nextInt();
 
+        int counterAltura = 0;
+        int counterAnys = 0;
+
+        float sumaAltura = 0;
+        int sumaAnys = 0;
+        for (int i = 0; i < 20; i++) {
+            System.out.print("Introdueix una altura: ");
+            float altura = scanner.nextFloat();
+
+            System.out.print("Introdueix l'edat: ");
+            int anys = scanner.nextInt();
+
+            if (anys < 18) {
+                counterAnys++;
+            }
+            if (altura < 1.75) {
+                counterAltura++;
+            }
+
+            sumaAltura += altura;
+            sumaAnys += anys;
         }
+        float resultAltura = sumaAltura / 20;
+        int resultAnys = sumaAnys / 20;
+
+        System.out.println("Mitjana Altura: " + resultAltura);
+        System.out.println("Mitjana Anys: " + resultAnys);
+        System.out.println("Majors d'edat: " + counterAnys);
+        System.out.println("Majors de 1,75m: " + counterAltura);
     }
 }
