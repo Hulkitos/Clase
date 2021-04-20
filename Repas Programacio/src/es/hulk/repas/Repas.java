@@ -15,7 +15,7 @@ public class Repas {
     private static char[] chars = {'h', 'o', 'l', 'a'};
 
     public static void main(String[] args) {
-        Revisio2.getCompteBanc(10, 1000);
+        Practica1.display();
     }
 
     public static void printPersons() {

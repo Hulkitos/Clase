@@ -5,8 +5,9 @@ import es.hulk.repas.practica.Practica1;
 public class ReapetedWord extends Practica1 {
 
     public static void returnRepeatedWord() {
-        String[] stringArray = text.split("\\W+");
-        int counter = 1;
+        String string = text.toLowerCase();
+        String[] stringArray = string.split("\\W+");
+        int counter = 0;
         int max = 0;
 
         String current = stringArray[0];
