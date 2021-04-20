@@ -6,21 +6,13 @@ import java.util.Scanner;
 public class Revisio1 {
 
     public static int max(int num1, int num2) {
-        if (num1 > num2) {
-            return num1;
-        } else {
-            return num2;
-        }
+        return Math.max(num1, num2);
     }
 
     public static boolean multiple(int num1, int num2) {
         int mult = num1 * num2;
         int div = mult % 0;
-        if (div != 0) {
-            return true;
-        } else {
-            return false;
-        }
+        return div != 0;
     }
 
     public static int countXifres(int num) {
@@ -224,7 +216,39 @@ public class Revisio1 {
         for (int i = 1; i <= factorial; i++) {
             result = result * i;
         }
-
         System.out.println("Calcul factorial de " + factorial + " es " + result);
+    }
+
+    public static void calcularEnters() {
+        Scanner scanner = new Scanner(System.in);
+
+        int counter0 = 0;
+        int counterNegative = 0;
+        int counterPositive = 0;
+
+        int sumaNeg = 0;
+        int sumaPos = 0;
+
+        int i = 0;
+        while (i <= 20) {
+            int n = scanner.nextInt();
+            if (n < 0) {
+                sumaNeg += n;
+                counterNegative++;
+            }
+            if (n > 0) {
+                sumaPos += n;
+                counterPositive++;
+            }
+            if (n == 0) {
+                counter0++;
+            }
+            i++;
+        }
+        int resultPositive = sumaPos / counterPositive;
+        int resultNegative = sumaNeg / counterNegative;
+        System.out.println("Contador de 0: " + counter0);
+        System.out.println("Mitjana Positius: " + resultPositive);
+        System.out.println("Mitjana Negatius: " + resultNegative);
     }
 }
