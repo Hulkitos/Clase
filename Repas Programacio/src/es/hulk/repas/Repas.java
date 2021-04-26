@@ -1,5 +1,9 @@
 package es.hulk.repas;
 
+import es.hulk.repas.clases.Dog;
+import es.hulk.repas.clases.Persona;
+import es.hulk.repas.practica.Practica1;
+
 public class Repas {
 
     private static int[] num = {2, 3, 4, 5};

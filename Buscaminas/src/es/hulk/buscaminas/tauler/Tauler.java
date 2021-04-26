@@ -1,30 +1,59 @@
 package es.hulk.buscaminas.tauler;
 
-import java.util.Scanner;
+import es.hulk.buscaminas.caselles.Caselles;
+import es.hulk.buscaminas.menus.MenuType;
+import es.hulk.buscaminas.menus.Menus;
+import es.hulk.buscaminas.utils.Utilities;
 
 public class Tauler {
 
-    private static String[][] taula = new String[0][];
+    private int column;
+    private int row;
+    private static Caselles[][] tauler;
 
-    public Tauler(String[][] taula) {
-        this.taula = taula;
+    public Tauler(int column, int row) {
+        this.column = column;
+        this.row = row;
     }
 
-    public static void printTaula() {
-        Scanner scanner = new Scanner(System.in);
-        int opcio = scanner.nextInt();
-        switch (opcio) {
-            case 1:
-                taula = new String[8][8];
-            case 2:
-                taula = new String[16][16];
-            case 3:
-                taula = new String[40][40];
-            case 4:
-                int x = scanner.nextInt();
-                int y = scanner.nextInt();
-                taula = new String[x][y];
+    public int getColumn() {
+        return column;
+    }
+
+    public void setColumn(int column) {
+        this.column = column;
+    }
+
+    public int getRow() {
+        return row;
+    }
+
+    public void setRow(int row) {
+        this.row = row;
+    }
+
+    public static Caselles[][] getTauler() {
+        return tauler;
+    }
+
+    public static void setTauler(Caselles[][] tauler) {
+        Tauler.tauler = tauler;
+    }
+
+    public static void printTauler() {
+        Utilities.clear();
+
+        if (tauler.length <= 200) {
+            for (Caselles[] caselles : tauler) {
+                for (int j = 0; j < caselles.length; j++) {
+                    Utilities.log(" ( x ) ");
+                }
+                Utilities.logNewLine("");
+            }
+        } else {
+            Utilities.logNewLine("Tauler massa gross");
         }
+        MenuType type = MenuType.INGAME;
+        Menus.printMenus(type);
     }
-
 }
