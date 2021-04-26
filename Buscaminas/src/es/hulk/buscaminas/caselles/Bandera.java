@@ -1,10 +1,13 @@
 package es.hulk.buscaminas.caselles;
 
+import es.hulk.buscaminas.menus.MenuType;
 import es.hulk.buscaminas.utils.Utilities;
 
+import javax.rmi.CORBA.Util;
 import java.util.Scanner;
 
 import static es.hulk.buscaminas.tauler.Tauler.getTauler;
+import static es.hulk.buscaminas.tauler.Tauler.printTauler;
 
 public class Bandera {
 
@@ -16,12 +19,17 @@ public class Bandera {
         bandera = getTauler();
         int x = scanner.nextInt();
         int y = scanner.nextInt();
-        for (int i = 0; i < x; i++) {
-            for (int j = 0; j < y; j++) {
-                Utilities.log(" ( ? ) ");
-                isBandera = true;
+        isBandera = true;
+        for (int i = 0; i < bandera.length; i++) {
+            for (int j = 0; j < bandera[i].length; j++) {
+                if (i == x && j == y) {
+                    Utilities.log(" ( ? ) ");
+                } else {
+                    Utilities.log(" ( x ) ");
+                }
             }
             Utilities.logNewLine("");
         }
+        MenuType type = MenuType.INGAME;
     }
 }
