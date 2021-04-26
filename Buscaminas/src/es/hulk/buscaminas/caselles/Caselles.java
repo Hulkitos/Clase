@@ -3,7 +3,7 @@ package es.hulk.buscaminas.caselles;
 public class Caselles {
 
     private boolean isTapada;
-    private boolean isBandera;
+    private static boolean isBandera = false;
     private int aroundBomb;
     private boolean isBomb;
 
@@ -22,7 +22,7 @@ public class Caselles {
         isTapada = tapada;
     }
 
-    public boolean isBandera() {
+    public static boolean isBandera() {
         return isBandera;
     }
 
