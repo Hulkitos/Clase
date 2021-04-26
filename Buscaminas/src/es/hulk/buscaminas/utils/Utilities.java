@@ -1,7 +1,5 @@
 package es.hulk.buscaminas.utils;
 
-import java.io.Console;
-
 public class Utilities {
 
     public static void logNewLine(String s) {
@@ -10,6 +8,12 @@ public class Utilities {
 
     public static void log(String s) {
         System.out.print(s);
+    }
+
+    public static void clear() {
+        for (int i = 0; i <= 200; i++) {
+            logNewLine("");
+        }
     }
 
 }

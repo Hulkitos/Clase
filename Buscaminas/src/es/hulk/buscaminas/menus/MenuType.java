@@ -7,4 +7,6 @@ public enum MenuType {
     INGAME,
     FINSIHED,
 
+    MenuType() {
+    }
 }
