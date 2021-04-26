@@ -1,7 +1,9 @@
 package es.hulk.buscaminas;
 
+import es.hulk.buscaminas.menus.MenuType;
 import es.hulk.buscaminas.menus.Menus;
 import es.hulk.buscaminas.tauler.Tauler;
+import es.hulk.buscaminas.utils.Utilities;
 
 public class Buscaminas {
 
@@ -14,6 +16,8 @@ public class Buscaminas {
         System.out.println("2 - Normal");
         System.out.println("3 - Dificil");
         System.out.println("4 - Personalitzat");
+        Utilities.logNewLine("");
+        Utilities.log("Trii una de les opcions: ");
         Menus.printMenus();
 
     }

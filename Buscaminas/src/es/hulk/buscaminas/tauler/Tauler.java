@@ -52,5 +52,6 @@ public class Tauler {
         } else {
             Utilities.logNewLine("Tauler massa gross");
         }
+        MenuType type = MenuType.INGAME;
     }
 }

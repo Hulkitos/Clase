@@ -11,7 +11,6 @@ import static es.hulk.buscaminas.menus.MenuType.*;
 public class Menus extends Tauler {
 
     private String menu;
-    private static MenuType type;
 
     public Menus(int column, int row) {
         super(column, row);
@@ -20,7 +19,10 @@ public class Menus extends Tauler {
     public static void printMenus() {
         Scanner scanner = new Scanner(System.in);
         int opcio = scanner.nextInt();
-        type = MAINMENU;
+        MenuType type = MAINMENU;
+        if (opcio == 4) {
+            type = CUSTOM;
+        }
         switch (type) {
             case MAINMENU:
                 switch (opcio) {
@@ -39,9 +41,6 @@ public class Menus extends Tauler {
                         printTauler();
                         type = INGAME;
                         break;
-                    case 4:
-                        type = CUSTOM;
-                        break;
                 }
                 break;
             case CUSTOM:
@@ -49,9 +48,9 @@ public class Menus extends Tauler {
                 System.out.println("Tablero personalitzat");
                 Utilities.logNewLine("");
 
-                Utilities.log("Trii un tamany per la X: ");
+                Utilities.log("Trii un numero de files: ");
                 int x = scanner.nextInt();
-                Utilities.log("Trii un tamany per la Y: ");
+                Utilities.log("Trii un numero de columnes: ");
                 int y = scanner.nextInt();
                 setTauler(new Caselles[x][y]);
                 printTauler();
@@ -68,7 +67,6 @@ public class Menus extends Tauler {
         Utilities.logNewLine(" |  _ <| |  | |\\___ \\| |      / /\\ \\ | |\\/| | | | | . ` | / /\\ \\  \\___ \\ ");
         Utilities.logNewLine(" | |_) | |__| |____) | |____ / ____ \\| |  | |_| |_| |\\  |/ ____ \\ ____) |");
         Utilities.logNewLine(" |____/ \\____/|_____/ \\_____/_/    \\_\\_|  |_|_____|_| \\_/_/    \\_\\_____/ ");
-        Utilities.logNewLine("                                                                         ");
         Utilities.logNewLine("                                                                         ");
     }
 
