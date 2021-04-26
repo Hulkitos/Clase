@@ -7,16 +7,13 @@ public class Buscaminas {
 
     public static void main(String[] args) {
 
-        System.out.println("");
-        System.out.println("Buscaminas");
-        System.out.println("");
+        Menus.printTitol();
         System.out.println("Trii una de les seguents opcions");
         System.out.println("");
         System.out.println("1 - Principiant ");
         System.out.println("2 - Normal");
         System.out.println("3 - Dificil");
         System.out.println("4 - Personalitzat");
-        System.out.println("");
         Menus.printMenus();
 
     }
