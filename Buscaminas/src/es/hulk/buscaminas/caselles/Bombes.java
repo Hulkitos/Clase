@@ -1,6 +1,6 @@
 package es.hulk.buscaminas.caselles;
 
-public class Bombes{
+public class Bombes {
 
 
 

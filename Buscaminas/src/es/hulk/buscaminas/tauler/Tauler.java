@@ -1,8 +1,7 @@
 package es.hulk.buscaminas.tauler;
 
 import es.hulk.buscaminas.caselles.Caselles;
-import es.hulk.buscaminas.menus.MenuType;
-import es.hulk.buscaminas.menus.Menus;
+import es.hulk.buscaminas.menus.Menu;
 import es.hulk.buscaminas.utils.Utilities;
 
 public class Tauler {
@@ -53,6 +52,6 @@ public class Tauler {
         } else {
             Utilities.logNewLine("Tauler massa gross");
         }
-        Menus.printMenus(MenuType.INGAME);
+        Menu.printInGameMenu();
     }
 }
