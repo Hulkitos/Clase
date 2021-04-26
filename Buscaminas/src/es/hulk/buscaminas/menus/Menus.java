@@ -68,8 +68,17 @@ public class Menus extends Tauler {
                     Utilities.logNewLine("Trii una opcio");
                     Utilities.logNewLine("");
                     Utilities.logNewLine("1 - Posar una bandera");
-                    Bandera.insertBanders();
                     Utilities.logNewLine("2 - Destapa tauler");
+                    Utilities.logNewLine("");
+                    Utilities.log("Seleccioni una de les opcions: ");
+                    int option = scanner.nextInt();
+                    switch (option) {
+                        case 1:
+                            Bandera.insertBanders();
+                            break;
+                        case 2:
+                            break;
+                    }
                     break;
                 case FINSIHED:
                     Utilities.logNewLine("");
