@@ -1,6 +1,8 @@
 package es.hulk.buscaminas.tauler;
 
 import es.hulk.buscaminas.caselles.Caselles;
+import es.hulk.buscaminas.menus.MenuType;
+import es.hulk.buscaminas.utils.Utilities;
 
 import java.util.Scanner;
 
@@ -37,5 +39,18 @@ public class Tauler {
 
     public static void setTauler(Caselles[][] tauler) {
         Tauler.tauler = tauler;
+    }
+
+    public static void printTauler() {
+        if (tauler.length <= 200) {
+            for (int i = 0; i < tauler.length; i++) {
+                for (int j = 0; j < tauler[i].length; j++) {
+                    Utilities.log(" ( x ) ");
+                }
+                Utilities.logNewLine("");
+            }
+        } else {
+            Utilities.logNewLine("Tauler massa gross");
+        }
     }
 }
