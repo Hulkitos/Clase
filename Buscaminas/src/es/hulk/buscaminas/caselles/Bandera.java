@@ -13,8 +13,13 @@ public class Bandera {
     public static void insertBanders() {
         Scanner scanner = new Scanner(System.in);
         bandera = getTauler();
+
+        Utilities.log("Trii la fila on vol posar la bandera: ");
         int x = scanner.nextInt();
+
+        Utilities.log("Trii la columna on vol posar la bandera");
         int y = scanner.nextInt();
+
         for (int i = 0; i < bandera.length; i++) {
             for (int j = 0; j < bandera[i].length; j++) {
                 if (i == x - 1 && j == y - 1) {

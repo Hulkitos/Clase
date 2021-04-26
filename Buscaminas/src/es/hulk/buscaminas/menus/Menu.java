@@ -1,6 +1,7 @@
 package es.hulk.buscaminas.menus;
 
 import es.hulk.buscaminas.caselles.Bandera;
+import es.hulk.buscaminas.caselles.Bombes;
 import es.hulk.buscaminas.caselles.Caselles;
 import es.hulk.buscaminas.tauler.Tauler;
 import es.hulk.buscaminas.utils.Utilities;
@@ -88,6 +89,7 @@ public class Menu {
         switch (option) {
             case 1:
                 Bandera.insertBanders();
+                Bombes.insertBombs();
                 break;
             case 2:
                 break;
