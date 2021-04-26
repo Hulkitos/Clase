@@ -42,7 +42,7 @@ public class Menus extends Tauler {
                             printTauler();
                             break;
                         case 3:
-                            setTauler(new Caselles[40][40]);
+                            setTauler(new Caselles[16][30]);
                             printTauler();
                             break;
                         case 5:
@@ -90,7 +90,9 @@ public class Menus extends Tauler {
         Utilities.logNewLine(" |____/ \\____/|_____/ \\_____/_/    \\_\\_|  |_|_____|_| \\_/_/    \\_\\_____/ ");
         Utilities.logNewLine("                                                                         ");
     }
-
+    //
+    // TODO: replace x on mines for max number of mines that can appear
+    //
     public static void display() {
         try {
             printTitol();
@@ -98,8 +100,8 @@ public class Menus extends Tauler {
             Utilities.logNewLine("");
             Utilities.logNewLine("1 - Principiant (Tauler 8x8 amb 10 mines");
             Utilities.logNewLine("2 - Normal (Tauler 16x16 amb 40 mines)");
-            Utilities.logNewLine("3 - Dificil");
-            Utilities.logNewLine("4 - Personalitzat");
+            Utilities.logNewLine("3 - Dificil (Tauler 16x30 amb 99 mines");
+            Utilities.logNewLine("4 - Personalitzat (Tauler maxim 200x200 amb x mines");
             Utilities.logNewLine("");
             Utilities.logNewLine("5 - Surtir del programa");
             Utilities.logNewLine("");
