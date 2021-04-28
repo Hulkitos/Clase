@@ -1,34 +1,48 @@
 package es.hulk.buscaminas.tauler;
 
+import es.hulk.buscaminas.caselles.Bandera;
 import es.hulk.buscaminas.caselles.Caselles;
 import es.hulk.buscaminas.menus.Menu;
 import es.hulk.buscaminas.utils.Utilities;
 
 public class Tauler {
 
-    private int column;
-    private int row;
     private static Caselles[][] tauler;
+    private static int x;
+    private static int y;
+    private static boolean isFlag;
+    private static boolean isBomb;
 
-    public Tauler(int column, int row) {
-        this.column = column;
-        this.row = row;
+    public static int getX() {
+        return x;
     }
 
-    public int getColumn() {
-        return column;
+    public static void setX(int x) {
+        Tauler.x = x;
     }
 
-    public void setColumn(int column) {
-        this.column = column;
+    public static int getY() {
+        return y;
     }
 
-    public int getRow() {
-        return row;
+    public static void setY(int y) {
+        Tauler.y = y;
     }
 
-    public void setRow(int row) {
-        this.row = row;
+    public static boolean isIsFlag() {
+        return isFlag;
+    }
+
+    public static void setIsFlag(boolean isFlag) {
+        Tauler.isFlag = isFlag;
+    }
+
+    public static boolean isIsBomb() {
+        return isBomb;
+    }
+
+    public static void setIsBomb(boolean isBomb) {
+        Tauler.isBomb = isBomb;
     }
 
     public static Caselles[][] getTauler() {
@@ -40,18 +54,20 @@ public class Tauler {
     }
 
     public static void printTauler() {
-        Utilities.clear();
-
         if (tauler.length <= 200) {
-            for (Caselles[] caselles : tauler) {
-                for (int j = 0; j < caselles.length; j++) {
+            for (int i = 0; i < tauler.length; i++) {
+                for (int j = 0; j < tauler[i].length; j++) {
                     Utilities.log(" [ x ] ");
+                    if (isIsFlag()) {
+                        setTauler(Bandera.getBandera());
+                        Utilities.log(" [ ? ] ");
+                    }
                 }
                 Utilities.logNewLine("");
             }
         } else {
             Utilities.logNewLine("Tauler massa gross");
         }
-        Menu.printInGameMenu();
+        Menu.displayInGameMenu();
     }
 }

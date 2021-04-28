@@ -1,16 +1,31 @@
 package es.hulk.buscaminas.caselles;
 
-import es.hulk.buscaminas.menus.Menu;
-import es.hulk.buscaminas.utils.Utilities;
+import es.hulk.buscaminas.tauler.Tauler;
 
 import java.util.Scanner;
-import static es.hulk.buscaminas.tauler.Tauler.getTauler;
 
-public class Bandera {
+public class Bandera extends Tauler{
 
     private static Caselles[][] bandera;
 
-    public static void insertBanders() {
+    public static Caselles[][] getBandera() {
+        return bandera;
+    }
+
+    public static void setBandera(Caselles[][] bandera) {
+        Bandera.bandera = bandera;
+    }
+
+    public static void setFlag() {
+        Scanner scanner = new Scanner(System.in);
+        int x = scanner.nextInt();
+        int y = scanner.nextInt();
+        bandera = new Caselles[x][y];
+        Tauler.setIsFlag(true);
+        Tauler.printTauler();
+    }
+
+/*    public static void insertBanders() {
         Scanner scanner = new Scanner(System.in);
         bandera = getTauler();
 
@@ -30,6 +45,6 @@ public class Bandera {
             }
             Utilities.logNewLine("");
         }
-        Menu.printInGameMenu();
-    }
+        Menu.displayInGameMenu();
+    }*/
 }

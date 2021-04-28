@@ -36,13 +36,26 @@ public class Menu {
             Utilities.logNewLine("5 - Surtir del programa");
             Utilities.logNewLine("");
             Utilities.log("Trii una de les opcions: ");
-            printMainMenu();
+            optionsMainMenu();
         } catch (InputMismatchException exception) {
             display();
         }
     }
 
-    public static void printMainMenu() {
+    public static void displayInGameMenu() {
+        Utilities.logNewLine("");
+        Utilities.logNewLine("Trii una opcio");
+        Utilities.logNewLine("");
+        Utilities.logNewLine("1 - Posar una bandera");
+        Utilities.logNewLine("2 - Llevar Bandera");
+        Utilities.logNewLine("");
+        Utilities.logNewLine("2 - Destapa tauler");
+        Utilities.logNewLine("");
+        Utilities.log("Seleccioni una de les opcions: ");
+        optionsInGameMenu();
+    }
+
+    public static void optionsMainMenu() {
         Scanner scanner = new Scanner(System.in);
         int option = scanner.nextInt();
         switch (option) {
@@ -77,21 +90,15 @@ public class Menu {
         }
     }
 
-    public static void printInGameMenu() {
-        Utilities.logNewLine("");
-        Utilities.logNewLine("Trii una opcio");
-        Utilities.logNewLine("");
-        Utilities.logNewLine("1 - Posar una bandera");
-        Utilities.logNewLine("2 - Destapa tauler");
-        Utilities.logNewLine("");
-        Utilities.log("Seleccioni una de les opcions: ");
+    public static void optionsInGameMenu() {
         int option = scanner.nextInt();
         switch (option) {
             case 1:
-                Bandera.insertBanders();
-                Bombes.insertBombs();
+                Bandera.setFlag();
                 break;
             case 2:
+                break;
+            case 3:
                 break;
         }
     }
