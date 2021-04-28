@@ -45,7 +45,7 @@ public class Tauler {
         if (tauler.length <= 200) {
             for (Caselles[] caselles : tauler) {
                 for (int j = 0; j < caselles.length; j++) {
-                    Utilities.log(" ( x ) ");
+                    Utilities.log(" [ x ] ");
                 }
                 Utilities.logNewLine("");
             }

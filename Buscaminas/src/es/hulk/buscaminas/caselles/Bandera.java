@@ -23,9 +23,9 @@ public class Bandera {
         for (int i = 0; i < bandera.length; i++) {
             for (int j = 0; j < bandera[i].length; j++) {
                 if (i == x - 1 && j == y - 1) {
-                    Utilities.log(" ( ? ) ");
+                    Utilities.log(" [ ? ] ");
                 } else {
-                    Utilities.log(" ( x ) ");
+                    Utilities.log(" [ x ] ");
                 }
             }
             Utilities.logNewLine("");
