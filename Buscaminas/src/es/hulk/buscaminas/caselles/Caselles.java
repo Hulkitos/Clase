@@ -9,15 +9,11 @@ public class Caselles {
     private int aroundBomb;
     private boolean isBomb;
 
-    public Caselles(boolean isTapada, boolean isBandera, int aroundBomb, boolean isBomb) {
-        this.isTapada = isTapada;
-        this.isBandera = isBandera;
-        this.aroundBomb = aroundBomb;
-        this.isBomb = isBomb;
-    }
-
     public Caselles() {
-
+        isTapada = false;
+        isBandera = false;
+        aroundBomb = 0;
+        isBomb = false;
     }
 
     public boolean isTapada() {
@@ -35,7 +31,6 @@ public class Caselles {
     public boolean isBandera() {
         return isBandera;
     }
-
 
     public int getAroundBomb() {
         return aroundBomb;

@@ -25,29 +25,31 @@ public class Tauler extends Caselles {
         Tauler.tauler = tauler;
     }
 
+    public void createTauler() {
+        for (int i = 0; i < tauler.length; i++) {
+            for (int j = 0; j < tauler.length; j++) {
+                tauler[i][j] = new Caselles();
+            }
+        }
+    }
+
     public void printTauler() {
-        if (tauler.length <= 200) {
             for (int i = 0; i < tauler.length; i++) {
                 for (int j = 0; j < tauler[i].length; j++) {
-                    tauler[i][j] = new Caselles();
                     if (tauler[i][j].isBandera()) {
                         Utilities.log(" [ ? ] ");
-                        return;
+                    } else {
+                        Utilities.log(" [ * ] ");
                     }
-                    Utilities.log(" [ * ] ");
-
                 }
                 Utilities.logNewLine("");
             }
-        } else {
-            Utilities.logNewLine("Tauler massa gross");
-        }
     }
 
     public void posarBandera() {
         Scanner scanner = new Scanner(System.in);
 
-        Utilities.log("Linees: ");
+        Utilities.log("Fila: ");
         int x = scanner.nextInt();
 
         Utilities.log("Columnes: ");

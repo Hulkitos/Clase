@@ -46,16 +46,19 @@ public class Menu extends Tauler {
             while (option != 5) {
                 switch (option) {
                     case 1:
-                        Tauler principiant = new Tauler(8,8);
-                        principiant.printTauler();
+                        Tauler ez = new Tauler(8,8);
+                        ez.createTauler();
+                        ez.printTauler();
                         break;
                     case 2:
                         Tauler normal = new Tauler(16,16);
+                        normal.createTauler();
                         normal.printTauler();
                         break;
                     case 3:
-                        Tauler dificil = new Tauler(16,30);
-                        dificil.printTauler();
+                        Tauler hard = new Tauler(16,30);
+                        hard.createTauler();
+                        hard.printTauler();
                         break;
                     case 4:
                         Utilities.logNewLine("");
@@ -68,6 +71,7 @@ public class Menu extends Tauler {
                         int y = scanner.nextInt();
 
                         Tauler custom = new Tauler(x,y);
+                        custom.createTauler();
                         custom.printTauler();
                         break;
                     case 5:
