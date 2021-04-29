@@ -26,11 +26,11 @@ public class Tauler extends Caselles{
             for (int i = 0; i < tauler.length; i++) {
                 for (int j = 0; j < tauler[i].length; j++) {
                     tauler[i][j] = new Caselles();
-                    Utilities.log(" [ * ] ");
                     if (tauler[i][j].isBandera()) {
                         Bandera.returnIsFlag();
                         Utilities.log(" [ ? ] ");
-                        return;
+                    } else {
+                        Utilities.log(" [ * ] ");
                     }
                 }
                 Utilities.logNewLine("");
