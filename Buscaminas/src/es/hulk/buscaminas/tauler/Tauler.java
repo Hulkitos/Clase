@@ -5,6 +5,8 @@ import es.hulk.buscaminas.caselles.Caselles;
 import es.hulk.buscaminas.menus.Menu;
 import es.hulk.buscaminas.utils.Utilities;
 
+import java.util.Scanner;
+
 public class Tauler extends Caselles {
 
     private static Caselles[][] tauler;
@@ -39,4 +41,18 @@ public class Tauler extends Caselles {
             Utilities.logNewLine("Tauler massa gross");
         }
     }
+
+    public static void posarBandera() {
+        Scanner scanner = new Scanner(System.in);
+
+        Utilities.log("Linees: ");
+        int x = scanner.nextInt();
+
+        Utilities.log("Columnes: ");
+        int y = scanner.nextInt();
+
+        tauler[x][y].setBandera(true);
+        printTauler();
+    }
+
 }

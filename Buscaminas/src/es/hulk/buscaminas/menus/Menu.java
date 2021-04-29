@@ -94,7 +94,7 @@ public class Menu extends Tauler {
         while (option != 4) {
             switch (option) {
                 case 1:
-                    Bandera.setFlag();
+                    posarBandera();
                     break;
                 case 2:
                     break;
