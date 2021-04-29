@@ -24,7 +24,7 @@ public class Bandera extends Caselles{
         this.bandera = bandera;
     }
 
-    public static boolean setFlag() {
+    public static void setFlag() {
         Scanner scanner = new Scanner(System.in);
         bandera = getTauler();
 
@@ -34,10 +34,8 @@ public class Bandera extends Caselles{
         Utilities.log("Columnes: ");
         int y = scanner.nextInt();
 
-        return true;
-    }
-
-    public static void returnIsFlag() {
-        bandera[x][y].setBandera(true);
+        if (!getTauler()[x][y].isBandera) {
+            getTauler()[x][y].setBandera(true);
+        }
     }
 }

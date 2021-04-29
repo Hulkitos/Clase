@@ -1,11 +1,13 @@
 package es.hulk.buscaminas.caselles;
 
+import es.hulk.buscaminas.utils.Utilities;
+
 public class Caselles {
 
-    private boolean isTapada = true;
-    private boolean isBandera = false;
+    private boolean isTapada;
+    protected boolean isBandera;
     private int aroundBomb;
-    private boolean isBomb = false;
+    private boolean isBomb;
 
     public Caselles(boolean isTapada, boolean isBandera, int aroundBomb, boolean isBomb) {
         this.isTapada = isTapada;
@@ -26,13 +28,14 @@ public class Caselles {
         isTapada = tapada;
     }
 
+    public void setBandera(boolean bandera) {
+        isBandera = bandera;
+    }
+
     public boolean isBandera() {
         return isBandera;
     }
 
-    public void setBandera(boolean bandera) {
-        isBandera = bandera;
-    }
 
     public int getAroundBomb() {
         return aroundBomb;
