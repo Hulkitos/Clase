@@ -1,50 +1,43 @@
 package es.hulk.buscaminas.caselles;
 
-import es.hulk.buscaminas.tauler.Tauler;
+import es.hulk.buscaminas.utils.Utilities;
 
 import java.util.Scanner;
 
-public class Bandera extends Tauler{
+import static es.hulk.buscaminas.tauler.Tauler.*;
+
+public class Bandera extends Caselles{
 
     private static Caselles[][] bandera;
+    private static int x;
+    private static int y;
 
-    public static Caselles[][] getBandera() {
+    public Bandera(boolean isTapada, boolean isBandera, int aroundBomb, boolean isBomb) {
+        super(isTapada, isBandera, aroundBomb, isBomb);
+    }
+
+    public  Caselles[][] getBandera() {
         return bandera;
     }
 
-    public static void setBandera(Caselles[][] bandera) {
-        Bandera.bandera = bandera;
+    public void setBandera(Caselles[][] bandera) {
+        this.bandera = bandera;
     }
 
-    public static void setFlag() {
-        Scanner scanner = new Scanner(System.in);
-        int x = scanner.nextInt();
-        int y = scanner.nextInt();
-        bandera = new Caselles[x][y];
-        Tauler.setIsFlag(true);
-        Tauler.printTauler();
-    }
-
-/*    public static void insertBanders() {
+    public static boolean setFlag() {
         Scanner scanner = new Scanner(System.in);
         bandera = getTauler();
 
-        Utilities.log("Trii la fila on vol posar la bandera: ");
+        Utilities.log("Linees: ");
         int x = scanner.nextInt();
 
-        Utilities.log("Trii la columna on vol posar la bandera");
+        Utilities.log("Columnes: ");
         int y = scanner.nextInt();
 
-        for (int i = 0; i < bandera.length; i++) {
-            for (int j = 0; j < bandera[i].length; j++) {
-                if (i == x - 1 && j == y - 1) {
-                    Utilities.log(" [ ? ] ");
-                } else {
-                    Utilities.log(" [ x ] ");
-                }
-            }
-            Utilities.logNewLine("");
-        }
-        Menu.displayInGameMenu();
-    }*/
+        return true;
+    }
+
+    public static void returnIsFlag() {
+        bandera[x][y].setBandera(true);
+    }
 }

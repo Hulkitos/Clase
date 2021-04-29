@@ -7,27 +7,14 @@ import java.util.Scanner;
 
 public class Bombes {
 
-    private static Caselles[][] bomba;
-    private static boolean isBomb;
+    private Caselles[][] bomba;
 
-    public static void insertBombs() {
-        bomba = Tauler.getTauler();
-        Caselles[] myVal = bomba[(int) Math.floor(bomba.length * Math.random())];
+    public Caselles[][] getBomba() {
+        return bomba;
+    }
 
-        int x = (int) Math.random();
-        int y = (int) Math.random();
-
-
-        for (int i = 0; i < bomba.length; i++) {
-            for (int j = 0; j < bomba[i].length; j++) {
-                if (i == x - 1 && j == y - 1) {
-                    Utilities.log(" ( bomb ) ");
-                } else {
-                    Utilities.log(" ( x ) ");
-                }
-            }
-            Utilities.logNewLine("");
-        }
+    public void setBomba(Caselles[][] bomba) {
+        this.bomba = bomba;
     }
 
 }
