@@ -28,8 +28,9 @@ public class Tauler extends Caselles{
                     tauler[i][j] = new Caselles();
                     Utilities.log(" [ * ] ");
                     if (tauler[i][j].isBandera()) {
-                        Bandera.setFlag();
+                        Bandera.returnIsFlag();
                         Utilities.log(" [ ? ] ");
+                        return;
                     }
                 }
                 Utilities.logNewLine("");

@@ -9,6 +9,8 @@ import static es.hulk.buscaminas.tauler.Tauler.*;
 public class Bandera extends Caselles{
 
     private static Caselles[][] bandera;
+    private static int x;
+    private static int y;
 
     public Bandera(boolean isTapada, boolean isBandera, int aroundBomb, boolean isBomb) {
         super(isTapada, isBandera, aroundBomb, isBomb);
@@ -32,7 +34,10 @@ public class Bandera extends Caselles{
         Utilities.log("Columnes: ");
         int y = scanner.nextInt();
 
-        bandera[x][y].setBandera(true);
         return true;
+    }
+
+    public static void returnIsFlag() {
+        bandera[x][y].setBandera(true);
     }
 }

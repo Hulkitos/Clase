@@ -107,7 +107,6 @@ public class Menu extends Tauler {
             printTauler();
             displayInGameMenu();
         }
-
     }
 
     public static void exit() {
