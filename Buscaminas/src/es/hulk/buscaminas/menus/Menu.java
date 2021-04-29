@@ -13,9 +13,10 @@ public class Menu extends Tauler {
 
     private static Scanner scanner = new Scanner(System.in);
 
-    public Menu(boolean isTapada, boolean isBandera, int aroundBomb, boolean isBomb) {
-        super(isTapada, isBandera, aroundBomb, isBomb);
+    public Menu(int x, int y) {
+        super(x, y);
     }
+
 
     public static void printTitol() {
         Utilities.logNewLine("  ____  _    _  _____  _____          __  __ _____ _   _           _____ ");
@@ -45,16 +46,16 @@ public class Menu extends Tauler {
             while (option != 5) {
                 switch (option) {
                     case 1:
-                        setTauler(new Caselles[8][8]);
-                        printTauler();
+                        Tauler principiant = new Tauler(8,8);
+                        principiant.printTauler();
                         break;
                     case 2:
-                        setTauler(new Caselles[16][16]);
-                        printTauler();
+                        Tauler normal = new Tauler(16,16);
+                        normal.printTauler();
                         break;
                     case 3:
-                        setTauler(new Caselles[16][30]);
-                        printTauler();
+                        Tauler dificil = new Tauler(16,30);
+                        dificil.printTauler();
                         break;
                     case 4:
                         Utilities.logNewLine("");
@@ -66,7 +67,8 @@ public class Menu extends Tauler {
                         Utilities.log("Trii un numero de columnes: ");
                         int y = scanner.nextInt();
 
-                        Tauler.setTauler(new Caselles[x][y]);
+                        Tauler custom = new Tauler(x,y);
+                        custom.printTauler();
                         break;
                     case 5:
                         exit();
@@ -94,7 +96,8 @@ public class Menu extends Tauler {
         while (option != 4) {
             switch (option) {
                 case 1:
-                    posarBandera();
+                    Tauler tauler = new Tauler();
+                    tauler.posarBandera();
                     break;
                 case 2:
                     break;
