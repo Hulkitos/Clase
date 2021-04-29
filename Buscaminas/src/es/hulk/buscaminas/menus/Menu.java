@@ -46,12 +46,15 @@ public class Menu extends Tauler {
                 switch (option) {
                     case 1:
                         setTauler(new Caselles[8][8]);
+                        printTauler();
                         break;
                     case 2:
                         setTauler(new Caselles[16][16]);
+                        printTauler();
                         break;
                     case 3:
                         setTauler(new Caselles[16][30]);
+                        printTauler();
                         break;
                     case 4:
                         Utilities.logNewLine("");
@@ -69,6 +72,7 @@ public class Menu extends Tauler {
                         exit();
                         break;
                 }
+                displayInGameMenu();
             }
         } catch (InputMismatchException exception) {
             display();
@@ -100,6 +104,7 @@ public class Menu extends Tauler {
                     display();
                     break;
             }
+            printTauler();
         }
 
     }
