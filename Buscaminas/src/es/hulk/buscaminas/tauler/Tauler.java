@@ -5,7 +5,7 @@ import es.hulk.buscaminas.caselles.Caselles;
 import es.hulk.buscaminas.menus.Menu;
 import es.hulk.buscaminas.utils.Utilities;
 
-public class Tauler extends Caselles{
+public class Tauler extends Caselles {
 
     private static Caselles[][] tauler;
 
@@ -27,11 +27,11 @@ public class Tauler extends Caselles{
                 for (int j = 0; j < tauler[i].length; j++) {
                     tauler[i][j] = new Caselles();
                     if (tauler[i][j].isBandera()) {
-                        Bandera.returnIsFlag();
                         Utilities.log(" [ ? ] ");
-                    } else {
-                        Utilities.log(" [ * ] ");
+                        return;
                     }
+                    Utilities.log(" [ * ] ");
+
                 }
                 Utilities.logNewLine("");
             }
