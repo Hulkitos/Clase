@@ -105,6 +105,7 @@ public class Menu extends Tauler {
                     break;
             }
             printTauler();
+            displayInGameMenu();
         }
 
     }

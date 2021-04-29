@@ -32,9 +32,7 @@ public class Bandera extends Caselles{
         Utilities.log("Columnes: ");
         int y = scanner.nextInt();
 
-        setTauler(new Caselles[x][y]);
         bandera[x][y].setBandera(true);
-
         return true;
     }
 }
