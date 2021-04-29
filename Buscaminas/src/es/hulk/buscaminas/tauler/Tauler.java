@@ -1,57 +1,60 @@
 package es.hulk.buscaminas.tauler;
 
 import es.hulk.buscaminas.caselles.Caselles;
-import es.hulk.buscaminas.menus.Menu;
 import es.hulk.buscaminas.utils.Utilities;
 
-public class Tauler {
+import java.util.Scanner;
 
-    private int column;
-    private int row;
+public class Tauler extends Caselles {
+
     private static Caselles[][] tauler;
 
-    public Tauler(int column, int row) {
-        this.column = column;
-        this.row = row;
+    public Tauler(int x, int y) {
+        tauler = new Caselles[x][y];
     }
 
-    public int getColumn() {
-        return column;
+    public Tauler() {
+
     }
 
-    public void setColumn(int column) {
-        this.column = column;
-    }
-
-    public int getRow() {
-        return row;
-    }
-
-    public void setRow(int row) {
-        this.row = row;
-    }
-
-    public static Caselles[][] getTauler() {
+    public Caselles[][] getTauler() {
         return tauler;
     }
 
-    public static void setTauler(Caselles[][] tauler) {
+    public void setTauler(Caselles[][] tauler) {
         Tauler.tauler = tauler;
     }
 
-    public static void printTauler() {
-        Utilities.clear();
-
+    public void printTauler() {
         if (tauler.length <= 200) {
-            for (Caselles[] caselles : tauler) {
-                for (int j = 0; j < caselles.length; j++) {
-                    Utilities.log(" ( x ) ");
+            for (int i = 0; i < tauler.length; i++) {
+                for (int j = 0; j < tauler[i].length; j++) {
+                    tauler[i][j] = new Caselles();
+                    if (tauler[i][j].isBandera()) {
+                        Utilities.log(" [ ? ] ");
+                        return;
+                    }
+                    Utilities.log(" [ * ] ");
+
                 }
                 Utilities.logNewLine("");
             }
         } else {
             Utilities.logNewLine("Tauler massa gross");
         }
-        Menu.printInGameMenu();
     }
+
+    public void posarBandera() {
+        Scanner scanner = new Scanner(System.in);
+
+        Utilities.log("Linees: ");
+        int x = scanner.nextInt();
+
+        Utilities.log("Columnes: ");
+        int y = scanner.nextInt();
+
+        tauler[x][y].setBandera(true);
+        printTauler();
+    }
+
 }

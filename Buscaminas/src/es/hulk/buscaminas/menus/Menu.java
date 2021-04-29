@@ -9,9 +9,14 @@ import es.hulk.buscaminas.utils.Utilities;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Menu {
+public class Menu extends Tauler {
 
     private static Scanner scanner = new Scanner(System.in);
+
+    public Menu(int x, int y) {
+        super(x, y);
+    }
+
 
     public static void printTitol() {
         Utilities.logNewLine("  ____  _    _  _____  _____          __  __ _____ _   _           _____ ");
@@ -36,68 +41,74 @@ public class Menu {
             Utilities.logNewLine("5 - Surtir del programa");
             Utilities.logNewLine("");
             Utilities.log("Trii una de les opcions: ");
-            printMainMenu();
+            Scanner scanner = new Scanner(System.in);
+            int option = scanner.nextInt();
+            while (option != 5) {
+                switch (option) {
+                    case 1:
+                        Tauler principiant = new Tauler(8,8);
+                        principiant.printTauler();
+                        break;
+                    case 2:
+                        Tauler normal = new Tauler(16,16);
+                        normal.printTauler();
+                        break;
+                    case 3:
+                        Tauler dificil = new Tauler(16,30);
+                        dificil.printTauler();
+                        break;
+                    case 4:
+                        Utilities.logNewLine("");
+                        System.out.println("Tauler personalitzat");
+                        Utilities.logNewLine("");
+
+                        Utilities.log("Trii un numero de files: ");
+                        int x = scanner.nextInt();
+                        Utilities.log("Trii un numero de columnes: ");
+                        int y = scanner.nextInt();
+
+                        Tauler custom = new Tauler(x,y);
+                        custom.printTauler();
+                        break;
+                    case 5:
+                        exit();
+                        break;
+                }
+                displayInGameMenu();
+            }
         } catch (InputMismatchException exception) {
             display();
         }
     }
 
-    public static void printMainMenu() {
-        Scanner scanner = new Scanner(System.in);
-        int option = scanner.nextInt();
-        switch (option) {
-            case 1:
-                Tauler.setTauler(new Caselles[8][8]);
-                Tauler.printTauler();
-                break;
-            case 2:
-                Tauler.setTauler(new Caselles[16][16]);
-                Tauler.printTauler();
-                break;
-            case 3:
-                Tauler.setTauler(new Caselles[16][30]);
-                Tauler.printTauler();
-                break;
-            case 4:
-                Utilities.logNewLine("");
-                System.out.println("Tauler personalitzat");
-                Utilities.logNewLine("");
-
-                Utilities.log("Trii un numero de files: ");
-                int x = scanner.nextInt();
-                Utilities.log("Trii un numero de columnes: ");
-                int y = scanner.nextInt();
-
-                Tauler.setTauler(new Caselles[x][y]);
-                Tauler.printTauler();
-                break;
-            case 5:
-                exit();
-                break;
-        }
-    }
-
-    public static void printInGameMenu() {
+    public static void displayInGameMenu() {
         Utilities.logNewLine("");
         Utilities.logNewLine("Trii una opcio");
         Utilities.logNewLine("");
         Utilities.logNewLine("1 - Posar una bandera");
-        Utilities.logNewLine("2 - Destapa tauler");
+        Utilities.logNewLine("2 - Llevar Bandera");
+        Utilities.logNewLine("3 - Destapa tauler");
+        Utilities.logNewLine("");
+        Utilities.logNewLine("4 - Tornar al menu principal");
         Utilities.logNewLine("");
         Utilities.log("Seleccioni una de les opcions: ");
         int option = scanner.nextInt();
-        switch (option) {
-            case 1:
-                Bandera.insertBanders();
-                Bombes.insertBombs();
-                break;
-            case 2:
-                break;
+        while (option != 4) {
+            switch (option) {
+                case 1:
+                    Tauler tauler = new Tauler();
+                    tauler.posarBandera();
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    display();
+                    break;
+            }
+            displayInGameMenu();
         }
-    }
-
-    public static void printFinishGameMenu() {
-
     }
 
     public static void exit() {
