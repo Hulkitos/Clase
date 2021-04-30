@@ -37,8 +37,6 @@ public class Board {
                     Utilities.log(" [ ? ] ");
                 } else if (!board[i][j].isPlugged()) {
                     Utilities.log(" [ - ] ");
-                } else if (board[i][j].isBomb()) {
-                    Utilities.log(" [ b ] ");
                 } else {
                     Utilities.log(" [ x ] ");
                 }
@@ -50,21 +48,24 @@ public class Board {
     public void putFlag() {
         Scanner scanner = new Scanner(System.in);
 
+        Utilities.log("Trii una fila a on posar la bandera: ");
         int x = scanner.nextInt();
+
+        Utilities.log("Trii una columna a on posar la bandera: ");
         int y = scanner.nextInt();
 
-        if (board[x - 1][y - 1].isBomb()) {
-            noobie();
-        } else {
-            board[x - 1][y - 1].setFlag(true);
-            printBoard();
-        }
+        board[x - 1][y - 1].setFlag(true);
+        printBoard();
+
     }
 
     public void removeFlag() {
         Scanner scanner = new Scanner(System.in);
 
+        Utilities.log("Trii la fila de la bandera que vol llevar: ");
         int x = scanner.nextInt();
+
+        Utilities.log("Trii la columna de la bandera que vol llevar: ");
         int y = scanner.nextInt();
 
         if (board[x - 1][y - 1].isFlag()) {
@@ -88,7 +89,10 @@ public class Board {
     public void removePlug() {
         Scanner scanner = new Scanner(System.in);
 
+        Utilities.log("Trii la file de la casella que vol destapar: ");
         int x = scanner.nextInt();
+
+        Utilities.log("Trii la columna de la casella que vol destapar: ");
         int y = scanner.nextInt();
 
         if (board[x - 1][y - 1].isBomb()) {
@@ -100,7 +104,9 @@ public class Board {
     }
 
     public void noobie() {
-        Utilities.log("Has perdut, per aixo t'hauries de dedicar a jugar a Hello Kitty Online");
+        Utilities.logNewLine("");
+        Utilities.logNewLine("Has perdut, per aixo t'hauries de dedicar a jugar a Hello Kitty Online");
+        Utilities.logNewLine("");
         System.exit(0);
     }
 }
