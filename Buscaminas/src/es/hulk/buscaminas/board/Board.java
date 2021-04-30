@@ -1,6 +1,6 @@
-package es.hulk.buscaminas.tauler;
+package es.hulk.buscaminas.board;
 
-import es.hulk.buscaminas.caselles.Box;
+import es.hulk.buscaminas.boxes.Box;
 import es.hulk.buscaminas.utils.Utilities;
 
 import java.util.Random;

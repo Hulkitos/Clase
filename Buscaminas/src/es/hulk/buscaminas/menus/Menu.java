@@ -1,6 +1,6 @@
 package es.hulk.buscaminas.menus;
 
-import es.hulk.buscaminas.tauler.Board;
+import es.hulk.buscaminas.board.Board;
 import es.hulk.buscaminas.utils.Utilities;
 
 import java.util.InputMismatchException;

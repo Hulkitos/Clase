@@ -1,6 +1,4 @@
-package es.hulk.buscaminas.caselles;
-
-import es.hulk.buscaminas.utils.Utilities;
+package es.hulk.buscaminas.boxes;
 
 public class Box {
 
