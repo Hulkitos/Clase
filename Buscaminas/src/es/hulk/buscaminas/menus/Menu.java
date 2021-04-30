@@ -103,7 +103,13 @@ public class Menu extends Board {
                     type.putFlag();
                     break;
                 case 2:
-                    type.removeFlag();
+/*                    Scanner scan = new Scanner(System.in);
+                    Utilities.log("Trii una fila a on posar la bandera: ");
+                    int z = scan.nextInt();
+
+                    Utilities.log("Trii una columna a on posar la bandera: ");
+                    int v = scan.nextInt();
+                    type.removeFlag(z, v);*/
                     break;
                 case 3:
                     type.removePlug();

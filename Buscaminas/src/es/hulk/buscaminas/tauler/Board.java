@@ -3,6 +3,7 @@ package es.hulk.buscaminas.tauler;
 import es.hulk.buscaminas.caselles.Box;
 import es.hulk.buscaminas.utils.Utilities;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Board {
@@ -34,11 +35,12 @@ public class Board {
             for (int j = 0; j < board[i].length; j++) {
                 if (board[i][j].isFlag()) {
                     Utilities.log(" [ ? ] ");
-                }
-                if (board[i][j].isPlugged()) {
-                    Utilities.log(" [ x ] ");
-                } else {
+                } else if (!board[i][j].isPlugged()) {
                     Utilities.log(" [ - ] ");
+                } else if (board[i][j].isBomb()) {
+                    Utilities.log(" [ b ] ");
+                } else {
+                    Utilities.log(" [ x ] ");
                 }
             }
             Utilities.logNewLine("");
@@ -48,34 +50,28 @@ public class Board {
     public void putFlag() {
         Scanner scanner = new Scanner(System.in);
 
-        Utilities.log("Trii una fila a on posar la bandera: ");
         int x = scanner.nextInt();
-
-        Utilities.log("Trii una columna a on posar la bandera: ");
         int y = scanner.nextInt();
 
         board[x-1][y-1].setFlag(true);
         printBoard();
     }
 
-    public void removeFlag() {
-        Scanner scanner = new Scanner(System.in);
-
-        Utilities.log("Trii una fila a on posar la bandera: ");
-        int x = scanner.nextInt();
-
-        Utilities.log("Trii una columna a on posar la bandera: ");
-        int y = scanner.nextInt();
-
+    public void removeFlag(int x, int y) {
         if (board[x-1][y-1].isFlag()) {
             board[x-1][y-1].setFlag(false);
         } else {
             Utilities.logNewLine("No pots llevar una bandera a una casella on no esta asignada");
         }
-        printBoard();
     }
 
-    public void putBombs() {
+    public void putBombs(int mines) {
+        Random random = new Random();
+        Scanner scanner = new Scanner(System.in);
+
+        int x = random.nextInt();
+        int y = random.nextInt();
+
 
     }
 
@@ -84,7 +80,6 @@ public class Board {
 
         int x = scanner.nextInt();
         int y = scanner.nextInt();
-
 
         board[x-1][y-1].setPlugged(false);
         printBoard();
