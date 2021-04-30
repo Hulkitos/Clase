@@ -53,26 +53,36 @@ public class Board {
         int x = scanner.nextInt();
         int y = scanner.nextInt();
 
-        board[x-1][y-1].setFlag(true);
-        printBoard();
+        if (board[x - 1][y - 1].isBomb()) {
+            noobie();
+        } else {
+            board[x - 1][y - 1].setFlag(true);
+            printBoard();
+        }
     }
 
-    public void removeFlag(int x, int y) {
-        if (board[x-1][y-1].isFlag()) {
-            board[x-1][y-1].setFlag(false);
+    public void removeFlag() {
+        Scanner scanner = new Scanner(System.in);
+
+        int x = scanner.nextInt();
+        int y = scanner.nextInt();
+
+        if (board[x - 1][y - 1].isFlag()) {
+            board[x - 1][y - 1].setFlag(false);
         } else {
             Utilities.logNewLine("No pots llevar una bandera a una casella on no esta asignada");
         }
     }
 
-    public void putBombs(int mines) {
+    public void putBombs(int bombs, int x, int y) {
         Random random = new Random();
-        Scanner scanner = new Scanner(System.in);
 
-        int x = random.nextInt();
-        int y = random.nextInt();
+        for (int i = 0; i < bombs; i++) {
+            int xBomb = random.nextInt(x);
+            int yBomb = random.nextInt(y);
 
-
+            board[x - 1][y - 1].setBomb(true);
+        }
     }
 
     public void removePlug() {
@@ -81,7 +91,17 @@ public class Board {
         int x = scanner.nextInt();
         int y = scanner.nextInt();
 
-        board[x-1][y-1].setPlugged(false);
-        printBoard();
+        if (board[x - 1][y - 1].isBomb()) {
+            noobie();
+        } else {
+            board[x - 1][y - 1].setPlugged(false);
+            printBoard();
+        }
+    }
+
+    public void noobie() {
+        Utilities.log("Has perdut, per aixo t'hauries de dedicar a jugar a Hello Kitty Online");
+        System.exit(0);
     }
 }
+
