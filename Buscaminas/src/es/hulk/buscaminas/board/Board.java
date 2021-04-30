@@ -102,7 +102,7 @@ public class Board {
             int xBomb = random.nextInt(x);
             int yBomb = random.nextInt(y);
 
-            while (board[xBomb][yBomb].isBomb()) {
+            if (board[xBomb][yBomb].isBomb()) {
                 xBomb = random.nextInt(x);
                 yBomb = random.nextInt(y);
             }
