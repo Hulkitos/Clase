@@ -76,6 +76,7 @@ public class Board {
         } else {
             Utilities.logNewLine("No pots llevar una bandera a una casella on no esta asignada");
         }
+        printBoard();
     }
 
     public void removePlug() {
@@ -112,7 +113,32 @@ public class Board {
 
     public void noobie() {
         Utilities.logNewLine("");
-        Utilities.logNewLine("Has perdut, per aixo t'hauries de dedicar a jugar a Hello Kitty Online");
+        Utilities.logNewLine("ME PRO U NOOB RETARD");
+        Utilities.logNewLine("ME PRO U NOOB RETARD");
+        Utilities.logNewLine("ME PRO U NOOB RETARD");
+        Utilities.logNewLine("ME PRO U NOOB RETARD");
+        Utilities.logNewLine("ME PRO U NOOB RETARD");
+        Utilities.logNewLine("ME PRO U NOOB RETARD");
+        Utilities.logNewLine("ME PRO U NOOB RETARD");
+        Utilities.logNewLine("ME PRO U NOOB RETARD");
+        Utilities.logNewLine("ME PRO U NOOB RETARD");
+        Utilities.logNewLine("ME PRO U NOOB RETARD");
+        Utilities.logNewLine("ME PRO U NOOB RETARD");
+        Utilities.logNewLine("ME PRO U NOOB RETARD");
+        Utilities.logNewLine("ME PRO U NOOB RETARD");
+        Utilities.logNewLine("ME PRO U NOOB RETARD");
+        Utilities.logNewLine("ME PRO U NOOB RETARD");
+        Utilities.logNewLine("ME PRO U NOOB RETARD");
+        Utilities.logNewLine("ME PRO U NOOB RETARD");
+        Utilities.logNewLine("ME PRO U NOOB RETARD");
+        Utilities.logNewLine("ME PRO U NOOB RETARD");
+        Utilities.logNewLine("ME PRO U NOOB RETARD");
+        Utilities.logNewLine("ME PRO U NOOB RETARD");
+        Utilities.logNewLine("ME PRO U NOOB RETARD");
+        Utilities.logNewLine("ME PRO U NOOB RETARD");
+        Utilities.logNewLine("ME PRO U NOOB RETARD");
+        Utilities.logNewLine("ME PRO U NOOB RETARD");
+        Utilities.logNewLine("ME PRO U NOOB RETARD");
         Utilities.logNewLine("");
         System.exit(0);
     }
