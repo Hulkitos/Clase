@@ -3,6 +3,7 @@ package es.hulk.buscaminas.board;
 import es.hulk.buscaminas.boxes.Box;
 import es.hulk.buscaminas.utils.Utilities;
 
+import javax.rmi.CORBA.Util;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -37,6 +38,8 @@ public class Board {
                     Utilities.log(" [ ? ] ");
                 } else if (!board[i][j].isPlugged()) {
                     Utilities.log(" [ - ] ");
+                } else if (board[i][j].isBomb()) {
+                    Utilities.log(" [ B ] ");
                 } else {
                     Utilities.log(" [ x ] ");
                 }
@@ -75,17 +78,6 @@ public class Board {
         }
     }
 
-    public void putBombs(int bombs, int x, int y) {
-        Random random = new Random();
-
-        for (int i = 0; i < bombs; i++) {
-            int xBomb = random.nextInt(x);
-            int yBomb = random.nextInt(y);
-
-            board[x - 1][y - 1].setBomb(true);
-        }
-    }
-
     public void removePlug() {
         Scanner scanner = new Scanner(System.in);
 
@@ -101,6 +93,22 @@ public class Board {
             board[x - 1][y - 1].setPlugged(false);
             printBoard();
         }
+    }
+
+    public void putBombs(int bombs, int x, int y) {
+        Random random = new Random();
+
+        for (int i = 0; i < bombs; i++) {
+            int xBomb = random.nextInt(x);
+            int yBomb = random.nextInt(y);
+
+            while (board[xBomb][yBomb].isBomb()) {
+                xBomb = random.nextInt(x);
+                yBomb = random.nextInt(y);
+            }
+            board[xBomb][yBomb].setBomb(true);
+        }
+        printBoard();
     }
 
     public void noobie() {
