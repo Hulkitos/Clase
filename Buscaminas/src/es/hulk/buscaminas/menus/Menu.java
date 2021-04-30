@@ -1,17 +1,15 @@
 package es.hulk.buscaminas.menus;
 
-import es.hulk.buscaminas.caselles.Bandera;
-import es.hulk.buscaminas.caselles.Bombes;
-import es.hulk.buscaminas.caselles.Caselles;
-import es.hulk.buscaminas.tauler.Tauler;
+import es.hulk.buscaminas.board.Board;
 import es.hulk.buscaminas.utils.Utilities;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Menu extends Tauler {
+public class Menu extends Board {
 
     private static Scanner scanner = new Scanner(System.in);
+    private static int bombs;
 
     public Menu(int x, int y) {
         super(x, y);
@@ -46,16 +44,28 @@ public class Menu extends Tauler {
             while (option != 5) {
                 switch (option) {
                     case 1:
-                        Tauler principiant = new Tauler(8,8);
-                        principiant.printTauler();
+                        bombs = 10;
+                        Board ez = new Board(8,8);
+                        ez.createBoard();
+                        ez.printBoard();
+                        ez.putBombs(bombs, 8, 8);
+                        displayInGameMenu(ez);
                         break;
                     case 2:
-                        Tauler normal = new Tauler(16,16);
-                        normal.printTauler();
+                        bombs = 40;
+                        Board normal = new Board(16,16);
+                        normal.createBoard();
+                        normal.printBoard();
+                        normal.putBombs(bombs, 16, 16);
+                        displayInGameMenu(normal);
                         break;
                     case 3:
-                        Tauler dificil = new Tauler(16,30);
-                        dificil.printTauler();
+                        bombs = 99;
+                        Board hard = new Board(16,30);
+                        hard.createBoard();
+                        hard.printBoard();
+                        hard.putBombs(bombs, 16, 30);
+                        displayInGameMenu(hard);
                         break;
                     case 4:
                         Utilities.logNewLine("");
@@ -67,27 +77,30 @@ public class Menu extends Tauler {
                         Utilities.log("Trii un numero de columnes: ");
                         int y = scanner.nextInt();
 
-                        Tauler custom = new Tauler(x,y);
-                        custom.printTauler();
-                        break;
-                    case 5:
-                        exit();
+                        Utilities.log("Trii el numero de bombes que vol: ");
+                        int customBombs = scanner.nextInt();
+
+                        Board custom = new Board(x,y);
+                        custom.createBoard();
+                        custom.printBoard();
+                        custom.putBombs(customBombs, x, y);
+                        displayInGameMenu(custom);
                         break;
                 }
-                displayInGameMenu();
             }
+            exit();
         } catch (InputMismatchException exception) {
             display();
         }
     }
 
-    public static void displayInGameMenu() {
+    public static void displayInGameMenu(Board type) {
         Utilities.logNewLine("");
         Utilities.logNewLine("Trii una opcio");
         Utilities.logNewLine("");
         Utilities.logNewLine("1 - Posar una bandera");
         Utilities.logNewLine("2 - Llevar Bandera");
-        Utilities.logNewLine("3 - Destapa tauler");
+        Utilities.logNewLine("3 - Destapa Casella");
         Utilities.logNewLine("");
         Utilities.logNewLine("4 - Tornar al menu principal");
         Utilities.logNewLine("");
@@ -96,22 +109,24 @@ public class Menu extends Tauler {
         while (option != 4) {
             switch (option) {
                 case 1:
-                    Tauler tauler = new Tauler();
-                    tauler.posarBandera();
+                    type.putFlag();
+                    displayInGameMenu(type);
                     break;
                 case 2:
+                    type.removeFlag();
+                    displayInGameMenu(type);
                     break;
                 case 3:
-                    break;
-                case 4:
-                    display();
+                    type.removePlug();
+                    displayInGameMenu(type);
                     break;
             }
-            displayInGameMenu();
+            display();
         }
     }
 
     public static void exit() {
         Utilities.logNewLine("Has sortit del pograma");
+        System.exit(0);
     }
 }
