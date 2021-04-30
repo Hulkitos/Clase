@@ -38,8 +38,8 @@ public class Board {
                     Utilities.log(" [ ? ] ");
                 } else if (!board[i][j].isPlugged()) {
                     Utilities.log(" [ - ] ");
-                } else if (board[i][j].isBomb()) {
-                    Utilities.log(" [ B ] ");
+               /* } else if (board[i][j].isBomb()) {
+                    Utilities.log(" [ B ] ");*//**/
                 } else {
                     Utilities.log(" [ x ] ");
                 }
