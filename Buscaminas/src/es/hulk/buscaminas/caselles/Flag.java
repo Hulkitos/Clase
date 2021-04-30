@@ -1,5 +1,7 @@
 package es.hulk.buscaminas.caselles;
 
-public class Flags {
+public class Flag extends Box {
+
+
 
 }

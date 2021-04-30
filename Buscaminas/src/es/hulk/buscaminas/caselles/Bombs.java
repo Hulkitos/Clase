@@ -1,6 +1,6 @@
 package es.hulk.buscaminas.caselles;
 
-public class Bombs {
+public class Bombs extends Box {
 
 
 }
