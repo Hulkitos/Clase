@@ -103,8 +103,7 @@ public class Board {
             int yBomb = random.nextInt(y);
 
             if (board[xBomb][yBomb].isBomb()) {
-                xBomb = random.nextInt(x);
-                yBomb = random.nextInt(y);
+                board[xBomb][yBomb].setBomb(false);
             }
             board[xBomb][yBomb].setBomb(true);
         }
