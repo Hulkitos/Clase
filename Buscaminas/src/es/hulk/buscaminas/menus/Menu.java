@@ -1,15 +1,12 @@
 package es.hulk.buscaminas.menus;
 
-import es.hulk.buscaminas.caselles.Bandera;
-import es.hulk.buscaminas.caselles.Bombes;
-import es.hulk.buscaminas.caselles.Caselles;
-import es.hulk.buscaminas.tauler.Tauler;
+import es.hulk.buscaminas.tauler.Board;
 import es.hulk.buscaminas.utils.Utilities;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Menu extends Tauler {
+public class Menu extends Board {
 
     private static Scanner scanner = new Scanner(System.in);
 
@@ -46,16 +43,22 @@ public class Menu extends Tauler {
             while (option != 5) {
                 switch (option) {
                     case 1:
-                        Tauler principiant = new Tauler(8,8);
-                        principiant.printTauler();
+                        Board ez = new Board(8,8);
+                        ez.createBoard();
+                        ez.printBoard();
+                        displayInGameMenu(ez);
                         break;
                     case 2:
-                        Tauler normal = new Tauler(16,16);
-                        normal.printTauler();
+                        Board normal = new Board(16,16);
+                        normal.createBoard();
+                        normal.printBoard();
+                        displayInGameMenu(normal);
                         break;
                     case 3:
-                        Tauler dificil = new Tauler(16,30);
-                        dificil.printTauler();
+                        Board hard = new Board(16,30);
+                        hard.createBoard();
+                        hard.printBoard();
+                        displayInGameMenu(hard);
                         break;
                     case 4:
                         Utilities.logNewLine("");
@@ -67,27 +70,28 @@ public class Menu extends Tauler {
                         Utilities.log("Trii un numero de columnes: ");
                         int y = scanner.nextInt();
 
-                        Tauler custom = new Tauler(x,y);
-                        custom.printTauler();
+                        Board custom = new Board(x,y);
+                        custom.createBoard();
+                        custom.printBoard();
+                        displayInGameMenu(custom);
                         break;
                     case 5:
                         exit();
                         break;
                 }
-                displayInGameMenu();
             }
         } catch (InputMismatchException exception) {
             display();
         }
     }
 
-    public static void displayInGameMenu() {
+    public static void displayInGameMenu(Board type) {
         Utilities.logNewLine("");
         Utilities.logNewLine("Trii una opcio");
         Utilities.logNewLine("");
         Utilities.logNewLine("1 - Posar una bandera");
         Utilities.logNewLine("2 - Llevar Bandera");
-        Utilities.logNewLine("3 - Destapa tauler");
+        Utilities.logNewLine("3 - Destapa Casella");
         Utilities.logNewLine("");
         Utilities.logNewLine("4 - Tornar al menu principal");
         Utilities.logNewLine("");
@@ -96,18 +100,19 @@ public class Menu extends Tauler {
         while (option != 4) {
             switch (option) {
                 case 1:
-                    Tauler tauler = new Tauler();
-                    tauler.posarBandera();
+                    type.putFlag();
                     break;
                 case 2:
+                    type.removeFlag();
                     break;
                 case 3:
+                    type.removePlug();
                     break;
                 case 4:
                     display();
                     break;
             }
-            displayInGameMenu();
+            displayInGameMenu(type);
         }
     }
 
