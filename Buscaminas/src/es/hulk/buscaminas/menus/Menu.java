@@ -9,6 +9,7 @@ import java.util.Scanner;
 public class Menu extends Board {
 
     private static Scanner scanner = new Scanner(System.in);
+    private static int bombs;
 
     public Menu(int x, int y) {
         super(x, y);
@@ -43,21 +44,27 @@ public class Menu extends Board {
             while (option != 5) {
                 switch (option) {
                     case 1:
+                        bombs = 10;
                         Board ez = new Board(8,8);
                         ez.createBoard();
                         ez.printBoard();
+                        ez.putBombs(bombs, 8, 8);
                         displayInGameMenu(ez);
                         break;
                     case 2:
+                        bombs = 40;
                         Board normal = new Board(16,16);
                         normal.createBoard();
                         normal.printBoard();
+                        normal.putBombs(bombs, 16, 16);
                         displayInGameMenu(normal);
                         break;
                     case 3:
+                        bombs = 99;
                         Board hard = new Board(16,30);
                         hard.createBoard();
                         hard.printBoard();
+                        hard.putBombs(bombs, 16, 30);
                         displayInGameMenu(hard);
                         break;
                     case 4:
@@ -70,16 +77,18 @@ public class Menu extends Board {
                         Utilities.log("Trii un numero de columnes: ");
                         int y = scanner.nextInt();
 
+                        Utilities.log("Trii el numero de bombes que vol: ");
+                        int customBombs = scanner.nextInt();
+
                         Board custom = new Board(x,y);
                         custom.createBoard();
                         custom.printBoard();
+                        custom.putBombs(customBombs, x, y);
                         displayInGameMenu(custom);
-                        break;
-                    case 5:
-                        exit();
                         break;
                 }
             }
+            exit();
         } catch (InputMismatchException exception) {
             display();
         }
@@ -101,28 +110,23 @@ public class Menu extends Board {
             switch (option) {
                 case 1:
                     type.putFlag();
+                    displayInGameMenu(type);
                     break;
                 case 2:
-/*                    Scanner scan = new Scanner(System.in);
-                    Utilities.log("Trii una fila a on posar la bandera: ");
-                    int z = scan.nextInt();
-
-                    Utilities.log("Trii una columna a on posar la bandera: ");
-                    int v = scan.nextInt();
-                    type.removeFlag(z, v);*/
+                    type.removeFlag();
+                    displayInGameMenu(type);
                     break;
                 case 3:
                     type.removePlug();
-                    break;
-                case 4:
-                    display();
+                    displayInGameMenu(type);
                     break;
             }
-            displayInGameMenu(type);
+            display();
         }
     }
 
     public static void exit() {
         Utilities.logNewLine("Has sortit del pograma");
+        System.exit(0);
     }
 }
