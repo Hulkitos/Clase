@@ -7,7 +7,7 @@ public enum DepositLenght {
 
     private int days;
 
-    private DepositLenght(int days){
+    DepositLenght(int days){
         this.days = days;
     }
 

@@ -1,6 +1,7 @@
 package es.hulk.buscaminas.board;
 
 import es.hulk.buscaminas.boxes.Box;
+import es.hulk.buscaminas.utils.Colors;
 import es.hulk.buscaminas.utils.Utilities;
 
 import java.util.Random;
@@ -34,11 +35,11 @@ public class Board {
         for (int i = 0; i < board.length; i++) {
             for (int j = 0; j < board[i].length; j++) {
                 if (board[i][j].isFlag()) {
-                    Utilities.log(" [ ? ] ");
+                    Utilities.log(Colors.green + " [ ? ] " + Colors.reset);
                 } else if (!board[i][j].isPlugged()) {
-                    Utilities.log(" [ - ] ");
+                    Utilities.log(Colors.yellow + " [ - ] " + Colors.reset);
                 } else {
-                    Utilities.log(" [ x ] ");
+                    Utilities.log(Colors.red + " [ x ] " + Colors.reset);
                 }
             }
             Utilities.logNewLine("");
