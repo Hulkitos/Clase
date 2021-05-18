@@ -79,10 +79,10 @@ public class VaixellsCPU {
      * @param mida Número de caselles que ocupa el vaixell
      * @return hiCab
      */
-    private boolean hiCab(int mida) {
-        // codi suprimit per l'exercici
-        return true;
-    }
+//    private boolean hiCab(int mida) {
+//        // codi suprimit per l'exercici
+//        return true;
+//    }
 
     /**
      * esPotPosar. Retorna si un vaixell té lloc suficient dins el tauler (no
@@ -93,7 +93,7 @@ public class VaixellsCPU {
      * @return
      */
     private boolean esPotPosar(Tauler cpu, int mida) {
-        return hiCab(mida) && espaiDisponible(cpu, mida);
+        return VaixellsUsuari.hiCab(mida) && espaiDisponible(cpu, mida);
     }
 
     /**

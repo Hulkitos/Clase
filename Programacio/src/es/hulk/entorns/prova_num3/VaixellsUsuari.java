@@ -5,7 +5,7 @@ import java.awt.event.MouseEvent;
 public class VaixellsUsuari {
 
     //coordenades de la casella a partir de la qual es vol posar un vaixell:
-    private int x, y;
+    private static int x, y;
     //per saber si s'han colocat cada un dels vaixells:
     private boolean colocat2 = false;
     private boolean colocat1 = false;
@@ -85,7 +85,7 @@ public class VaixellsUsuari {
      * @param mida Número de caselles que ocupa el vaixell
      * @return hiCab
      */
-    private boolean hiCab(int mida) {
+    public static boolean hiCab(int mida) {
         boolean hiCab;
         if (clickEsquerre()) {
             hiCab = 9 - x >= mida;
@@ -148,7 +148,7 @@ public class VaixellsUsuari {
      *
      * @return
      */
-    public boolean clickEsquerre() {
+    public static boolean clickEsquerre() {
         // codi suprimit per l'exercici
         return true;
     }
