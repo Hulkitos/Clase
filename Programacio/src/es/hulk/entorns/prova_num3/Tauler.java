@@ -51,6 +51,10 @@ public class Tauler {
             }
         }
         //per tornar a posar els vaixells...
+        reiniciarVaixellUsuari();
+    }
+
+    public void reiniciarVaixellUsuari() {
         vu.setColocat1(false);
         vu.setColocat2(false);
         VaixellsUsuari.setVaixellsColocats(false);
