@@ -32,7 +32,7 @@ public class VaixellsCPU {
      * col·locat correctament.
      */
     private void posarVaixell(Tauler cpu, int mida) {
-        while (!colocat) {
+        while (true) {
 
             // generar casella aleatoria
             y = (int) (Math.random() * (9 + 1));
