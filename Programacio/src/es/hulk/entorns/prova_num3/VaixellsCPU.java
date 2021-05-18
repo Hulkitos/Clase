@@ -63,10 +63,7 @@ public class VaixellsCPU {
         if (orientacio) {
             for (int i = x; i <= x + mida; i++) {
                 for (int j = y; j <= y + mida; j++) {
-                    if (!cpu.casellaDisponible(i, x)) {
-                        return false;
-                    }
-                    if (!cpu.casellaDisponible(y, i)) {
+                    if (!cpu.casellaDisponible(i, j)) {
                         return false;
                     }
                 }
