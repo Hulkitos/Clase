@@ -69,10 +69,7 @@ public class VaixellsUsuari {
         if (clickEsquerre()) {
             for (int i = x; i <= x + mida; i++) {
                 for (int j = y; j <= y + mida; j++) {
-                    if (!tUsuari.casellaDisponible(i, x)) {
-                        return false;
-                    }
-                    if (!tUsuari.casellaDisponible(y, i)) {
+                    if (!tUsuari.casellaDisponible(i, j)) {
                         return false;
                     }
                 }
