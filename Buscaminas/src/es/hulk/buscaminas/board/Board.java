@@ -114,31 +114,6 @@ public class Board {
     public void noobie() {
         Utilities.logNewLine("");
         Utilities.logNewLine("ME PRO U NOOB RETARD");
-        Utilities.logNewLine("ME PRO U NOOB RETARD");
-        Utilities.logNewLine("ME PRO U NOOB RETARD");
-        Utilities.logNewLine("ME PRO U NOOB RETARD");
-        Utilities.logNewLine("ME PRO U NOOB RETARD");
-        Utilities.logNewLine("ME PRO U NOOB RETARD");
-        Utilities.logNewLine("ME PRO U NOOB RETARD");
-        Utilities.logNewLine("ME PRO U NOOB RETARD");
-        Utilities.logNewLine("ME PRO U NOOB RETARD");
-        Utilities.logNewLine("ME PRO U NOOB RETARD");
-        Utilities.logNewLine("ME PRO U NOOB RETARD");
-        Utilities.logNewLine("ME PRO U NOOB RETARD");
-        Utilities.logNewLine("ME PRO U NOOB RETARD");
-        Utilities.logNewLine("ME PRO U NOOB RETARD");
-        Utilities.logNewLine("ME PRO U NOOB RETARD");
-        Utilities.logNewLine("ME PRO U NOOB RETARD");
-        Utilities.logNewLine("ME PRO U NOOB RETARD");
-        Utilities.logNewLine("ME PRO U NOOB RETARD");
-        Utilities.logNewLine("ME PRO U NOOB RETARD");
-        Utilities.logNewLine("ME PRO U NOOB RETARD");
-        Utilities.logNewLine("ME PRO U NOOB RETARD");
-        Utilities.logNewLine("ME PRO U NOOB RETARD");
-        Utilities.logNewLine("ME PRO U NOOB RETARD");
-        Utilities.logNewLine("ME PRO U NOOB RETARD");
-        Utilities.logNewLine("ME PRO U NOOB RETARD");
-        Utilities.logNewLine("ME PRO U NOOB RETARD");
         Utilities.logNewLine("");
         System.exit(0);
     }
