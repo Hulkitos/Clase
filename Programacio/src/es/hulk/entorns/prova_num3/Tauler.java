@@ -39,7 +39,7 @@ public class Tauler {
         t[x][y].setDisponible(Boolean.FALSE);
     }
 
-    public void reiniciar(Tauler tauler) {
+    public void reiniciar() {
         //netejar tauler...
         for (int i = 0; i < DIMENSIO; i++) {
             for (int j = 0; j < DIMENSIO; j++) {
