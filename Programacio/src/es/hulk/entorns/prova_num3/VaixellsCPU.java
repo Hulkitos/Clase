@@ -33,16 +33,18 @@ public class VaixellsCPU {
      */
     private void posarVaixell(Tauler cpu, int mida) {
         while (!colocat) {
+
             // generar casella aleatoria
             y = (int) (Math.random() * (9 + 1));
             x = (int) (Math.random() * (9 + 1));
             // generar orientació aleatoria
+
             Random r = new Random();
             orientacio = r.nextBoolean();
             if (cpu.casellaDisponible(y, x)) {
                 if (esPotPosar(cpu, mida)) {
                     colocar(cpu, mida);
-                    colocat = true;
+                    break;
                 }
             }
         }
