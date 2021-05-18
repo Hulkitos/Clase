@@ -3,6 +3,7 @@ package es.hulk.buscaminas.board;
 import es.hulk.buscaminas.boxes.Box;
 import es.hulk.buscaminas.utils.Utilities;
 
+import javax.rmi.CORBA.Util;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -37,6 +38,8 @@ public class Board {
                     Utilities.log(" [ ? ] ");
                 } else if (!board[i][j].isPlugged()) {
                     Utilities.log(" [ - ] ");
+               /* } else if (board[i][j].isBomb()) {
+                    Utilities.log(" [ B ] ");*//**/
                 } else {
                     Utilities.log(" [ x ] ");
                 }
@@ -73,17 +76,7 @@ public class Board {
         } else {
             Utilities.logNewLine("No pots llevar una bandera a una casella on no esta asignada");
         }
-    }
-
-    public void putBombs(int bombs, int x, int y) {
-        Random random = new Random();
-
-        for (int i = 0; i < bombs; i++) {
-            int xBomb = random.nextInt(x);
-            int yBomb = random.nextInt(y);
-
-            board[x - 1][y - 1].setBomb(true);
-        }
+        printBoard();
     }
 
     public void removePlug() {
@@ -103,9 +96,49 @@ public class Board {
         }
     }
 
+    public void putBombs(int bombs, int x, int y) {
+        Random random = new Random();
+
+        for (int i = 0; i < bombs; i++) {
+            int xBomb = random.nextInt(x);
+            int yBomb = random.nextInt(y);
+
+            if (board[xBomb][yBomb].isBomb()) {
+                board[xBomb][yBomb].setBomb(false);
+            }
+            board[xBomb][yBomb].setBomb(true);
+        }
+        printBoard();
+    }
+
     public void noobie() {
         Utilities.logNewLine("");
-        Utilities.logNewLine("Has perdut, per aixo t'hauries de dedicar a jugar a Hello Kitty Online");
+        Utilities.logNewLine("ME PRO U NOOB RETARD");
+        Utilities.logNewLine("ME PRO U NOOB RETARD");
+        Utilities.logNewLine("ME PRO U NOOB RETARD");
+        Utilities.logNewLine("ME PRO U NOOB RETARD");
+        Utilities.logNewLine("ME PRO U NOOB RETARD");
+        Utilities.logNewLine("ME PRO U NOOB RETARD");
+        Utilities.logNewLine("ME PRO U NOOB RETARD");
+        Utilities.logNewLine("ME PRO U NOOB RETARD");
+        Utilities.logNewLine("ME PRO U NOOB RETARD");
+        Utilities.logNewLine("ME PRO U NOOB RETARD");
+        Utilities.logNewLine("ME PRO U NOOB RETARD");
+        Utilities.logNewLine("ME PRO U NOOB RETARD");
+        Utilities.logNewLine("ME PRO U NOOB RETARD");
+        Utilities.logNewLine("ME PRO U NOOB RETARD");
+        Utilities.logNewLine("ME PRO U NOOB RETARD");
+        Utilities.logNewLine("ME PRO U NOOB RETARD");
+        Utilities.logNewLine("ME PRO U NOOB RETARD");
+        Utilities.logNewLine("ME PRO U NOOB RETARD");
+        Utilities.logNewLine("ME PRO U NOOB RETARD");
+        Utilities.logNewLine("ME PRO U NOOB RETARD");
+        Utilities.logNewLine("ME PRO U NOOB RETARD");
+        Utilities.logNewLine("ME PRO U NOOB RETARD");
+        Utilities.logNewLine("ME PRO U NOOB RETARD");
+        Utilities.logNewLine("ME PRO U NOOB RETARD");
+        Utilities.logNewLine("ME PRO U NOOB RETARD");
+        Utilities.logNewLine("ME PRO U NOOB RETARD");
         Utilities.logNewLine("");
         System.exit(0);
     }
