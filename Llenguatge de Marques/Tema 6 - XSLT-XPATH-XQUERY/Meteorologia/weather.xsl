@@ -3,6 +3,31 @@
     <xsl:output method="html" omit-xml-declaration="yes"/>
     <xsl:template match="/">
         <html>
+
+            <head>
+                <title>La Meteorologia</title>
+                <meta charset="utf-8"/>
+
+                <style>
+                    table, td, th {
+                        border: 1px solid black;
+                        border-collapse: collapse;
+                    }
+
+                    td, th {
+                        padding: 5px;
+                    }
+
+                    th {
+                        background-color: #a3a3a3;
+                    }
+
+                    td {
+                        background-color: #fff;
+                    }
+                </style>
+            </head>
+
             <body>
                 <xsl:for-each select="root">
                     <p>Provincia: <xsl:value-of select="provincia"/></p>
@@ -23,10 +48,10 @@
                             <td align="center">
                                 <xsl:choose>
                                     <xsl:when test="estado_cielo/@descripcion = Despejado">
-                                        Despejado
+                                            <img src="sol-solet.jpg" />
                                     </xsl:when>
                                     <xsl:otherwise>
-                                        Nubloso
+                                        <img src ="nuvol.jpg" height="20px"/>
                                     </xsl:otherwise>
                                 </xsl:choose>
                             </td>
@@ -37,4 +62,3 @@
         </html>
     </xsl:template>
 </xsl:stylesheet>
-
