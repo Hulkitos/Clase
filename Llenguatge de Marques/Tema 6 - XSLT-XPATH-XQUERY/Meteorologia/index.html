@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+
+        <ul>
+            {
+            for $x in doc("weather.xml")/provincia
+            order by $x
+            return <li>{$x}</li>
+            }
+        </ul>
+
+    </body>
+</html>
