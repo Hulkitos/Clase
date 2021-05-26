@@ -24,8 +24,8 @@
     </head>
 
     <body>
-        <p>Provincia: <xsl:value-of select="provincia"/></p>
-        <p>Nombre: <xsl:value-of select="nombre"/></p>
+        <p>Provincia:</p>
+        <p>Nombre:</p>
 
         <table>
             <tr>
@@ -34,12 +34,11 @@
                 <th>Temperatura Minima</th>
                 <th>Estat del cel</th>
             </tr>
-            <tr>
-                <td align="center"></td>
-                <td align="center"><xsl:value-of select="temperatura/maxima"/></td>
-                <td align="center"><xsl:value-of select="temperatura/minima"/></td>
-                <td align="center"></td>
-            </tr>
+            {
+             for $var in doc("weather.xml")/root/prediccion/dia/@fecha
+                return
+                <td>{$var}</td>
+             }
         </table>
     </body>
 </html>
