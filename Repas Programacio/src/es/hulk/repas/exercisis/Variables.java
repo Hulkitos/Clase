@@ -42,7 +42,7 @@ public class Variables {
         System.out.println(result);
     }
 
-    public static void chgangeValue() {
+    public static void changeValue() {
         int a = 5;
         int b = 10;
         int aux;
